@@ -1,0 +1,32 @@
+[
+  {
+    "id": "lumeng",
+    "name": "呂蒙",
+    "faction": "吳",
+    "image": "/images/generals/lumeng.jpg",
+    "modes": ["國戰"],
+    "versions": ["受命于天"],
+    "skills": [
+      {
+        "name": "克己",
+        "text": "若你未於出牌階段內使用或打出過【殺】，你可以跳過棄牌階段。"
+      }
+    ],
+    "partners": ["孫權", "周瑜"]
+  },
+  {
+    "id": "huaxiong",
+    "name": "華雄",
+    "faction": "群",
+    "image": "/images/generals/huaxiong.jpg",
+    "modes": ["國戰"],
+    "versions": ["受命于天"],
+    "skills": [
+      {
+        "name": "耀武",
+        "text": "當你受到紅色【殺】造成的傷害後，傷害來源可以回復1點體力。"
+      }
+    ],
+    "partners": ["呂布", "董卓"]
+  }
+]
