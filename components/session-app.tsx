@@ -349,13 +349,13 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
         channel = supabase
           .channel(`room:${state.roomId}`)
           .on("postgres_changes", { event: "*", schema: "public", table: "rooms", filter: `id=eq.${state.roomId}` }, () => {
-            if (!isApplyingRemote.current) refreshFromSupabase(true);
+            refreshFromSupabase(true);
           })
           .on("postgres_changes", { event: "*", schema: "public", table: "players", filter: `room_id=eq.${state.roomId}` }, () => {
-            if (!isApplyingRemote.current) refreshFromSupabase(true);
+            refreshFromSupabase(true);
           })
           .on("postgres_changes", { event: "*", schema: "public", table: "player_generals" }, () => {
-            if (!isApplyingRemote.current) refreshFromSupabase(true);
+            refreshFromSupabase(true);
           })
           .subscribe();
       } catch (error) {
@@ -380,7 +380,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
 
   function markChanged() {
     if (!isApplyingRemote.current) {
-      setSavedAt(supabase ? "同步中..." : "有未保存變更");
+      setSavedAt(supabase ? "同步中..." : "有未本機備份變更");
     }
   }
 
@@ -471,15 +471,16 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
   }
 
   async function updatePlayer(playerId: number, patch: Partial<Player>) {
-    let targetDbId: string | undefined;
+    const targetPlayer = players.find((player) => player.id === playerId);
+    const targetDbId = targetPlayer?.dbId;
 
     setPlayers((current) =>
       current.map((player) => {
         if (player.id !== playerId) return player;
-        targetDbId = player.dbId;
         return { ...player, ...patch };
       })
     );
+
     markChanged();
 
     if (supabase && targetDbId) {
@@ -489,43 +490,53 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
       if (patch.identity !== undefined) dbPatch.identity = patch.identity;
 
       try {
-        await supabase
+        const { error } = await supabase
           .from("players")
           .update({ ...dbPatch, updated_at: new Date().toISOString() })
           .eq("id", targetDbId);
+
+        if (error) throw error;
+
         setSavedAt("已同步");
       } catch (error) {
         console.error("updatePlayer failed:", error);
         setSavedAt("同步失敗");
       }
+    } else if (supabase && !targetDbId) {
+      console.error("updatePlayer failed: missing player dbId", {
+        playerId,
+        players,
+      });
+      setSavedAt("同步失敗：玩家資料尚未載入");
     }
   }
 
   async function chooseGeneral(general: General) {
     if (!picker) return;
 
-    let targetDbId: string | undefined;
+    const selectedPlayerId = picker.playerId;
+    const selectedSlot = picker.slotIndex;
+    const targetPlayer = players.find((player) => player.id === selectedPlayerId);
+    const targetDbId = targetPlayer?.dbId;
 
     setPlayers((current) =>
       current.map((player) => {
-        if (player.id !== picker.playerId) return player;
+        if (player.id !== selectedPlayerId) return player;
 
-        targetDbId = player.dbId;
         const nextGenerals = [...player.generals];
-        nextGenerals[picker.slotIndex] = general;
+        nextGenerals[selectedSlot] = general;
 
         return { ...player, generals: nextGenerals };
       })
     );
 
-    const selectedSlot = picker.slotIndex;
     setPicker(null);
     setQuery("");
     markChanged();
 
     if (supabase && targetDbId) {
       try {
-        await supabase
+        const { error } = await supabase
           .from("player_generals")
           .upsert(
             {
@@ -536,22 +547,31 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
             },
             { onConflict: "player_id,slot_index" }
           );
+
+        if (error) throw error;
+
         setSavedAt("已同步");
       } catch (error) {
         console.error("chooseGeneral failed:", error);
         setSavedAt("同步失敗");
       }
+    } else if (supabase && !targetDbId) {
+      console.error("chooseGeneral failed: missing player dbId", {
+        selectedPlayerId,
+        players,
+      });
+      setSavedAt("同步失敗：玩家資料尚未載入");
     }
   }
 
   async function removeGeneral(playerId: number, slotIndex: number) {
-    let targetDbId: string | undefined;
+    const targetPlayer = players.find((player) => player.id === playerId);
+    const targetDbId = targetPlayer?.dbId;
 
     setPlayers((current) =>
       current.map((player) => {
         if (player.id !== playerId) return player;
 
-        targetDbId = player.dbId;
         const nextGenerals = [...player.generals];
         nextGenerals[slotIndex] = null;
 
@@ -563,7 +583,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
 
     if (supabase && targetDbId) {
       try {
-        await supabase
+        const { error } = await supabase
           .from("player_generals")
           .upsert(
             {
@@ -574,11 +594,20 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
             },
             { onConflict: "player_id,slot_index" }
           );
+
+        if (error) throw error;
+
         setSavedAt("已同步");
       } catch (error) {
         console.error("removeGeneral failed:", error);
         setSavedAt("同步失敗");
       }
+    } else if (supabase && !targetDbId) {
+      console.error("removeGeneral failed: missing player dbId", {
+        playerId,
+        players,
+      });
+      setSavedAt("同步失敗：玩家資料尚未載入");
     }
   }
 
@@ -655,7 +684,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
         <p style={styles.description}>
           國戰與身分局玩家自用資料站。資料僅供參考，以官方裁定為準。
           <br />
-          房間 <strong>{roomCode}</strong> · 目前 {gameMode} / {version} · 支援 {playerLimitsByMode[gameMode].min}-{playerLimitsByMode[gameMode].max} 人 · {supabase ? (isReady ? "多人同步已連線" : "連線中") : "本機模式"}
+          房間 <strong>{roomCode}</strong> · 目前 {gameMode} / {version} · {supabase ? (isReady ? "多人同步已連線" : "連線中") : "本機模式"}
         </p>
       </header>
 
@@ -710,7 +739,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
           <div style={styles.saveArea}>
             <span style={styles.savedText}>{savedAt}</span>
             <button onClick={saveSession} style={styles.primaryButton}>
-              保存
+              本機備份
             </button>
           </div>
         </section>
