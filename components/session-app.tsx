@@ -881,8 +881,8 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
           style={{
             ...styles.playersGrid,
             gridTemplateColumns: isIdentityMode
-              ? "repeat(auto-fit, minmax(240px, 300px))"
-              : "repeat(auto-fit, minmax(540px, 1fr))",
+              ? "repeat(auto-fit, minmax(min(100%, 240px), 300px))"
+              : "repeat(auto-fit, minmax(min(100%, 520px), 1fr))",
           }}
         >
           {players.map((player) => {
@@ -937,7 +937,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
                 <div
                   style={{
                     ...styles.generalSlots,
-                    gridTemplateColumns: isIdentityMode ? "1fr" : "1fr 1fr",
+                    gridTemplateColumns: isIdentityMode ? "1fr" : "repeat(2, minmax(0, 1fr))",
                   }}
                 >
                   {player.generals.map((general, slotIndex) => {
@@ -1069,6 +1069,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
 const styles: Record<string, React.CSSProperties> = {
   page: {
     minHeight: "100vh",
+    overflowX: "hidden",
     background:
       "radial-gradient(circle at top left, rgba(92,28,20,.45), transparent 36%), #130f0d",
     color: "#f5f5f4",
@@ -1076,6 +1077,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   header: {
     maxWidth: 1180,
+    boxSizing: "border-box",
     margin: "0 auto",
     padding: "22px 20px 18px",
   },
@@ -1124,6 +1126,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   main: {
     maxWidth: 1180,
+    boxSizing: "border-box",
     margin: "0 auto",
     padding: "0 20px 50px",
   },
@@ -1246,6 +1249,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   playerCard: {
     position: "relative",
+    minWidth: 0,
     background: "#1d1713",
     border: "1px solid rgba(127,29,29,.75)",
     borderRadius: 8,
@@ -1320,13 +1324,15 @@ const styles: Record<string, React.CSSProperties> = {
   },
   generalSlots: {
     display: "grid",
+    minWidth: 0,
     gap: 16,
     alignItems: "start",
   },
   generalSlot: {
     position: "relative",
     width: "100%",
-    height: 360,
+    minWidth: 0,
+    height: "clamp(260px, 28vw, 360px)",
     background: "#625746",
     border: "1px dashed rgba(185,28,28,.75)",
     borderRadius: 8,
