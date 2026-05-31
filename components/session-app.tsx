@@ -67,6 +67,116 @@ function generalFromId(generalId: string | null | undefined) {
   return generals.find((general) => general.id === generalId) ?? null;
 }
 
+function normalizeChineseSearch(value: string) {
+  const simplifiedToTraditional: Record<string, string> = {
+    国: "國",
+    战: "戰",
+    标: "標",
+    准: "準",
+    身: "身",
+    份: "分",
+    局: "局",
+    受: "受",
+    命: "命",
+    于: "于",
+    於: "于",
+    天: "天",
+    君: "君",
+    临: "臨",
+    下: "下",
+    珍: "珍",
+    藏: "藏",
+    军: "軍",
+    争: "爭",
+
+    魏: "魏",
+    蜀: "蜀",
+    吴: "吳",
+    吳: "吳",
+    群: "群",
+    晋: "晉",
+    晉: "晉",
+    神: "神",
+
+    吕: "呂",
+    呂: "呂",
+    刘: "劉",
+    劉: "劉",
+    关: "關",
+    關: "關",
+    张: "張",
+    張: "張",
+    赵: "趙",
+    趙: "趙",
+    孙: "孫",
+    孫: "孫",
+    黄: "黃",
+    黃: "黃",
+    马: "馬",
+    馬: "馬",
+    许: "許",
+    許: "許",
+    诸: "諸",
+    諸: "諸",
+    庞: "龐",
+    龐: "龐",
+    邓: "鄧",
+    鄧: "鄧",
+    钟: "鍾",
+    鍾: "鍾",
+    华: "華",
+    華: "華",
+    乐: "樂",
+    樂: "樂",
+    义: "義",
+    義: "義",
+    仪: "儀",
+    儀: "儀",
+    韦: "韋",
+    韋: "韋",
+    颜: "顏",
+    顏: "顏",
+    袁: "袁",
+    曹: "曹",
+    操: "操",
+    蒙: "蒙",
+    权: "權",
+    權: "權",
+    备: "備",
+    備: "備",
+    飞: "飛",
+    飛: "飛",
+    云: "雲",
+    雲: "雲",
+    懿: "懿",
+    司: "司",
+    郭: "郭",
+    嘉: "嘉",
+    瑜: "瑜",
+    亮: "亮",
+    逊: "遜",
+    遜: "遜",
+    盖: "蓋",
+    蓋: "蓋",
+    卓: "卓",
+    布: "布",
+    雄: "雄",
+    繡: "繡",
+    绣: "繡",
+    昭: "昭",
+    祖: "祖",
+    熙: "熙",
+  };
+
+  return value
+    .toLowerCase()
+    .split("")
+    .map((char) => simplifiedToTraditional[char] ?? char)
+    .join("")
+    .replace(/\s+/g, "");
+}
+
+
 async function loadRoomState(roomCode: string, fallbackMode: GameMode, fallbackVersion: string, fallbackCount: number) {
   if (!supabase) return null;
 
@@ -258,13 +368,14 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
   const isApplyingRemote = useRef(false);
 
   const filteredGenerals = useMemo(() => {
-    const keyword = query.trim();
+    const keyword = normalizeChineseSearch(query.trim());
 
     return generals.filter((general) => {
-      const matchesQuery =
-        !keyword ||
-        general.name.includes(keyword) ||
-        general.faction.includes(keyword);
+      const searchableText = normalizeChineseSearch(
+        [general.name, general.faction, general.id].join(" ")
+      );
+
+      const matchesQuery = !keyword || searchableText.includes(keyword);
 
       return (
         matchesQuery &&
@@ -829,52 +940,121 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
                     gridTemplateColumns: isIdentityMode ? "1fr" : "1fr 1fr",
                   }}
                 >
-                  {player.generals.map((general, slotIndex) => (
-                    <button
-                      key={slotIndex}
-                      onClick={() =>
-                        general ? undefined : setPicker({ playerId: player.id, slotIndex })
-                      }
-                      style={{
-                        ...styles.generalSlot,
-                        ...(isIdentityMode ? styles.identityGeneralSlot : {}),
-                      }}
-                    >
-                      {general ? (
-                        <div style={styles.generalCard}>
-                          <div style={styles.generalArt}>
-                            {general.image ? (
-                              <img src={general.image} alt={general.name} style={styles.generalImage} />
-                            ) : (
-                              <span style={styles.generalInitial}>{general.name.slice(0, 1)}</span>
-                            )}
+                  {player.generals.map((general, slotIndex) => {
+                    const isPickingThisSlot =
+                      picker?.playerId === player.id && picker.slotIndex === slotIndex;
 
-                            <div style={styles.generalBadge}>
-                              <Badge faction={general.faction} />
+                    return (
+                      <div
+                        key={slotIndex}
+                        onClick={() => {
+                          if (!general) {
+                            setPicker({ playerId: player.id, slotIndex });
+                            setQuery("");
+                          }
+                        }}
+                        style={{
+                          ...styles.generalSlot,
+                          ...(isIdentityMode ? styles.identityGeneralSlot : {}),
+                        }}
+                      >
+                        {general ? (
+                          <div style={styles.generalCard}>
+                            <div style={styles.generalArt}>
+                              {general.image ? (
+                                <img src={general.image} alt={general.name} style={styles.generalImage} />
+                              ) : (
+                                <span style={styles.generalInitial}>{general.name.slice(0, 1)}</span>
+                              )}
+
+                              <div style={styles.generalBadge}>
+                                <Badge faction={general.faction} />
+                              </div>
                             </div>
-                          </div>
 
-                          <div style={styles.generalFooter}>
-                            <strong>{general.name}</strong>
                             <span
                               onClick={(event) => {
                                 event.stopPropagation();
                                 removeGeneral(player.id, slotIndex);
                               }}
-                              style={styles.removeButton}
+                              style={styles.floatingRemoveButton}
+                              aria-label={`移除${general.name}`}
+                              title="移除武將"
                             >
                               ×
                             </span>
+
+                            <div style={styles.generalFooter}>
+                              <strong>{general.name}</strong>
+                            </div>
                           </div>
-                        </div>
-                      ) : (
-                        <div style={styles.emptySlot}>
-                          <div style={styles.plus}>＋</div>
-                          <div>選擇武將 {slotIndex + 1}</div>
-                        </div>
-                      )}
-                    </button>
-                  ))}
+                        ) : isPickingThisSlot ? (
+                          <div
+                            style={styles.inlinePicker}
+                            onClick={(event) => event.stopPropagation()}
+                          >
+                            <input
+                              value={query}
+                              onChange={(event) => setQuery(event.target.value)}
+                              autoFocus
+                              placeholder="搜尋武將..."
+                              style={styles.inlinePickerInput}
+                            />
+
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setPicker(null);
+                                setQuery("");
+                              }}
+                              style={styles.inlinePickerCancel}
+                            >
+                              取消
+                            </button>
+
+                            <div style={styles.inlinePickerList}>
+                              {filteredGenerals.map((general) => (
+                                <button
+                                  key={general.id}
+                                  type="button"
+                                  onClick={() => chooseGeneral(general)}
+                                  style={styles.inlinePickerItem}
+                                >
+                                  <div style={styles.inlinePickerThumb}>
+                                    {general.image ? (
+                                      <img
+                                        src={general.image}
+                                        alt={general.name}
+                                        style={styles.inlinePickerThumbImage}
+                                      />
+                                    ) : (
+                                      <span style={styles.inlinePickerInitial}>
+                                        {general.name.slice(0, 1)}
+                                      </span>
+                                    )}
+                                  </div>
+
+                                  <span style={styles.inlinePickerName}>{general.name}</span>
+                                  <Badge faction={general.faction} />
+                                </button>
+                              ))}
+
+                              {filteredGenerals.length === 0 && (
+                                <div style={styles.inlinePickerEmpty}>
+                                  沒有符合的武將
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        ) : (
+                          <div style={styles.emptySlot}>
+                            <div style={styles.plus}>＋</div>
+                            <div>選擇武將 {slotIndex + 1}</div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </article>
             );
@@ -882,61 +1062,6 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
         </section>
       </main>
 
-      {picker && (
-        <div style={styles.modalBackdrop}>
-          <div style={styles.modal}>
-            <div style={styles.modalHeader}>
-              <div>
-                <div style={styles.sectionLabel}>
-                  <span style={styles.labelLine} />
-                  選擇武將
-                </div>
-                <h2 style={styles.modalTitle}>
-                  玩家 {picker.playerId} · 第 {picker.slotIndex + 1} 將
-                </h2>
-              </div>
-
-              <button onClick={() => setPicker(null)} style={styles.closeButton}>
-                ×
-              </button>
-            </div>
-
-            <input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="搜尋武將、勢力..."
-              style={styles.searchInput}
-            />
-
-            <div style={styles.pickerGrid}>
-              {filteredGenerals.map((general) => (
-                <button
-                  key={general.id}
-                  onClick={() => chooseGeneral(general)}
-                  style={styles.pickerCard}
-                >
-                  <div style={styles.pickerArt}>
-                    {general.image ? (
-                      <img src={general.image} alt={general.name} style={styles.generalImage} />
-                    ) : (
-                      <span style={styles.pickerInitial}>{general.name.slice(0, 1)}</span>
-                    )}
-                  </div>
-
-                  <div style={styles.pickerFooter}>
-                    <strong>{general.name}</strong>
-                    <Badge faction={general.faction} />
-                  </div>
-                </button>
-              ))}
-
-              {filteredGenerals.length === 0 && (
-                <div style={styles.emptyResult}>這個模式 / 版本目前沒有可選武將</div>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
@@ -1266,6 +1391,118 @@ const styles: Record<string, React.CSSProperties> = {
     color: "#fff",
     cursor: "pointer",
     fontWeight: 900,
+  },
+  floatingRemoveButton: {
+    position: "absolute",
+    top: 8,
+    right: 8,
+    zIndex: 20,
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 32,
+    height: 32,
+    borderRadius: 999,
+    background: "rgba(226,232,240,.86)",
+    color: "#334155",
+    cursor: "pointer",
+    fontWeight: 900,
+    fontSize: 22,
+    lineHeight: 1,
+    border: "1px solid rgba(255,255,255,.78)",
+    boxShadow: "0 4px 14px rgba(0,0,0,.38)",
+    backdropFilter: "blur(3px)",
+  },
+  inlinePicker: {
+    height: "100%",
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    background: "#1d1713",
+    padding: 10,
+    gap: 8,
+  },
+  inlinePickerInput: {
+    width: "100%",
+    height: 40,
+    background: "#14100e",
+    color: "#f5f5f4",
+    border: "1px solid #57534e",
+    borderRadius: 4,
+    padding: "0 10px",
+    fontSize: 14,
+    outline: "none",
+  },
+  inlinePickerCancel: {
+    alignSelf: "center",
+    background: "transparent",
+    border: "none",
+    color: "#a68a64",
+    cursor: "pointer",
+    fontSize: 13,
+    padding: "2px 10px",
+  },
+  inlinePickerList: {
+    flex: 1,
+    overflowY: "auto",
+    display: "flex",
+    flexDirection: "column",
+    gap: 6,
+    paddingRight: 4,
+  },
+  inlinePickerItem: {
+    width: "100%",
+    minHeight: 52,
+    display: "grid",
+    gridTemplateColumns: "42px 1fr auto",
+    alignItems: "center",
+    gap: 10,
+    border: "1px solid rgba(185,28,28,.35)",
+    borderRadius: 6,
+    background: "#d9c48f",
+    color: "#fef3c7",
+    padding: 6,
+    cursor: "pointer",
+    textAlign: "left",
+  },
+  inlinePickerThumb: {
+    width: 38,
+    height: 44,
+    borderRadius: 4,
+    overflow: "hidden",
+    background: "#292524",
+    border: "1px solid rgba(127,29,29,.7)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  inlinePickerThumbImage: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    display: "block",
+  },
+  inlinePickerInitial: {
+    color: "#f5f5f4",
+    fontWeight: 900,
+    fontSize: 20,
+  },
+  inlinePickerName: {
+    color: "#fff7ed",
+    fontWeight: 800,
+    fontSize: 15,
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap",
+  },
+  inlinePickerEmpty: {
+    color: "#c8b6a6",
+    border: "1px solid #57534e",
+    background: "#14100e",
+    borderRadius: 6,
+    padding: 16,
+    textAlign: "center",
+    fontSize: 14,
   },
   emptySlot: {
     display: "flex",
