@@ -1,29 +1,59 @@
 [
   {
-    "id": "lumeng",
-    "name": "呂蒙",
-    "faction": "吳",
-    "image": "/images/generals/lumeng.jpg",
+    "id": "liubei_guozhan_2024_em001",
+    "name": "刘备",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.EM001.龙横蜀汉.刘备.png",
     "modes": ["國戰"],
     "versions": ["受命于天"],
     "skills": [],
     "partners": []
   },
-{
-  "id": "liubei_guozhan_2024_junzhu",
-  "name": "刘备",
-  "faction": "蜀",
-  "image": "/images/generals/国战UI.EM001.龙横蜀汉.刘备.png",
-  "modes": ["國戰"],
-  "versions": ["受命于天"],
-  "skills": [],
-  "partners": []
-},
   {
-    "id": "caocao_guozhan_2024_junzhu",
+    "id": "zhangjiao_guozhan_2024_em002",
+    "name": "张角",
+    "faction": "群",
+    "image": "/images/generals/国战UI.EM002.时代的先驱.张角.png",
+    "modes": ["國戰"],
+    "versions": ["受命于天"],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "sunquan_guozhan_2024_em003",
+    "name": "孙权",
+    "faction": "吳",
+    "image": "/images/generals/国战UI.EM003.虎踞江东.孙权.png",
+    "modes": ["國戰"],
+    "versions": ["受命于天"],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "caocao_guozhan_2024_em004",
     "name": "曹操",
     "faction": "魏",
     "image": "/images/generals/国战UI.EM004.凤舞九天.曹操.png",
+    "modes": ["國戰"],
+    "versions": ["受命于天"],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "simayi_guozhan_2024_em005",
+    "name": "司马懿",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.EM005.时代的归墟.司马懿.png",
+    "modes": ["國戰"],
+    "versions": ["受命于天"],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "liubei_guozhan_2024_shu001",
+    "name": "刘备",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU001.乱世的枭雄.刘备.png",
     "modes": ["國戰"],
     "versions": ["受命于天"],
     "skills": [],
