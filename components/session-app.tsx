@@ -344,7 +344,7 @@ function Badge({ faction }: { faction: string }) {
         background: color.bg,
         color: color.text,
         fontSize: 12,
-        fontWeight: 900,
+        fontWeight: 800,
         padding: "3px 8px",
       }}
     >
@@ -773,6 +773,9 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
   }
 
   const isIdentityMode = gameMode === "身分局";
+  const isMobile =
+    typeof window !== "undefined" &&
+    window.matchMedia("(max-width: 640px)").matches;
 
   return (
     <div style={styles.page}>
@@ -880,9 +883,11 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
         <section
           style={{
             ...styles.playersGrid,
-            gridTemplateColumns: isIdentityMode
-              ? "repeat(auto-fit, minmax(min(100%, 240px), 300px))"
-              : "repeat(auto-fit, minmax(min(100%, 520px), 1fr))",
+            gridTemplateColumns: isMobile
+              ? "1fr"
+              : isIdentityMode
+                ? "repeat(auto-fit, minmax(min(100%, 240px), 300px))"
+                : "repeat(auto-fit, minmax(min(100%, 520px), 1fr))",
           }}
         >
           {players.map((player) => {
@@ -894,6 +899,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
                 style={{
                   ...styles.playerCard,
                   ...(isIdentityMode ? styles.identityPlayerCard : {}),
+                  ...(isMobile ? styles.mobilePlayerCard : {}),
                   opacity: player.dead ? 0.45 : 1,
                   filter: player.dead ? "grayscale(1)" : "none",
                 }}
@@ -937,7 +943,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
                 <div
                   style={{
                     ...styles.generalSlots,
-                    gridTemplateColumns: isIdentityMode ? "1fr" : "repeat(2, minmax(0, 1fr))",
+                    gridTemplateColumns: isMobile || isIdentityMode ? "1fr" : "repeat(2, minmax(0, 1fr))",
                   }}
                 >
                   {player.generals.map((general, slotIndex) => {
@@ -1117,7 +1123,7 @@ const styles: Record<string, React.CSSProperties> = {
     marginTop: 12,
     marginBottom: 0,
     color: "#d6d3d1",
-    fontSize: 18,
+    fontSize: 15,
     lineHeight: 1.8,
   },
   main: {
@@ -1133,7 +1139,7 @@ const styles: Record<string, React.CSSProperties> = {
     gap: 12,
     border: "1px solid rgba(127,29,29,.75)",
     background: "#1d1713",
-    borderRadius: 10,
+    borderRadius: 6,
     padding: 16,
     marginBottom: 16,
     boxShadow: "0 12px 30px rgba(0,0,0,.22)",
@@ -1154,7 +1160,7 @@ const styles: Record<string, React.CSSProperties> = {
     background: "#14100e",
     color: "#f5f5f4",
     border: "1px solid #57534e",
-    borderRadius: 6,
+    borderRadius: 4,
     padding: "0 10px",
   },
   dangerButton: {
@@ -1254,6 +1260,9 @@ const styles: Record<string, React.CSSProperties> = {
   },
   identityPlayerCard: {
     maxWidth: 320,
+  },
+  mobilePlayerCard: {
+    padding: 10,
   },
   cornerTop: {
     position: "absolute",
@@ -1423,18 +1432,18 @@ const styles: Record<string, React.CSSProperties> = {
     display: "flex",
     flexDirection: "column",
     background: "#1d1713",
-    padding: 6,
+    padding: 10,
     gap: 8,
   },
   inlinePickerInput: {
     width: "100%",
-    height: 42,
+    height: 40,
     background: "#14100e",
     color: "#f5f5f4",
     border: "1px solid #57534e",
     borderRadius: 4,
     padding: "0 10px",
-    fontSize: 15,
+    fontSize: 14,
     outline: "none",
   },
   inlinePickerCancel: {
@@ -1451,14 +1460,14 @@ const styles: Record<string, React.CSSProperties> = {
     overflowY: "auto",
     display: "flex",
     flexDirection: "column",
-    gap: 8,
-    paddingRight: 2,
+    gap: 6,
+    paddingRight: 4,
   },
   inlinePickerItem: {
     width: "100%",
-    minHeight: 62,
+    minHeight: 52,
     display: "grid",
-    gridTemplateColumns: "52px minmax(0, 1fr) auto",
+    gridTemplateColumns: "42px 1fr auto",
     alignItems: "center",
     gap: 10,
     border: "1px solid rgba(185,28,28,.35)",
@@ -1470,8 +1479,8 @@ const styles: Record<string, React.CSSProperties> = {
     textAlign: "left",
   },
   inlinePickerThumb: {
-    width: 50,
-    height: 56,
+    width: 38,
+    height: 44,
     borderRadius: 4,
     overflow: "hidden",
     background: "#292524",
