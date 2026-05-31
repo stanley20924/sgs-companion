@@ -10,10 +10,10 @@
     "partners": []
   },
   {
-    "id": "huaxiong",
-    "name": "華雄",
-    "faction": "群",
-    "image": "/images/generals/huaxiong.jpg",
+    "id": "liubei_guozhan_2024_junzhu",
+    "name": "劉備",
+    "faction": "蜀",
+    "image": "/images/generals/國戰UI.EM001.龍橫蜀漢.劉備.png",
     "modes": ["國戰"],
     "versions": ["受命于天"],
     "skills": [],
