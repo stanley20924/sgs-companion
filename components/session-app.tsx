@@ -1127,10 +1127,11 @@ const styles: Record<string, React.CSSProperties> = {
     lineHeight: 1.8,
   },
   main: {
-    maxWidth: 1180,
-    boxSizing: "border-box",
-    margin: "0 auto",
-    padding: "0 20px 50px",
+  width: "100%",
+  maxWidth: 1180,
+  boxSizing: "border-box",
+  margin: "0 auto",
+  padding: "0 8px 50px",
   },
   controlPanel: {
     display: "flex",
