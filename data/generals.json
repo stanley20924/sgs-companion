@@ -9,16 +9,16 @@
     "skills": [],
     "partners": []
   },
-  {
-    "id": "liubei_guozhan_2024_junzhu",
-    "name": "劉備",
-    "faction": "蜀",
-    "image": "/images/generals/國戰UI.EM001.龍橫蜀漢.劉備.png",
-    "modes": ["國戰"],
-    "versions": ["受命于天"],
-    "skills": [],
-    "partners": []
-  },
+{
+  "id": "liubei_guozhan_2024_junzhu",
+  "name": "刘备",
+  "faction": "蜀",
+  "image": "/images/generals/国战UI.EM001.龙横蜀汉.刘备.png",
+  "modes": ["國戰"],
+  "versions": ["受命于天"],
+  "skills": [],
+  "partners": []
+},
   {
     "id": "caocao_guozhan_2024_junzhu",
     "name": "曹操",
