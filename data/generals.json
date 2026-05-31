@@ -1,51 +1,71 @@
 [
   {
     "id": "gz_smyt_em001_liubei",
-    "name": "刘备",
+    "name": "君主·刘备",
     "faction": "蜀",
     "image": "/images/generals/国战UI.EM001.龙横蜀汉.刘备.png",
-    "modes": ["國戰"],
-    "versions": ["受命于天"],
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
     "skills": [],
     "partners": []
   },
   {
     "id": "gz_smyt_em002_zhangjiao",
-    "name": "张角",
+    "name": "君主·张角",
     "faction": "群",
     "image": "/images/generals/国战UI.EM002.时代的先驱.张角.png",
-    "modes": ["國戰"],
-    "versions": ["受命于天"],
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
     "skills": [],
     "partners": []
   },
   {
     "id": "gz_smyt_em003_sunquan",
-    "name": "孙权",
+    "name": "君主·孙权",
     "faction": "吳",
     "image": "/images/generals/国战UI.EM003.虎踞江东.孙权.png",
-    "modes": ["國戰"],
-    "versions": ["受命于天"],
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
     "skills": [],
     "partners": []
   },
   {
     "id": "gz_smyt_em004_caocao",
-    "name": "曹操",
+    "name": "君主·曹操",
     "faction": "魏",
     "image": "/images/generals/国战UI.EM004.凤舞九天.曹操.png",
-    "modes": ["國戰"],
-    "versions": ["受命于天"],
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
     "skills": [],
     "partners": []
   },
   {
     "id": "gz_smyt_em005_simayi",
-    "name": "司马懿",
+    "name": "君主·司马懿",
     "faction": "魏",
     "image": "/images/generals/国战UI.EM005.时代的归墟.司马懿.png",
-    "modes": ["國戰"],
-    "versions": ["受命于天"],
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
     "skills": [],
     "partners": []
   },
@@ -54,8 +74,12 @@
     "name": "刘备",
     "faction": "蜀",
     "image": "/images/generals/国战UI.SHU001.乱世的枭雄.刘备.png",
-    "modes": ["國戰"],
-    "versions": ["受命于天"],
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
     "skills": [],
     "partners": []
   },
@@ -64,8 +88,12 @@
     "name": "关羽",
     "faction": "蜀",
     "image": "/images/generals/国战UI.SHU002.美髯公.关羽.png",
-    "modes": ["國戰"],
-    "versions": ["受命于天"],
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
     "skills": [],
     "partners": []
   },
@@ -74,18 +102,26 @@
     "name": "张飞",
     "faction": "蜀",
     "image": "/images/generals/国战UI.SHU003.万夫不当.张飞.png",
-    "modes": ["國戰"],
-    "versions": ["受命于天"],
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
     "skills": [],
     "partners": []
   },
   {
     "id": "gz_smyt_shu004_zhugeliang",
-    "name": "诸葛亮",
+    "name": "迟暮的丞相·诸葛亮",
     "faction": "蜀",
     "image": "/images/generals/国战UI.SHU004.迟暮的丞相.诸葛亮.png",
-    "modes": ["國戰"],
-    "versions": ["受命于天"],
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
     "skills": [],
     "partners": []
   },
@@ -94,8 +130,600 @@
     "name": "赵云",
     "faction": "蜀",
     "image": "/images/generals/国战UI.SHU005.虎威将军.赵云.png",
-    "modes": ["國戰"],
-    "versions": ["受命于天"],
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu006_machao",
+    "name": "马超",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU006.一骑当千.马超.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu007_huangyueying",
+    "name": "黄月英",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU007.归隐的杰女.黄月英.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu008_huangzhong",
+    "name": "黄忠",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU008.老当益壮.黄忠.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu009_weiyan",
+    "name": "魏延",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU009.嗜血的独狼.魏延.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu010_pangtong",
+    "name": "庞统",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU010.凤雏.庞统.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu011_zhugeliang",
+    "name": "卧龙·诸葛亮",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU011.卧龙.诸葛亮.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu012_jiangwei",
+    "name": "姜维",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU012.龙的衣钵.姜维.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu013_liushan",
+    "name": "刘禅",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU013.无为的真命主.刘禅.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu014_menghuo",
+    "name": "孟获",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU014.南蛮王.孟获.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu015_zhurong",
+    "name": "祝融",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU015.野性的女王.祝融.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu016_ganfuren",
+    "name": "甘夫人",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU016.昭烈皇后.甘夫人.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu017_xushu",
+    "name": "徐庶",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU017.难为完臣.徐庶.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu018_jiangwan_feiyi",
+    "name": "蒋琬&费祎",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU018.社稷股肱.蒋琬&费祎.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu019_madai",
+    "name": "马岱",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU019.临危受命.马岱.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu020_shamoke",
+    "name": "沙摩柯",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU020.五溪蛮王.沙摩柯.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu021_mifuren",
+    "name": "糜夫人",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU021.乱世沉香.糜夫人.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu022_masu",
+    "name": "马谡",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU022.帷幄经谋.马谡.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu023_wangping",
+    "name": "王平",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU023.键闭剑门.王平.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu024_fazheng",
+    "name": "法正",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU024.蜀汉的辅翼.法正.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei001_caocao",
+    "name": "曹操",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI001.魏武帝.曹操.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei002_simayi",
+    "name": "司马懿",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI002.狼顾之鬼.司马懿.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei003_xiahoudun",
+    "name": "夏侯惇",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI003.独眼的罗刹.夏侯惇.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei004_zhangliao",
+    "name": "张辽",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI004.前将军.张辽.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei005_xuchu",
+    "name": "许褚",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI005.虎痴.许褚.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei006_guojia",
+    "name": "郭嘉",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI006.早终的先知.郭嘉.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei007_zhenji",
+    "name": "甄姬",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI007.薄幸的美人.甄姬.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei008_xiahouyuan",
+    "name": "夏侯渊",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI008.疾行的猎豹.夏侯渊.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei009_zhanghe",
+    "name": "张郃",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI009.料敌机先.张郃.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei010_xuhuang",
+    "name": "徐晃",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI010.周亚夫之风.徐晃.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei011_caoren",
+    "name": "曹仁",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI011.大将军.曹仁.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei012_dianwei",
+    "name": "典韦",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI012.拔山超海.典韦.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei013_xunyu",
+    "name": "荀彧",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI013.王佐之才.荀彧.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei014_caopi",
+    "name": "曹丕",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI014.霸业的继承者.曹丕.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei015_dengai",
+    "name": "邓艾",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI015.矫然的壮士.邓艾.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei016_yuejin",
+    "name": "乐进",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI016.奋强突固.乐进.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei017_lidian",
+    "name": "李典",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI017.深明大义.李典.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei018_caohong",
+    "name": "曹洪",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI018.魏之福将.曹洪.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei020_xunyou",
+    "name": "荀攸",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI020.曹魏的谋主.荀攸.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei021_cuiyan_maojie",
+    "name": "崔琰&毛玠",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI021.日出月盛.崔琰&毛玠.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei022_bianfuren",
+    "name": "卞夫人",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI022.奕世之雍容.卞夫人.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei023_zangba",
+    "name": "臧霸",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI023.节度青徐.臧霸.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei024_yujin",
+    "name": "于禁",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI024.讨暴坚垒.于禁.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
     "skills": [],
     "partners": []
   }
