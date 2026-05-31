@@ -1,6 +1,6 @@
 [
   {
-    "id": "liubei_guozhan_2024_em001",
+    "id": "gz_smyt_em001_liubei",
     "name": "刘备",
     "faction": "蜀",
     "image": "/images/generals/国战UI.EM001.龙横蜀汉.刘备.png",
@@ -10,7 +10,7 @@
     "partners": []
   },
   {
-    "id": "zhangjiao_guozhan_2024_em002",
+    "id": "gz_smyt_em002_zhangjiao",
     "name": "张角",
     "faction": "群",
     "image": "/images/generals/国战UI.EM002.时代的先驱.张角.png",
@@ -20,7 +20,7 @@
     "partners": []
   },
   {
-    "id": "sunquan_guozhan_2024_em003",
+    "id": "gz_smyt_em003_sunquan",
     "name": "孙权",
     "faction": "吳",
     "image": "/images/generals/国战UI.EM003.虎踞江东.孙权.png",
@@ -30,7 +30,7 @@
     "partners": []
   },
   {
-    "id": "caocao_guozhan_2024_em004",
+    "id": "gz_smyt_em004_caocao",
     "name": "曹操",
     "faction": "魏",
     "image": "/images/generals/国战UI.EM004.凤舞九天.曹操.png",
@@ -40,7 +40,7 @@
     "partners": []
   },
   {
-    "id": "simayi_guozhan_2024_em005",
+    "id": "gz_smyt_em005_simayi",
     "name": "司马懿",
     "faction": "魏",
     "image": "/images/generals/国战UI.EM005.时代的归墟.司马懿.png",
@@ -50,10 +50,50 @@
     "partners": []
   },
   {
-    "id": "liubei_guozhan_2024_shu001",
+    "id": "gz_smyt_shu001_liubei",
     "name": "刘备",
     "faction": "蜀",
     "image": "/images/generals/国战UI.SHU001.乱世的枭雄.刘备.png",
+    "modes": ["國戰"],
+    "versions": ["受命于天"],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu002_guanyu",
+    "name": "关羽",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU002.美髯公.关羽.png",
+    "modes": ["國戰"],
+    "versions": ["受命于天"],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu003_zhangfei",
+    "name": "张飞",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU003.万夫不当.张飞.png",
+    "modes": ["國戰"],
+    "versions": ["受命于天"],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu004_zhugeliang",
+    "name": "诸葛亮",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU004.迟暮的丞相.诸葛亮.png",
+    "modes": ["國戰"],
+    "versions": ["受命于天"],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu005_zhaoyun",
+    "name": "赵云",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU005.虎威将军.赵云.png",
     "modes": ["國戰"],
     "versions": ["受命于天"],
     "skills": [],
