@@ -983,10 +983,6 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
                             >
                               ×
                             </span>
-
-                            <div style={styles.generalFooter}>
-                              <strong>{general.name}</strong>
-                            </div>
                           </div>
                         ) : isPickingThisSlot ? (
                           <div
@@ -1362,7 +1358,7 @@ const styles: Record<string, React.CSSProperties> = {
   generalImage: {
     width: "100%",
     height: "100%",
-    objectFit: "cover",
+    objectFit: "contain",
     display: "block",
   },
   generalInitial: {
