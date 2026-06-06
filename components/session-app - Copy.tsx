@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import * as OpenCC from "opencc-js/core";
-import * as Locale from "opencc-js/preset";
 import generalsJson from "../data/generals.json";
 import { supabase } from "../lib/supabase";
 
@@ -69,10 +67,113 @@ function generalFromId(generalId: string | null | undefined) {
   return generals.find((general) => general.id === generalId) ?? null;
 }
 
-const t2s = OpenCC.ConverterFactory(Locale.from.tw, Locale.to.cn);
-
 function normalizeChineseSearch(value: string) {
-  return t2s(value.toLowerCase().replace(/\s+/g, ""));
+  const simplifiedToTraditional: Record<string, string> = {
+    国: "國",
+    战: "戰",
+    标: "標",
+    准: "準",
+    身: "身",
+    份: "分",
+    局: "局",
+    受: "受",
+    命: "命",
+    于: "于",
+    於: "于",
+    天: "天",
+    君: "君",
+    临: "臨",
+    下: "下",
+    珍: "珍",
+    藏: "藏",
+    军: "軍",
+    争: "爭",
+
+    魏: "魏",
+    蜀: "蜀",
+    吴: "吳",
+    吳: "吳",
+    群: "群",
+    晋: "晉",
+    晉: "晉",
+    神: "神",
+
+    吕: "呂",
+    呂: "呂",
+    刘: "劉",
+    劉: "劉",
+    关: "關",
+    關: "關",
+    张: "張",
+    張: "張",
+    赵: "趙",
+    趙: "趙",
+    孙: "孫",
+    孫: "孫",
+    黄: "黃",
+    黃: "黃",
+    马: "馬",
+    馬: "馬",
+    许: "許",
+    許: "許",
+    诸: "諸",
+    諸: "諸",
+    庞: "龐",
+    龐: "龐",
+    邓: "鄧",
+    鄧: "鄧",
+    钟: "鍾",
+    鍾: "鍾",
+    华: "華",
+    華: "華",
+    乐: "樂",
+    樂: "樂",
+    义: "義",
+    義: "義",
+    仪: "儀",
+    儀: "儀",
+    韦: "韋",
+    韋: "韋",
+    颜: "顏",
+    顏: "顏",
+    袁: "袁",
+    曹: "曹",
+    操: "操",
+    蒙: "蒙",
+    权: "權",
+    權: "權",
+    备: "備",
+    備: "備",
+    飞: "飛",
+    飛: "飛",
+    云: "雲",
+    雲: "雲",
+    懿: "懿",
+    司: "司",
+    郭: "郭",
+    嘉: "嘉",
+    瑜: "瑜",
+    亮: "亮",
+    逊: "遜",
+    遜: "遜",
+    盖: "蓋",
+    蓋: "蓋",
+    卓: "卓",
+    布: "布",
+    雄: "雄",
+    繡: "繡",
+    绣: "繡",
+    昭: "昭",
+    祖: "祖",
+    熙: "熙",
+  };
+
+  return value
+    .toLowerCase()
+    .split("")
+    .map((char) => simplifiedToTraditional[char] ?? char)
+    .join("")
+    .replace(/\s+/g, "");
 }
 
 
