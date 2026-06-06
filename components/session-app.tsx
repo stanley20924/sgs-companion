@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import * as OpenCC from "opencc-js/core";
-import * as Locale from "opencc-js/preset";
+import { Converter } from "opencc-js";
 import generalsJson from "../data/generals.json";
 import { supabase } from "../lib/supabase";
 
@@ -69,7 +68,7 @@ function generalFromId(generalId: string | null | undefined) {
   return generals.find((general) => general.id === generalId) ?? null;
 }
 
-const t2s = OpenCC.ConverterFactory(Locale.from.tw, Locale.to.cn);
+const t2s = Converter({ from: "tw", to: "cn" });
 
 function normalizeChineseSearch(value: string) {
   return t2s(value.toLowerCase().replace(/\s+/g, ""));
