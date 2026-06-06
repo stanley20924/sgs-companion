@@ -843,7 +843,7 @@
     "id": "gz_smyt_wu009_sunjian",
     "name": "孙坚",
     "faction": "吳",
-    "image": "/images/generals/国战UI.WU009.傲视江东.孙坚.png",
+    "image": "/images/generals/国战UI.WU009.魂佑江东.孙坚.png",
     "modes": [
       "國戰"
     ],
@@ -1684,6 +1684,34 @@
     "name": "文鸯",
     "faction": "晉",
     "image": "/images/generals/国战UI.JIN042.陆拔山岳.文鸯.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_qun089_lvlingqi",
+    "name": "吕玲绮",
+    "faction": "群",
+    "image": "/images/generals/国战UI.QUN089.无双虓姬.吕玲绮.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu002_yaowu_guanyu",
+    "name": "关羽",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU002.曜武宣威.关羽.png",
     "modes": [
       "國戰"
     ],
