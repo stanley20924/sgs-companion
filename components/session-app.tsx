@@ -182,7 +182,7 @@ async function loadRoomState(roomCode: string, fallbackMode: GameMode, fallbackV
 
   const { data: existingPlayers, error: playersError } = await supabase
     .from("players")
-    .select("id, room_id, player_id, name, dead, identity, player_generals(general_id, slot_index)")
+    .select("id, room_id, player_id, name, dead, identity, selected_faction, player_generals(general_id, slot_index)")
     .eq("room_id", room.id)
     .order("player_id");
 
@@ -226,7 +226,7 @@ async function loadRoomState(roomCode: string, fallbackMode: GameMode, fallbackV
 
   const { data: finalPlayers, error: finalPlayersError } = await supabase
     .from("players")
-    .select("id, room_id, player_id, name, dead, identity, player_generals(general_id, slot_index)")
+    .select("id, room_id, player_id, name, dead, identity, selected_faction, player_generals(general_id, slot_index)")
     .eq("room_id", room.id)
     .order("player_id");
 
@@ -245,6 +245,7 @@ async function loadRoomState(roomCode: string, fallbackMode: GameMode, fallbackV
       name: player.name,
       dead: Boolean(player.dead),
       identity: player.identity ?? "",
+      selectedFaction: player.selected_faction ?? null,
       generals: Array.from({ length: slotCount }, (_, slotIndex) => generalFromId(bySlot.get(slotIndex))),
     };
   });
@@ -757,12 +758,28 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
     }
   }
 
-  function choosePlayerFaction(playerId: number, faction: string) {
+  async function choosePlayerFaction(playerId: number, faction: string) {
+    const targetPlayer = players.find((player) => player.id === playerId);
+
     setPlayers((current) =>
       current.map((player) =>
         player.id === playerId ? { ...player, selectedFaction: faction } : player
       )
     );
+
+    if (supabase && targetPlayer?.dbId) {
+      try {
+        await supabase
+          .from("players")
+          .update({
+            selected_faction: faction,
+            updated_at: new Date().toISOString(),
+          })
+          .eq("id", targetPlayer.dbId);
+      } catch (error) {
+        console.error("choosePlayerFaction failed:", error);
+      }
+    }
 
     setFactionPicker(null);
     markChanged();
