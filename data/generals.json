@@ -11,7 +11,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "lord"
   },
   {
     "id": "gz_smyt_em002_zhangjiao",
@@ -25,7 +29,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "lord"
   },
   {
     "id": "gz_smyt_em003_sunquan",
@@ -39,7 +47,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "lord"
   },
   {
     "id": "gz_smyt_em004_caocao",
@@ -53,7 +65,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "lord"
   },
   {
     "id": "gz_smyt_em005_simayi",
@@ -67,7 +83,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "lord"
   },
   {
     "id": "gz_smyt_shu001_liubei",
@@ -81,7 +101,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu002_guanyu",
@@ -95,7 +119,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu003_zhangfei",
@@ -109,7 +137,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu004_zhugeliang",
@@ -123,7 +155,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu005_zhaoyun",
@@ -137,7 +173,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu006_machao",
@@ -151,7 +191,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu007_huangyueying",
@@ -165,7 +209,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu008_huangzhong",
@@ -179,7 +227,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu009_weiyan",
@@ -193,7 +245,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu010_pangtong",
@@ -207,7 +263,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu011_zhugeliang",
@@ -221,7 +281,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu012_jiangwei",
@@ -235,7 +299,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu013_liushan",
@@ -249,7 +317,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu014_menghuo",
@@ -263,7 +335,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu015_zhurong",
@@ -277,7 +353,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu016_ganfuren",
@@ -291,7 +371,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu017_xushu",
@@ -305,7 +389,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu018_jiangwan_feiyi",
@@ -319,7 +407,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu019_madai",
@@ -333,7 +425,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu020_shamoke",
@@ -347,7 +443,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu021_mifuren",
@@ -361,7 +461,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu022_masu",
@@ -375,7 +479,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu023_wangping",
@@ -389,7 +497,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu024_fazheng",
@@ -403,7 +515,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei001_caocao",
@@ -417,7 +533,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei002_simayi",
@@ -431,7 +551,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei003_xiahoudun",
@@ -445,7 +569,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei004_zhangliao",
@@ -459,7 +587,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei005_xuchu",
@@ -473,7 +605,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei006_guojia",
@@ -487,7 +623,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei007_zhenji",
@@ -501,7 +641,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei008_xiahouyuan",
@@ -515,7 +659,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei009_zhanghe",
@@ -529,7 +677,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei010_xuhuang",
@@ -543,7 +695,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei011_caoren",
@@ -557,7 +713,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei012_dianwei",
@@ -571,7 +731,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei013_xunyu",
@@ -585,7 +749,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei014_caopi",
@@ -599,7 +767,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei015_dengai",
@@ -613,7 +785,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei016_yuejin",
@@ -627,7 +803,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei017_lidian",
@@ -641,7 +821,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei018_caohong",
@@ -655,7 +839,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei020_xunyou",
@@ -669,7 +857,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei021_cuiyan_maojie",
@@ -683,7 +875,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei022_bianfuren",
@@ -697,7 +893,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei023_zangba",
@@ -711,7 +911,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wei024_yujin",
@@ -725,7 +929,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu001_sunquan",
@@ -739,7 +947,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu002_ganning",
@@ -753,7 +965,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu003_lvmeng",
@@ -767,7 +983,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu004_huanggai",
@@ -781,7 +1001,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu005_zhouyu",
@@ -795,7 +1019,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu006_daqiao",
@@ -809,7 +1037,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu007_luxun",
@@ -823,7 +1055,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu008_sunshangxiang",
@@ -837,7 +1073,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu009_sunjian",
@@ -851,7 +1091,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu010_sunce",
@@ -865,7 +1109,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu011_xiaoqiao",
@@ -879,7 +1127,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu012_taishici",
@@ -893,7 +1145,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu013_zhoutai",
@@ -907,7 +1163,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu014_lusu",
@@ -921,7 +1181,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu015_zhangzhao_zhanghong",
@@ -935,7 +1199,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu016_dingfeng",
@@ -949,7 +1217,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu017_jiangqin",
@@ -963,7 +1235,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu019_lukang",
@@ -977,7 +1253,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu020_xusheng",
@@ -991,7 +1271,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu021_lingtong",
@@ -1005,7 +1289,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu022_lvfan",
@@ -1019,7 +1307,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu023_chenwu_dongxi",
@@ -1033,7 +1325,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_wu024_wuguotai",
@@ -1047,7 +1343,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun001_huatuo",
@@ -1061,7 +1361,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun002_lvbu",
@@ -1075,7 +1379,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun003_diaochan",
@@ -1089,7 +1397,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun004_yuanshao",
@@ -1103,7 +1415,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun005_yanliang_wenchou",
@@ -1117,7 +1433,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun006_dongzhuo",
@@ -1131,7 +1451,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun007_jiaxu",
@@ -1145,7 +1469,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun008_pangde",
@@ -1159,7 +1487,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun009_zuoci",
@@ -1173,7 +1505,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun010_zhangjiao",
@@ -1187,7 +1523,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun011_yuji",
@@ -1201,7 +1541,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun012_caiwenji",
@@ -1215,7 +1559,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun013_mateng",
@@ -1229,7 +1577,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun014_kongrong",
@@ -1243,7 +1595,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun015_jiling",
@@ -1257,7 +1613,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun016_tianfeng",
@@ -1271,7 +1631,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun017_panfeng",
@@ -1285,7 +1649,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun018_zoushi",
@@ -1299,7 +1667,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun020_hetaihou",
@@ -1313,7 +1685,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun021_yuanshu",
@@ -1327,7 +1703,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun022_lijue_guosi",
@@ -1341,7 +1721,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun023_zhangxiu",
@@ -1355,7 +1739,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun024_zhangren",
@@ -1369,7 +1757,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin001_simayi",
@@ -1383,7 +1775,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin002_zhangchunhua",
@@ -1397,7 +1793,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin003_simashi",
@@ -1411,7 +1811,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin004_simazhao",
@@ -1425,7 +1829,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin005_simazhou",
@@ -1439,7 +1847,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin006_simaliang",
@@ -1453,7 +1865,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin011_simalun",
@@ -1467,7 +1883,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin014_zhanghu_lechen",
@@ -1481,7 +1901,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin016_shibao",
@@ -1495,7 +1919,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin017_yanghuiyu",
@@ -1509,7 +1937,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin018_wangyuanji",
@@ -1523,7 +1955,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin019_duyu",
@@ -1537,7 +1973,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin020_weiguan",
@@ -1551,7 +1991,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin021_jiachong",
@@ -1565,7 +2009,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin022_yanghu",
@@ -1579,7 +2027,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin027_guohuai",
@@ -1593,7 +2045,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin032_wangxiang",
@@ -1607,7 +2063,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin036_wangjun",
@@ -1621,7 +2081,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin037_malong",
@@ -1635,7 +2099,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin039_yangjun",
@@ -1649,7 +2117,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin040_baifuren",
@@ -1663,7 +2135,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin041_sunxiu",
@@ -1677,7 +2153,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_jin042_wenyang",
@@ -1691,7 +2171,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "晉"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_qun089_lvlingqi",
@@ -1705,7 +2189,11 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_shu002_yaowu_guanyu",
@@ -1719,12 +2207,20 @@
       "受命于天"
     ],
     "skills": [],
-    "partners": []
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
   },
   {
     "id": "gz_smyt_am001_simazhao",
     "name": "司马昭",
     "faction": "晉",
+    "factions": [
+      "晉"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.AM001.嘲风开天.司马昭.png",
     "modes": [
       "國戰"
@@ -1739,6 +2235,10 @@
     "id": "gz_smyt_am002_zhonghui",
     "name": "钟会",
     "faction": "魏",
+    "factions": [
+      "魏"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.AM002.桀骜的野心家.钟会.png",
     "modes": [
       "國戰"
@@ -1753,6 +2253,10 @@
     "id": "gz_smyt_am003_sunchen",
     "name": "孙綝",
     "faction": "吳",
+    "factions": [
+      "吳"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.AM003.食髓的朝堂客.孙綝.png",
     "modes": [
       "國戰"
@@ -1767,6 +2271,10 @@
     "id": "gz_smyt_shu073_dengzhi",
     "name": "邓芝",
     "faction": "蜀",
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.SHU073.绝境的外交家.邓芝.png",
     "modes": [
       "國戰"
@@ -1781,6 +2289,10 @@
     "id": "gz_smyt_shu078_zongyu",
     "name": "宗预",
     "faction": "蜀",
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.SHU078.九酝鸿胪.宗预.png",
     "modes": [
       "國戰"
@@ -1795,6 +2307,10 @@
     "id": "gz_smyt_shu086_liuba",
     "name": "刘巴",
     "faction": "蜀",
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.SHU086.清河一鲲.刘巴.png",
     "modes": [
       "國戰"
@@ -1809,6 +2325,10 @@
     "id": "gz_smyt_shu088_yangwan",
     "name": "杨婉",
     "faction": "蜀",
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.SHU088.融沫之鲡.杨婉.png",
     "modes": [
       "國戰"
@@ -1823,6 +2343,10 @@
     "id": "gz_smyt_wei060_zhuling",
     "name": "朱灵",
     "faction": "魏",
+    "factions": [
+      "魏"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.WEI060.五子之亚.朱灵.png",
     "modes": [
       "國戰"
@@ -1837,6 +2361,10 @@
     "id": "gz_smyt_wei075_jianggan",
     "name": "蒋干",
     "faction": "魏",
+    "factions": [
+      "魏"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.WEI075.锋镝悬信.蒋干.png",
     "modes": [
       "國戰"
@@ -1851,6 +2379,10 @@
     "id": "gz_smyt_wei084_huaxin",
     "name": "华歆",
     "faction": "魏",
+    "factions": [
+      "魏"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.WEI084.渊清玉洁.华歆.png",
     "modes": [
       "國戰"
@@ -1865,6 +2397,10 @@
     "id": "gz_smyt_wei086_dongzhao",
     "name": "董昭",
     "faction": "魏",
+    "factions": [
+      "魏"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.WEI086.移尊易鼎.董昭.png",
     "modes": [
       "國戰"
@@ -1879,6 +2415,10 @@
     "id": "gz_smyt_wei089_yanghu",
     "name": "羊祜",
     "faction": "魏",
+    "factions": [
+      "魏"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.WEI089.制纮同轨.羊祜.png",
     "modes": [
       "國戰"
@@ -1893,6 +2433,10 @@
     "id": "gz_smyt_wu042_zhugeke",
     "name": "诸葛恪",
     "faction": "吳",
+    "factions": [
+      "吳"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.WU042.兴家赤族.诸葛恪.png",
     "modes": [
       "國戰"
@@ -1907,6 +2451,10 @@
     "id": "gz_smyt_wu078_luyusheng",
     "name": "陆郁生",
     "faction": "吳",
+    "factions": [
+      "吳"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.WU078.义姑.陆郁生.png",
     "modes": [
       "國戰"
@@ -1921,6 +2469,10 @@
     "id": "gz_smyt_wu086_wujing",
     "name": "吴景",
     "faction": "吳",
+    "factions": [
+      "吳"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.WU086.汗马鎏金.吴景.png",
     "modes": [
       "國戰"
@@ -1935,6 +2487,10 @@
     "id": "gz_smyt_wu088_zhouyi",
     "name": "周夷",
     "faction": "吳",
+    "factions": [
+      "吳"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.WU088.靛情雨黛.周夷.png",
     "modes": [
       "國戰"
@@ -1949,6 +2505,10 @@
     "id": "gz_smyt_wu089_fengxi",
     "name": "冯熙",
     "faction": "吳",
+    "factions": [
+      "吳"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.WU089.东吴苏武.冯熙.png",
     "modes": [
       "國戰"
@@ -1963,6 +2523,10 @@
     "id": "gz_smyt_qun050_yanbaihu",
     "name": "严白虎",
     "faction": "群",
+    "factions": [
+      "群"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.QUN050.豺牙落涧.严白虎.png",
     "modes": [
       "國戰"
@@ -1977,6 +2541,10 @@
     "id": "gz_smyt_qun060_miheng",
     "name": "祢衡",
     "faction": "群",
+    "factions": [
+      "群"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.QUN060.狂傲奇人.祢衡.png",
     "modes": [
       "國戰"
@@ -1991,6 +2559,10 @@
     "id": "gz_smyt_qun078_xunchen",
     "name": "荀谌",
     "faction": "群",
+    "factions": [
+      "群"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.QUN078.三公谋主.荀谌.png",
     "modes": [
       "國戰"
@@ -2005,7 +2577,239 @@
     "id": "gz_smyt_qun086_huangzu",
     "name": "黄祖",
     "faction": "群",
+    "factions": [
+      "群"
+    ],
+    "type": "normal",
     "image": "/images/generals/国战UI.QUN086.遮山扼江.黄祖.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_qun_shu072_liuqi",
+    "name": "刘琦",
+    "faction": "群",
+    "factions": [
+      "群",
+      "蜀"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.QUN&SHU072.居外而安.刘琦.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_qun_wei048_zhanglu",
+    "name": "张鲁",
+    "faction": "群",
+    "factions": [
+      "群",
+      "魏"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.QUN&WEI048.政宽教惠.张鲁.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_qun_wei066_xuyou",
+    "name": "许攸",
+    "faction": "群",
+    "factions": [
+      "群",
+      "魏"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.QUN&WEI066.毕方矫翼.许攸.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_qun_wu051_shixie",
+    "name": "士燮",
+    "faction": "群",
+    "factions": [
+      "群",
+      "吳"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.QUN&WU051.百粤灵欹.士燮.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu_qun072_pengyang",
+    "name": "彭羕",
+    "faction": "蜀",
+    "factions": [
+      "蜀",
+      "群"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.SHU&QUN072.误身的狂士.彭羕.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu_wei041_xiahouba",
+    "name": "夏侯霸",
+    "faction": "蜀",
+    "factions": [
+      "蜀",
+      "魏"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.SHU&WEI041.棘途壮志.夏侯霸.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu_wu071_mifang_fushiren",
+    "name": "糜芳&傅士仁",
+    "faction": "蜀",
+    "factions": [
+      "蜀",
+      "吳"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.SHU&WU071.逐驾迎尘.糜芳&傅士仁.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei_shu079_mengda",
+    "name": "孟达",
+    "faction": "魏",
+    "factions": [
+      "魏",
+      "蜀"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.WEI&SHU079.怠军反复.孟达.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei_wu072_tangzi",
+    "name": "唐咨",
+    "faction": "魏",
+    "factions": [
+      "魏",
+      "吳"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.WEI&WU072.得时识风.唐咨.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei_wu080_wenqin",
+    "name": "文钦",
+    "faction": "魏",
+    "factions": [
+      "魏",
+      "吳"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.WEI&WU080.勇而无算.文钦.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wu_qun070_sufei",
+    "name": "苏飞",
+    "faction": "吳",
+    "factions": [
+      "吳",
+      "群"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.WU&QUN070.诤友投明.苏飞.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wu_shu050_panjun",
+    "name": "潘濬",
+    "faction": "吳",
+    "factions": [
+      "吳",
+      "蜀"
+    ],
+    "type": "dual",
+    "image": "/images/generals/国战UI.WU&SHU050.逆鳞之砥.潘濬.png",
     "modes": [
       "國戰"
     ],
