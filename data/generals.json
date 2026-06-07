@@ -507,7 +507,7 @@
     "id": "gz_smyt_wei008_xiahouyuan",
     "name": "夏侯渊",
     "faction": "魏",
-    "image": "/images/generals/国战UI.WEI008.疾行的猎豹.夏侯渊.png",
+    "image": "/images/generals/国战UI.WEI008.虎步关右.夏侯渊.png",
     "modes": [
       "國戰"
     ],
@@ -563,7 +563,7 @@
     "id": "gz_smyt_wei012_dianwei",
     "name": "典韦",
     "faction": "魏",
-    "image": "/images/generals/国战UI.WEI012.拔山超海.典韦.png",
+    "image": "/images/generals/国战UI.WEI012.古之恶来.典韦.png",
     "modes": [
       "國戰"
     ],
@@ -1712,6 +1712,300 @@
     "name": "关羽",
     "faction": "蜀",
     "image": "/images/generals/国战UI.SHU002.曜武宣威.关羽.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_am001_simazhao",
+    "name": "司马昭",
+    "faction": "晉",
+    "image": "/images/generals/国战UI.AM001.嘲风开天.司马昭.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_am002_zhonghui",
+    "name": "钟会",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.AM002.桀骜的野心家.钟会.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_am003_sunchen",
+    "name": "孙綝",
+    "faction": "吳",
+    "image": "/images/generals/国战UI.AM003.食髓的朝堂客.孙綝.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu073_dengzhi",
+    "name": "邓芝",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU073.绝境的外交家.邓芝.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu078_zongyu",
+    "name": "宗预",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU078.九酝鸿胪.宗预.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu086_liuba",
+    "name": "刘巴",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU086.清河一鲲.刘巴.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_shu088_yangwan",
+    "name": "杨婉",
+    "faction": "蜀",
+    "image": "/images/generals/国战UI.SHU088.融沫之鲡.杨婉.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei060_zhuling",
+    "name": "朱灵",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI060.五子之亚.朱灵.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei075_jianggan",
+    "name": "蒋干",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI075.锋镝悬信.蒋干.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei084_huaxin",
+    "name": "华歆",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI084.渊清玉洁.华歆.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei086_dongzhao",
+    "name": "董昭",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI086.移尊易鼎.董昭.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wei089_yanghu",
+    "name": "羊祜",
+    "faction": "魏",
+    "image": "/images/generals/国战UI.WEI089.制纮同轨.羊祜.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wu042_zhugeke",
+    "name": "诸葛恪",
+    "faction": "吳",
+    "image": "/images/generals/国战UI.WU042.兴家赤族.诸葛恪.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wu078_luyusheng",
+    "name": "陆郁生",
+    "faction": "吳",
+    "image": "/images/generals/国战UI.WU078.义姑.陆郁生.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wu086_wujing",
+    "name": "吴景",
+    "faction": "吳",
+    "image": "/images/generals/国战UI.WU086.汗马鎏金.吴景.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wu088_zhouyi",
+    "name": "周夷",
+    "faction": "吳",
+    "image": "/images/generals/国战UI.WU088.靛情雨黛.周夷.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_wu089_fengxi",
+    "name": "冯熙",
+    "faction": "吳",
+    "image": "/images/generals/国战UI.WU089.东吴苏武.冯熙.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_qun050_yanbaihu",
+    "name": "严白虎",
+    "faction": "群",
+    "image": "/images/generals/国战UI.QUN050.豺牙落涧.严白虎.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_qun060_miheng",
+    "name": "祢衡",
+    "faction": "群",
+    "image": "/images/generals/国战UI.QUN060.狂傲奇人.祢衡.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_qun078_xunchen",
+    "name": "荀谌",
+    "faction": "群",
+    "image": "/images/generals/国战UI.QUN078.三公谋主.荀谌.png",
+    "modes": [
+      "國戰"
+    ],
+    "versions": [
+      "受命于天"
+    ],
+    "skills": [],
+    "partners": []
+  },
+  {
+    "id": "gz_smyt_qun086_huangzu",
+    "name": "黄祖",
+    "faction": "群",
+    "image": "/images/generals/国战UI.QUN086.遮山扼江.黄祖.png",
     "modes": [
       "國戰"
     ],
