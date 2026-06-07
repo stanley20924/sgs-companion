@@ -415,6 +415,15 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
   useEffect(() => {
     let active = true;
     let channel: ReturnType<typeof supabase.channel> | null = null;
+    let refreshTimer: ReturnType<typeof setTimeout> | null = null;
+
+    function scheduleRefresh() {
+      if (refreshTimer) clearTimeout(refreshTimer);
+
+      refreshTimer = setTimeout(() => {
+        refreshFromSupabase(true);
+      }, 150);
+    }
 
     async function init() {
       if (!supabase) {
@@ -441,15 +450,9 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
 
         channel = supabase
           .channel(`room:${state.roomId}`)
-          .on("postgres_changes", { event: "*", schema: "public", table: "rooms", filter: `id=eq.${state.roomId}` }, () => {
-            refreshFromSupabase(true);
-          })
-          .on("postgres_changes", { event: "*", schema: "public", table: "players", filter: `room_id=eq.${state.roomId}` }, () => {
-            refreshFromSupabase(true);
-          })
-          .on("postgres_changes", { event: "*", schema: "public", table: "player_generals" }, () => {
-            refreshFromSupabase(true);
-          })
+          .on("postgres_changes", { event: "*", schema: "public", table: "rooms", filter: `id=eq.${state.roomId}` }, scheduleRefresh)
+          .on("postgres_changes", { event: "*", schema: "public", table: "players", filter: `room_id=eq.${state.roomId}` }, scheduleRefresh)
+          .on("postgres_changes", { event: "*", schema: "public", table: "player_generals" }, scheduleRefresh)
           .subscribe();
       } catch (error) {
         console.error("Supabase init failed:", error);
@@ -464,6 +467,11 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
 
     return () => {
       active = false;
+
+      if (refreshTimer) {
+        clearTimeout(refreshTimer);
+      }
+
       if (channel && supabase) {
         supabase.removeChannel(channel);
       }
