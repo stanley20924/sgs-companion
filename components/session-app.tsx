@@ -9,6 +9,8 @@ type General = {
   id: string;
   name: string;
   faction: string;
+  factions?: string[];
+  type?: "normal" | "dual" | "lord";
   image?: string;
   modes: string[];
   versions: string[];
@@ -23,6 +25,7 @@ type Player = {
   generals: (General | null)[];
   dead: boolean;
   identity: string;
+  selectedFaction?: string | null;
 };
 
 const identities = ["主公", "忠臣", "反賊", "內奸", "未公開"];
@@ -59,6 +62,7 @@ function createPlayers(count: number, mode: GameMode): Player[] {
     generals: Array.from({ length: slots }, () => null),
     dead: false,
     identity: mode === "身分局" ? identities[Math.min(index, identities.length - 1)] : "",
+    selectedFaction: null,
   }));
 }
 
@@ -72,6 +76,75 @@ const t2s = Converter({ from: "tw", to: "cn" });
 
 function normalizeChineseSearch(value: string) {
   return t2s(value.toLowerCase().replace(/\s+/g, ""));
+}
+
+function getGeneralFactions(general: General | null | undefined) {
+  if (!general) return [];
+  return general.factions?.length ? general.factions : [general.faction];
+}
+
+function uniqueFactions(factions: string[]) {
+  return Array.from(new Set(factions)).filter((faction) => factionOrder.includes(faction));
+}
+
+function getSelectedGenerals(generalsList: (General | null)[]) {
+  return generalsList.filter(Boolean) as General[];
+}
+
+function getPossiblePlayerFactions(generalsList: (General | null)[]) {
+  const selected = getSelectedGenerals(generalsList);
+  if (selected.length === 0) return [];
+
+const allFactions = selected.map(getGeneralFactions);
+
+const shared =
+  allFactions.length > 0
+    ? allFactions.slice(1).reduce<string[]>(
+        (common, factions) => common.filter((faction) => factions.includes(faction)),
+        allFactions[0] ?? []
+      )
+    : [];
+
+  if (shared.length > 0) return uniqueFactions(shared);
+
+  return uniqueFactions(allFactions.flat());
+}
+
+function getAutomaticPlayerFaction(generalsList: (General | null)[]) {
+  const selected = getSelectedGenerals(generalsList);
+  if (selected.length === 0) return null;
+
+  const singleFactionGeneral = selected.find((general) => getGeneralFactions(general).length === 1);
+  if (singleFactionGeneral) {
+    return getGeneralFactions(singleFactionGeneral)[0] ?? null;
+  }
+
+  const possible = getPossiblePlayerFactions(generalsList);
+  return possible.length === 1 ? possible[0] : null;
+}
+
+function getResolvedPlayerFaction(player: Player) {
+  const automaticFaction = getAutomaticPlayerFaction(player.generals);
+  if (automaticFaction) return automaticFaction;
+
+  const possible = getPossiblePlayerFactions(player.generals);
+  if (player.selectedFaction && possible.includes(player.selectedFaction)) {
+    return player.selectedFaction;
+  }
+
+  return null;
+}
+
+function getNextSelectedFaction(generalsList: (General | null)[], currentSelectedFaction?: string | null) {
+  const automaticFaction = getAutomaticPlayerFaction(generalsList);
+  if (automaticFaction) return automaticFaction;
+
+  const possible = getPossiblePlayerFactions(generalsList);
+  if (currentSelectedFaction && possible.includes(currentSelectedFaction)) {
+    return currentSelectedFaction;
+  }
+
+  return null;
 }
 
 
@@ -251,6 +324,16 @@ function Badge({ faction }: { faction: string }) {
   );
 }
 
+function FactionBadges({ general }: { general: General }) {
+  return (
+    <span style={{ display: "inline-flex", gap: 4, flexWrap: "wrap", justifyContent: "flex-end" }}>
+      {getGeneralFactions(general).map((faction) => (
+        <Badge key={faction} faction={faction} />
+      ))}
+    </span>
+  );
+}
+
 export default function SessionApp({ roomCode }: { roomCode: string }) {
   const [gameMode, setGameMode] = useState<GameMode>("國戰");
   const [version, setVersion] = useState("受命于天");
@@ -259,6 +342,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
     createPlayers(playerLimitsByMode["國戰"].defaultCount, "國戰")
   );
   const [picker, setPicker] = useState<{ playerId: number; slotIndex: number } | null>(null);
+  const [factionPicker, setFactionPicker] = useState<{ playerId: number; factions: string[] } | null>(null);
   const [query, setQuery] = useState("");
   const [savedAt, setSavedAt] = useState("連線中...");
   const [roomDbId, setRoomDbId] = useState<string | null>(null);
@@ -270,7 +354,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
 
     return generals.filter((general) => {
       const searchableText = normalizeChineseSearch(
-        [general.name, general.faction, general.id].join(" ")
+        [general.name, general.faction, ...(general.factions ?? []), general.id].join(" ")
       );
 
       const matchesQuery = !keyword || searchableText.includes(keyword);
@@ -287,11 +371,11 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
     const stats: Record<string, number> = { 魏: 0, 蜀: 0, 吳: 0, 群: 0, 晉: 0 };
 
     players.forEach((player) => {
-      player.generals.forEach((general) => {
-        if (general && stats[general.faction] !== undefined) {
-          stats[general.faction] += 1;
-        }
-      });
+      const faction = getResolvedPlayerFaction(player);
+
+      if (faction && stats[faction] !== undefined) {
+        stats[faction] += 1;
+      }
     });
 
     return stats;
@@ -528,19 +612,37 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
     const targetPlayer = players.find((player) => player.id === selectedPlayerId);
     const targetDbId = targetPlayer?.dbId;
 
+    const nextGenerals = [...(targetPlayer?.generals ?? [])];
+    nextGenerals[selectedSlot] = general;
+
+    const nextSelectedFaction = getNextSelectedFaction(
+      nextGenerals,
+      targetPlayer?.selectedFaction
+    );
+    const possibleFactions = getPossiblePlayerFactions(nextGenerals);
+    const shouldAskFaction =
+      gameMode === "國戰" &&
+      !nextSelectedFaction &&
+      possibleFactions.length > 1;
+
     setPlayers((current) =>
       current.map((player) => {
         if (player.id !== selectedPlayerId) return player;
 
-        const nextGenerals = [...player.generals];
-        nextGenerals[selectedSlot] = general;
+        const updatedGenerals = [...player.generals];
+        updatedGenerals[selectedSlot] = general;
 
-        return { ...player, generals: nextGenerals };
+        return {
+          ...player,
+          generals: updatedGenerals,
+          selectedFaction: getNextSelectedFaction(updatedGenerals, player.selectedFaction),
+        };
       })
     );
 
     setPicker(null);
     setQuery("");
+    setFactionPicker(shouldAskFaction ? { playerId: selectedPlayerId, factions: possibleFactions } : null);
     markChanged();
 
     if (supabase && targetDbId) {
@@ -584,7 +686,11 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
         const nextGenerals = [...player.generals];
         nextGenerals[slotIndex] = null;
 
-        return { ...player, generals: nextGenerals };
+        return {
+          ...player,
+          generals: nextGenerals,
+          selectedFaction: getNextSelectedFaction(nextGenerals, player.selectedFaction),
+        };
       })
     );
 
@@ -641,6 +747,17 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
         isApplyingRemote.current = false;
       }
     }
+  }
+
+  function choosePlayerFaction(playerId: number, faction: string) {
+    setPlayers((current) =>
+      current.map((player) =>
+        player.id === playerId ? { ...player, selectedFaction: faction } : player
+      )
+    );
+
+    setFactionPicker(null);
+    markChanged();
   }
 
   async function saveSession() {
@@ -826,6 +943,10 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
                     </select>
                   )}
 
+                  {gameMode === "國戰" && getResolvedPlayerFaction(player) && (
+                    <Badge faction={getResolvedPlayerFaction(player)!} />
+                  )}
+
                   <span style={styles.slotCount}>
                     {filled}/{player.generals.length}
                   </span>
@@ -872,7 +993,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
                               )}
 
                               <div style={styles.generalBadge}>
-                                <Badge faction={general.faction} />
+                                <FactionBadges general={general} />
                               </div>
                             </div>
 
@@ -935,7 +1056,7 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
                                   </div>
 
                                   <span style={styles.inlinePickerName}>{general.name}</span>
-                                  <Badge faction={general.faction} />
+                                  <FactionBadges general={general} />
                                 </button>
                               ))}
 
@@ -962,6 +1083,37 @@ export default function SessionApp({ roomCode }: { roomCode: string }) {
         </section>
       </main>
 
+      {factionPicker && (
+        <div style={styles.factionPickerBackdrop}>
+          <div style={styles.factionPickerModal}>
+            <h2 style={styles.factionPickerTitle}>選擇玩家勢力</h2>
+            <p style={styles.factionPickerDescription}>
+              這位玩家目前的武將無法自動判定勢力，請選擇要公開的勢力。
+            </p>
+
+            <div style={styles.factionPickerActions}>
+              {factionPicker.factions.map((faction) => (
+                <button
+                  key={faction}
+                  type="button"
+                  onClick={() => choosePlayerFaction(factionPicker.playerId, faction)}
+                  style={styles.factionChoiceButton}
+                >
+                  <Badge faction={faction} />
+                </button>
+              ))}
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setFactionPicker(null)}
+              style={styles.factionPickerCancel}
+            >
+              先不選
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -1430,6 +1582,58 @@ const styles: Record<string, React.CSSProperties> = {
     lineHeight: 1,
     marginBottom: 10,
     color: "#c8b6a6",
+  },
+  factionPickerBackdrop: {
+    position: "fixed",
+    inset: 0,
+    zIndex: 1000,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: "rgba(0,0,0,.72)",
+    backdropFilter: "blur(4px)",
+    padding: 18,
+  },
+  factionPickerModal: {
+    width: "min(100%, 360px)",
+    background: "#1d1713",
+    border: "1px solid rgba(127,29,29,.75)",
+    borderRadius: 12,
+    padding: 20,
+    boxShadow: "0 24px 80px rgba(0,0,0,.55)",
+    textAlign: "center",
+  },
+  factionPickerTitle: {
+    margin: 0,
+    fontSize: 22,
+    fontWeight: 900,
+  },
+  factionPickerDescription: {
+    color: "#c8b6a6",
+    fontSize: 14,
+    lineHeight: 1.6,
+    margin: "12px 0 18px",
+  },
+  factionPickerActions: {
+    display: "flex",
+    justifyContent: "center",
+    gap: 10,
+    flexWrap: "wrap",
+  },
+  factionChoiceButton: {
+    background: "#292524",
+    border: "1px solid #57534e",
+    borderRadius: 999,
+    padding: 6,
+    cursor: "pointer",
+  },
+  factionPickerCancel: {
+    marginTop: 16,
+    background: "transparent",
+    border: "none",
+    color: "#a68a64",
+    cursor: "pointer",
+    fontSize: 13,
   },
   modalBackdrop: {
     position: "fixed",
