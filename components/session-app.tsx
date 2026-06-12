@@ -335,12 +335,18 @@ function FactionBadges({ general }: { general: General }) {
   );
 }
 
-export default function SessionApp({ roomCode }: { roomCode: string }) {
-  const [gameMode, setGameMode] = useState<GameMode>("國戰");
-  const [version, setVersion] = useState("受命于天");
-  const [playerCount, setPlayerCount] = useState(playerLimitsByMode["國戰"].defaultCount);
+export default function SessionApp({
+  roomCode,
+  initialMode = "國戰",
+}: {
+  roomCode: string;
+  initialMode?: GameMode;
+}) {
+  const [gameMode, setGameMode] = useState<GameMode>(initialMode);
+  const [version, setVersion] = useState(versionsByMode[initialMode][0]);
+  const [playerCount, setPlayerCount] = useState(playerLimitsByMode[initialMode].defaultCount);
   const [players, setPlayers] = useState<Player[]>(() =>
-    createPlayers(playerLimitsByMode["國戰"].defaultCount, "國戰")
+    createPlayers(playerLimitsByMode[initialMode].defaultCount, initialMode)
   );
   const [picker, setPicker] = useState<{ playerId: number; slotIndex: number } | null>(null);
   const [factionPicker, setFactionPicker] = useState<{ playerId: number; factions: string[] } | null>(null);
