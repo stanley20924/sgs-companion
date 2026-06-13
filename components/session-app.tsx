@@ -338,15 +338,29 @@ function FactionBadges({ general }: { general: General }) {
 export default function SessionApp({
   roomCode,
   initialMode = "國戰",
+  initialPlayerCount,
+  initialVersion,
 }: {
   roomCode: string;
   initialMode?: GameMode;
+  initialPlayerCount?: number;
+  initialVersion?: string;
 }) {
+  const safeInitialVersion =
+    initialVersion && versionsByMode[initialMode].includes(initialVersion)
+      ? initialVersion
+      : versionsByMode[initialMode][0];
+  const initialLimits = playerLimitsByMode[initialMode];
+  const safeInitialPlayerCount =
+    typeof initialPlayerCount === "number"
+      ? Math.min(Math.max(initialPlayerCount, initialLimits.min), initialLimits.max)
+      : initialLimits.defaultCount;
+
   const [gameMode, setGameMode] = useState<GameMode>(initialMode);
-  const [version, setVersion] = useState(versionsByMode[initialMode][0]);
-  const [playerCount, setPlayerCount] = useState(playerLimitsByMode[initialMode].defaultCount);
+  const [version, setVersion] = useState(safeInitialVersion);
+  const [playerCount, setPlayerCount] = useState(safeInitialPlayerCount);
   const [players, setPlayers] = useState<Player[]>(() =>
-    createPlayers(playerLimitsByMode[initialMode].defaultCount, initialMode)
+    createPlayers(safeInitialPlayerCount, initialMode)
   );
   const [picker, setPicker] = useState<{ playerId: number; slotIndex: number } | null>(null);
   const [factionPicker, setFactionPicker] = useState<{ playerId: number; factions: string[] } | null>(null);
@@ -354,6 +368,9 @@ export default function SessionApp({
   const [savedAt, setSavedAt] = useState("連線中...");
   const [roomDbId, setRoomDbId] = useState<string | null>(null);
   const [isReady, setIsReady] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window === "undefined" ? true : window.matchMedia("(max-width: 640px)").matches
+  );
   const isApplyingRemote = useRef(false);
 
   const filteredGenerals = useMemo(() => {
@@ -418,6 +435,18 @@ export default function SessionApp({
       isApplyingRemote.current = false;
     }
   }
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 640px)");
+    const updateMobileState = () => setIsMobile(mediaQuery.matches);
+
+    updateMobileState();
+    mediaQuery.addEventListener("change", updateMobileState);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateMobileState);
+    };
+  }, []);
 
   useEffect(() => {
     let active = true;
@@ -819,14 +848,12 @@ export default function SessionApp({
   }
 
   const isIdentityMode = gameMode === "身分局";
-  const isMobile =
-    typeof window !== "undefined" &&
-    window.matchMedia("(max-width: 640px)").matches;
 
   return (
     <div style={styles.page}>
       <header style={styles.header}>
         <nav style={styles.nav}>
+          <a href="/" style={styles.homeNavLink}>← Home</a>
           <strong style={styles.logo}>三國殺牌局 Companion</strong>
           <span>武將</span>
           <span>卡牌</span>
@@ -1177,6 +1204,11 @@ const styles: Record<string, React.CSSProperties> = {
   logo: {
     color: "#f5f5f4",
     marginRight: "auto",
+  },
+  homeNavLink: {
+    color: "#facc15",
+    textDecoration: "none",
+    fontWeight: 900,
   },
   sectionLabel: {
     display: "flex",
