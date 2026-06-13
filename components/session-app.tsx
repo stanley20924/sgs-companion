@@ -1020,7 +1020,8 @@ export default function SessionApp({
                 <div
                   style={{
                     ...styles.generalSlots,
-                    gridTemplateColumns: isMobile || isIdentityMode ? "1fr" : "repeat(2, minmax(0, 1fr))",
+                    gridTemplateColumns: isIdentityMode ? "1fr" : "repeat(2, minmax(0, 1fr))",
+                    gap: isMobile ? 10 : 16,
                   }}
                 >
                   {player.generals.map((general, slotIndex) => {
@@ -1039,6 +1040,7 @@ export default function SessionApp({
                         style={{
                           ...styles.generalSlot,
                           ...(isIdentityMode ? styles.identityGeneralSlot : {}),
+                          ...(isMobile && isIdentityMode ? styles.mobileIdentityGeneralSlot : {}),
                         }}
                       >
                         {general ? (
@@ -1463,6 +1465,9 @@ const styles: Record<string, React.CSSProperties> = {
   },
   identityGeneralSlot: {
     height: 330,
+  },
+  mobileIdentityGeneralSlot: {
+    height: 230,
   },
   generalCard: {
     position: "absolute",
