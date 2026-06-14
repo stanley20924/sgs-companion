@@ -8,10 +8,9 @@ import {
   Menu,
   Shield,
   Wrench,
-  X,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type ModeKey = "war" | "identity";
 
@@ -21,7 +20,7 @@ const modeCards = [
   {
     key: "war" as const,
     title: "國戰",
-    icon: "/images/home/home-icon-national.svg",
+    icon: "/images/home/icon/flag.png",
     eyebrow: "受命於天・君臨天下",
     meta: "雙將・勢力推演・8人對戰",
     className: "war",
@@ -30,7 +29,7 @@ const modeCards = [
   {
     key: "identity" as const,
     title: "身分局",
-    icon: "/images/home/home-icon-identity.svg",
+    icon: "/images/home/icon/crowne.png",
     eyebrow: "主公・忠臣・反賊・內奸",
     meta: "經典身份・5-8人對戰",
     className: "identity",
@@ -58,16 +57,16 @@ const libraryCards = [
 ];
 
 const toolCards = [
-  { href: "/faq", title: "FAQ", subtitle: "規則解答・常見問題", icon: "/images/home/faq-icon.svg" },
-  { href: "/changelog", title: "更新日誌", subtitle: "版本更新・功能紀錄", icon: "/images/home/changelog-icon.svg" },
+  { href: "/faq", title: "FAQ", subtitle: "規則解答・常見問題", icon: "/images/home/icon/faq-transparent.png", className: "faq-tool" },
+  { href: "/changelog", title: "更新日誌", subtitle: "版本更新・功能紀錄", icon: "/images/home/icon/updat4e journal.png", className: "changelog-tool" },
 ];
 
 const menuItems = [
-  { href: "/", label: "Home" },
-  { href: "/generals", label: "Generals" },
-  { href: "/cards", label: "Cards" },
+  { href: "/", label: "首頁" },
+  { href: "/generals", label: "武將圖鑑" },
+  { href: "/cards", label: "卡牌資料庫" },
   { href: "/faq", label: "FAQ" },
-  { href: "/changelog", label: "Changelog" },
+  { href: "/changelog", label: "更新日誌" },
 ];
 
 const updates = [
@@ -75,44 +74,44 @@ const updates = [
     name: "文鴦",
     faction: "晉",
     mode: "國戰",
-    date: "2024/05/28",
+    date: "2026/05/28",
     image: "/images/generals/国战UI.JIN042.陆拔山岳.文鸯.png",
   },
   {
     name: "張魯",
     faction: "群",
     mode: "國戰",
-    date: "2024/05/27",
+    date: "2026/05/27",
     image: "/images/generals/国战UI.QUN%26WEI048.政宽教惠.张鲁.png",
   },
   {
     name: "夏侯霸",
     faction: "蜀",
     mode: "國戰",
-    date: "2024/05/25",
+    date: "2026/05/25",
     image: "/images/generals/国战UI.SHU%26WEI041.棘途壮志.夏侯霸.png",
   },
   {
     name: "羊祜",
     faction: "晉",
     mode: "國戰",
-    date: "2024/05/24",
+    date: "2026/05/24",
     image: "/images/generals/国战UI.JIN022.执德清劭.羊祜.png",
   },
   {
     name: "陸郁生",
     faction: "吳",
     mode: "國戰",
-    date: "2024/05/23",
+    date: "2026/05/23",
     image: "/images/generals/国战UI.WU078.义姑.陆郁生.png",
   },
 ];
 
 const stats = [
-  { label: "武將數", value: "188+", icon: "/images/home/stat-generals.svg" },
-  { label: "卡牌數", value: "XXX+", icon: "/images/home/stat-cards.svg" },
-  { label: "支援模式", value: "國戰 / 身分局", icon: "/images/home/stat-modes.svg" },
-  { label: "版本", value: "v0.8.0", icon: "/images/home/stat-version.svg" },
+  { label: "武將數", value: "156", icon: "/images/home/icon/武將數-cropped.png" },
+  { label: "卡牌數", value: "0", icon: "/images/home/icon/卡牌數-cropped.png" },
+  { label: "支援模式", value: "國戰 / 身分局", icon: "/images/home/icon/支援模式-cropped.png" },
+  { label: "版本", value: "v1.0", icon: "/images/home/icon/版本-cropped.png" },
 ];
 
 function makeRoomCode() {
@@ -126,8 +125,16 @@ export default function Home() {
   const [nationalPlayers, setNationalPlayers] = useState(8);
   const [identityPlayers, setIdentityPlayers] = useState(8);
   const [nationalVersion, setNationalVersion] = useState(nationalVersions[0]);
+  const setupRef = useRef<HTMLElement | null>(null);
 
   const selectedMode = modeCards.find((mode) => mode.key === setupMode);
+
+  useEffect(() => {
+    if (!selectedMode) return;
+    window.requestAnimationFrame(() => {
+      setupRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, [selectedMode]);
 
   function createRoom() {
     if (!setupMode) return;
@@ -155,28 +162,23 @@ export default function Home() {
         <button
           className="icon-button"
           type="button"
-          aria-label="開啟選單"
+          aria-label="選單"
           aria-expanded={menuOpen}
-          onClick={() => setMenuOpen(true)}
+          onClick={() => setMenuOpen((open) => !open)}
         >
           <Menu size={31} strokeWidth={2.5} />
         </button>
-      </header>
 
-      {menuOpen && (
-        <div className="home-menu" role="dialog" aria-label="主選單">
-          <div className="home-menu-panel">
-            <button type="button" className="home-menu-close" onClick={() => setMenuOpen(false)} aria-label="關閉選單">
-              <X size={22} />
-            </button>
+        {menuOpen && (
+          <nav className="home-menu" aria-label="主選單">
             {menuItems.map((item) => (
               <Link key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>
                 {item.label}
               </Link>
             ))}
-          </div>
-        </div>
-      )}
+          </nav>
+        )}
+      </header>
 
       <section className="hero-lockup" aria-label="三國殺 Companion">
         <img className="hero-logo" src="/images/home/logo-transparent.png" alt="三國殺 Companion" />
@@ -186,7 +188,19 @@ export default function Home() {
       <section className="mode-grid" aria-label="主要模式">
         {modeCards.map((card) => {
           return (
-            <article key={card.key} className={`mode-card ${card.className}`}>
+            <article
+              key={card.key}
+              className={`mode-card ${card.className}`}
+              role="button"
+              tabIndex={0}
+              onClick={() => setSetupMode(card.key)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  setSetupMode(card.key);
+                }
+              }}
+            >
               <div className="card-corners" aria-hidden="true">
                 <span className="corner corner-tl" />
                 <span className="corner corner-tr" />
@@ -209,7 +223,7 @@ export default function Home() {
       </section>
 
       {selectedMode && (
-        <section className={`setup-panel ${selectedMode.className}`} aria-label={`${selectedMode.title}設定`}>
+        <section ref={setupRef} className={`setup-panel ${selectedMode.className}`} aria-label={`${selectedMode.title}設定`}>
           <button type="button" className="setup-back" onClick={() => setSetupMode(null)}>
             <ChevronLeft size={18} />
             返回模式
@@ -292,7 +306,7 @@ export default function Home() {
         <div className="tool-grid">
           {toolCards.map((card) => {
             return (
-              <Link key={card.title} href={card.href} className="tool-card">
+              <Link key={card.title} href={card.href} className={`tool-card ${card.className}`}>
                 <span className="tool-icon">
                   <img className="filled-emblem" src={card.icon} alt="" aria-hidden="true" />
                 </span>
