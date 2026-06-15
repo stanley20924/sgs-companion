@@ -957,7 +957,9 @@ export default function SessionApp({
           style={{
             ...styles.playersGrid,
             gridTemplateColumns: isMobile
-              ? "1fr"
+              ? isIdentityMode
+                ? "repeat(2, minmax(0, 1fr))"
+                : "1fr"
               : isIdentityMode
                 ? "repeat(auto-fit, minmax(min(100%, 240px), 300px))"
                 : "repeat(auto-fit, minmax(min(100%, 520px), 1fr))",
@@ -973,6 +975,7 @@ export default function SessionApp({
                   ...styles.playerCard,
                   ...(isIdentityMode ? styles.identityPlayerCard : {}),
                   ...(isMobile ? styles.mobilePlayerCard : {}),
+                  ...(isMobile && isIdentityMode ? styles.mobileIdentityPlayerCard : {}),
                   opacity: player.dead ? 0.45 : 1,
                   filter: player.dead ? "grayscale(1)" : "none",
                 }}
@@ -980,11 +983,19 @@ export default function SessionApp({
                 <div style={styles.cornerTop} />
                 <div style={styles.cornerBottom} />
 
-                <div style={styles.playerHeader}>
+                <div
+                  style={{
+                    ...styles.playerHeader,
+                    ...(isMobile && isIdentityMode ? styles.mobileIdentityPlayerHeader : {}),
+                  }}
+                >
                   <input
                     value={player.name}
                     onChange={(event) => updatePlayer(player.id, { name: event.target.value })}
-                    style={styles.playerInput}
+                    style={{
+                      ...styles.playerInput,
+                      ...(isMobile && isIdentityMode ? styles.mobileIdentityPlayerInput : {}),
+                    }}
                   />
 
                   {gameMode === "身分局" && (
@@ -993,7 +1004,10 @@ export default function SessionApp({
                       onChange={(event) =>
                         updatePlayer(player.id, { identity: event.target.value })
                       }
-                      style={styles.identitySelect}
+                      style={{
+                        ...styles.identitySelect,
+                        ...(isMobile && isIdentityMode ? styles.mobileIdentitySelect : {}),
+                      }}
                     >
                       {identities.map((identity) => (
                         <option key={identity}>{identity}</option>
@@ -1380,6 +1394,9 @@ const styles: Record<string, React.CSSProperties> = {
   mobilePlayerCard: {
     padding: 10,
   },
+  mobileIdentityPlayerCard: {
+    padding: 8,
+  },
   cornerTop: {
     position: "absolute",
     top: 8,
@@ -1406,6 +1423,11 @@ const styles: Record<string, React.CSSProperties> = {
     gap: 8,
     marginBottom: 14,
   },
+  mobileIdentityPlayerHeader: {
+    flexWrap: "wrap",
+    gap: 6,
+    marginBottom: 8,
+  },
   playerInput: {
     height: 42,
     flex: 1,
@@ -1416,6 +1438,13 @@ const styles: Record<string, React.CSSProperties> = {
     padding: "0 12px",
     minWidth: 90,
     fontSize: 15,
+  },
+  mobileIdentityPlayerInput: {
+    flex: "1 1 100%",
+    height: 34,
+    minWidth: 0,
+    fontSize: 13,
+    padding: "0 9px",
   },
   identitySelect: {
     height: 42,
@@ -1466,8 +1495,16 @@ const styles: Record<string, React.CSSProperties> = {
   identityGeneralSlot: {
     height: 330,
   },
+  mobileIdentitySelect: {
+    flex: "1 1 auto",
+    height: 32,
+    minWidth: 0,
+    fontSize: 12,
+    padding: "0 5px",
+  },
   mobileIdentityGeneralSlot: {
-    height: 230,
+    height: "auto",
+    aspectRatio: "2 / 3",
   },
   generalCard: {
     position: "absolute",

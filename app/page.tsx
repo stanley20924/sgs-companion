@@ -122,7 +122,7 @@ const updates = [
 const stats = [
   { label: "武將數", value: String(generals.length), icon: "/images/home/icon/武將數-cropped.png" },
   { label: "卡牌數", value: String(cards.length), icon: "/images/home/icon/卡牌數-cropped.png" },
-  { label: "支援模式", value: "國戰 / 身分局", icon: "/images/home/icon/支援模式-cropped.png" },
+  { label: "支援模式", value: "國戰／身分局", icon: "/images/home/icon/支援模式-cropped.png" },
   { label: "版本", value: "v1.1", icon: "/images/home/icon/版本-cropped.png" },
 ];
 

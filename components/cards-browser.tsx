@@ -103,8 +103,7 @@ export default function CardsBrowser() {
           <span className="generals-kicker">卡牌</span>
           <h1>卡牌資料庫</h1>
           <p>
-            先建立身分局與國戰可擴充資料庫。搜尋支援繁簡，之後把官方卡圖放到
-            <code>/public/images/cards</code> 並填入 image 欄位即可顯示大圖。
+            整理身分局與國戰常用卡牌，支援繁簡搜尋與模式、類型、擴充篩選。點開卡牌可查看效果、時機與來源。
           </p>
         </section>
 
@@ -160,7 +159,7 @@ export default function CardsBrowser() {
             ))}
           </div>
 
-          <p className="generals-count">共 {filteredCards.length} 張 / 筆卡牌資料</p>
+          <p className="generals-count">共 {filteredCards.length} 種卡牌</p>
         </section>
 
         <section className="cards-grid" aria-label="卡牌列表">

@@ -2311,7 +2311,8 @@ a {
   }
 
   .stat-item:nth-child(3) strong {
-    font-size: 10.5px;
+    font-size: 9.5px;
+    letter-spacing: 0;
   }
 
   .generals-shell {
@@ -2358,19 +2359,26 @@ a {
   }
 
   .general-detail-overlay {
-    padding: 10px;
+    padding: 8px;
+  }
+
+  .general-detail-modal,
+  .general-feedback-panel {
+    width: min(100%, calc(100vw - 16px));
   }
 
   .general-detail-main {
     grid-template-columns: 1fr;
+    min-height: 0;
   }
 
   .general-detail-image {
-    max-height: 70vh;
+    max-height: 58vh;
   }
 
   .general-detail-image img {
     height: auto;
+    max-height: 58vh;
     object-fit: contain;
   }
 
@@ -2381,6 +2389,15 @@ a {
 
   .detail-title-row {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .detail-title-row h2 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .detail-title-row p {
+    font-size: 15px;
   }
 
   .general-meta-grid {
