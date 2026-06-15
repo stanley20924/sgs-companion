@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ChevronLeft, MessageSquare, Search, Send, Star, X } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import { Converter } from "opencc-js";
 import { useEffect, useMemo, useState } from "react";
 import generalsJson from "../data/generals.json";
@@ -87,6 +88,7 @@ function emptyFeedback(): GeneralFeedback {
 }
 
 export default function GeneralsBrowser() {
+  const searchParams = useSearchParams();
   const [query, setQuery] = useState("");
   const [selectedFaction, setSelectedFaction] = useState("全部");
   const [selectedMode, setSelectedMode] = useState("全部");
@@ -97,9 +99,14 @@ export default function GeneralsBrowser() {
   const [commentName, setCommentName] = useState("");
   const [commentText, setCommentText] = useState("");
   const [commentRating, setCommentRating] = useState<RatingKey>("show");
+  const recentIds = useMemo(
+    () => (searchParams.get("recent") ?? "").split(",").filter(Boolean),
+    [searchParams]
+  );
 
   const filteredGenerals = useMemo(() => {
     const keyword = normalize(query);
+    const recentSet = new Set(recentIds);
 
     return generals.filter((general) => {
       const searchable = normalize(
@@ -119,10 +126,11 @@ export default function GeneralsBrowser() {
       const matchesMode = selectedMode === "全部" || general.modes.includes(selectedMode);
       const matchesVersion = selectedVersion === "全部" || general.versions.includes(selectedVersion);
       const matchesType = selectedType === "all" || general.type === selectedType;
+      const matchesRecent = recentSet.size === 0 || recentSet.has(general.id);
 
-      return matchesKeyword && matchesFaction && matchesMode && matchesVersion && matchesType;
+      return matchesKeyword && matchesFaction && matchesMode && matchesVersion && matchesType && matchesRecent;
     });
-  }, [query, selectedFaction, selectedMode, selectedVersion, selectedType]);
+  }, [query, selectedFaction, selectedMode, selectedVersion, selectedType, recentIds]);
 
   const totalVotes = ratingOptions.reduce((sum, option) => sum + feedback.ratingCounts[option.key], 0);
   const leadingRating = ratingOptions.reduce(
@@ -130,6 +138,16 @@ export default function GeneralsBrowser() {
       feedback.ratingCounts[option.key] > feedback.ratingCounts[best.key] ? option : best,
     ratingOptions[0]
   );
+
+  useEffect(() => {
+    const generalId = searchParams.get("general");
+    if (!generalId) return;
+
+    const target = generals.find((general) => general.id === generalId);
+    if (target) {
+      setSelectedGeneral(target);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     if (!selectedGeneral) return;

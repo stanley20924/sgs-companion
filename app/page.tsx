@@ -11,8 +11,12 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import GeneralDetailModal, { type General } from "../components/general-detail-modal";
+import generalsJson from "../data/generals.json";
 
 type ModeKey = "war" | "identity";
+
+const generals = generalsJson as General[];
 
 const nationalVersions = ["受命于天", "標準國戰", "君臨天下"];
 
@@ -72,6 +76,7 @@ const menuItems = [
 const updates = [
   {
     name: "文鴦",
+    id: "gz_smyt_jin042_wenyang",
     faction: "晉",
     mode: "國戰",
     date: "2026/05/28",
@@ -79,6 +84,7 @@ const updates = [
   },
   {
     name: "張魯",
+    id: "gz_smyt_qun_wei048_zhanglu",
     faction: "群",
     mode: "國戰",
     date: "2026/05/27",
@@ -86,6 +92,7 @@ const updates = [
   },
   {
     name: "夏侯霸",
+    id: "gz_smyt_shu_wei041_xiahouba",
     faction: "蜀",
     mode: "國戰",
     date: "2026/05/25",
@@ -93,6 +100,7 @@ const updates = [
   },
   {
     name: "羊祜",
+    id: "gz_smyt_jin022_yanghu",
     faction: "晉",
     mode: "國戰",
     date: "2026/05/24",
@@ -100,6 +108,7 @@ const updates = [
   },
   {
     name: "陸郁生",
+    id: "gz_smyt_wu078_luyusheng",
     faction: "吳",
     mode: "國戰",
     date: "2026/05/23",
@@ -125,6 +134,7 @@ export default function Home() {
   const [nationalPlayers, setNationalPlayers] = useState(8);
   const [identityPlayers, setIdentityPlayers] = useState(8);
   const [nationalVersion, setNationalVersion] = useState(nationalVersions[0]);
+  const [selectedGeneral, setSelectedGeneral] = useState<General | null>(null);
   const setupRef = useRef<HTMLElement | null>(null);
 
   const selectedMode = modeCards.find((mode) => mode.key === setupMode);
@@ -149,6 +159,13 @@ export default function Home() {
     }
 
     router.push(`/s/${makeRoomCode()}?${params.toString()}`);
+  }
+
+  function openRecentGeneral(id: string) {
+    const general = generals.find((item) => item.id === id);
+    if (general) {
+      setSelectedGeneral(general);
+    }
   }
 
   return (
@@ -274,10 +291,6 @@ export default function Home() {
             <Shield size={22} fill="currentColor" strokeWidth={1.8} />
             <h2>資料庫</h2>
           </div>
-          <Link href="/generals">
-            更多
-            <ChevronRight size={20} />
-          </Link>
         </div>
 
         <div className="library-grid">
@@ -327,7 +340,7 @@ export default function Home() {
             <Flame size={22} fill="currentColor" strokeWidth={1.8} />
             <h2>最近更新</h2>
           </div>
-          <Link href="/changelog">
+          <Link href={`/generals?recent=${updates.map((item) => item.id).join(",")}`}>
             查看全部
             <ChevronRight size={20} />
           </Link>
@@ -335,15 +348,20 @@ export default function Home() {
 
         <div className="update-list">
           {updates.map((item) => (
-            <Link key={`${item.name}-${item.date}`} href="/changelog" className="update-row">
+            <button
+              key={`${item.name}-${item.date}`}
+              type="button"
+              className="update-row"
+              onClick={() => openRecentGeneral(item.id)}
+            >
               <span className="new-badge">NEW</span>
               <img src={item.image} alt="" aria-hidden="true" />
               <strong>{item.name}</strong>
-              <span className={`faction-badge faction-${item.faction}`}>{item.faction}</span>
               <span className="mode-badge">{item.mode}</span>
+              <span className={`faction-badge faction-${item.faction}`}>{item.faction}</span>
               <time>{item.date}</time>
               <ChevronRight size={22} />
-            </Link>
+            </button>
           ))}
         </div>
       </section>
@@ -359,6 +377,10 @@ export default function Home() {
           );
         })}
       </section>
+
+      {selectedGeneral && (
+        <GeneralDetailModal general={selectedGeneral} onClose={() => setSelectedGeneral(null)} />
+      )}
     </main>
   );
 }
