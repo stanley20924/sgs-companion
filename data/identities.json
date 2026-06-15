@@ -1,0 +1,58 @@
+[
+  {
+    "id": "identity_role_lord",
+    "name": "主公",
+    "simplifiedName": "主公",
+    "modes": [
+      "身分局"
+    ],
+    "category": "身份牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "effect": "主公公開身份，目標通常是擊敗所有反賊與內奸。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E4%B8%BB%E5%85%AC"
+  },
+  {
+    "id": "identity_role_loyalist",
+    "name": "忠臣",
+    "simplifiedName": "忠臣",
+    "modes": [
+      "身分局"
+    ],
+    "category": "身份牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "effect": "協助主公擊敗反賊與內奸。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E5%BF%A0%E8%87%A3"
+  },
+  {
+    "id": "identity_role_rebel",
+    "name": "反賊",
+    "simplifiedName": "反贼",
+    "modes": [
+      "身分局"
+    ],
+    "category": "身份牌",
+    "expansion": "標準",
+    "deckCount": 4,
+    "effect": "擊敗主公。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E5%8F%8D%E8%B3%8A"
+  },
+  {
+    "id": "identity_role_renegade",
+    "name": "內奸",
+    "simplifiedName": "内奸",
+    "modes": [
+      "身分局"
+    ],
+    "category": "身份牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "effect": "通常需先清除其他角色，最後擊敗主公。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E5%85%A7%E5%A5%B8"
+  }
+]

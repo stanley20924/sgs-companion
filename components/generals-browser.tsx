@@ -17,6 +17,7 @@ type General = {
   modes: string[];
   versions: string[];
   skills?: string[];
+  cardEntry?: boolean;
 };
 
 type RatingKey = "show" | "top" | "strong" | "npc" | "weak";
@@ -33,7 +34,7 @@ type GeneralFeedback = {
   }>;
 };
 
-const generals = generalsJson as General[];
+const generals = (generalsJson as General[]).filter((general) => !general.cardEntry);
 const t2s = Converter({ from: "tw", to: "cn" });
 const factions = ["全部", "魏", "蜀", "吳", "群", "晉"];
 const modeFilters = Array.from(new Set(["全部", "國戰", "身分局", ...generals.flatMap((general) => general.modes)]));

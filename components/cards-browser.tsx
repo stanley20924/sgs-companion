@@ -14,7 +14,7 @@ type CardData = {
   category: string;
   subtype?: string;
   expansion: string;
-  count?: number;
+  deckCount?: number;
   timing?: string;
   target?: string;
   effect: string;
@@ -247,7 +247,7 @@ export default function CardsBrowser() {
                   </div>
                   <div>
                     <dt>數量</dt>
-                    <dd>{selectedCard.count ?? "待補"}</dd>
+                    <dd>{selectedCard.deckCount ?? "待補"}</dd>
                   </div>
                   <div>
                     <dt>時機</dt>

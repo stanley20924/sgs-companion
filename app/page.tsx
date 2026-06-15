@@ -12,13 +12,16 @@ import {
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import GeneralDetailModal, { type General } from "../components/general-detail-modal";
+import cardsJson from "../data/cards.json";
 import generalsJson from "../data/generals.json";
 
 type ModeKey = "war" | "identity";
 
-const generals = generalsJson as General[];
+const generals = (generalsJson as General[]).filter((general) => !general.cardEntry);
+const cards = cardsJson as Array<{ id: string }>;
 
 const nationalVersions = ["受命于天", "標準國戰", "君臨天下"];
+const identityVersions = ["2026珍藏版", "標準身份", "軍爭"];
 
 const modeCards = [
   {
@@ -46,7 +49,7 @@ const libraryCards = [
     href: "/generals",
     title: "武將圖鑑",
     mark: "將",
-    count: "188+ 位武將",
+    count: `${generals.length} 位武將`,
     meta: "技能・勢力・稱號・皮膚",
     className: "generals",
   },
@@ -54,7 +57,7 @@ const libraryCards = [
     href: "/cards",
     title: "卡牌資料庫",
     mark: "牌",
-    count: "全卡牌庫",
+    count: `${cards.length} 張卡牌`,
     meta: "基本牌・錦囊牌・裝備牌",
     className: "cards",
   },
@@ -75,52 +78,52 @@ const menuItems = [
 
 const updates = [
   {
-    name: "文鴦",
-    id: "gz_smyt_jin042_wenyang",
-    faction: "晉",
-    mode: "國戰",
-    date: "2026/05/28",
-    image: "/images/generals/国战UI.JIN042.陆拔山岳.文鸯.png",
-  },
-  {
-    name: "張魯",
-    id: "gz_smyt_qun_wei048_zhanglu",
-    faction: "群",
-    mode: "國戰",
-    date: "2026/05/27",
-    image: "/images/generals/国战UI.QUN%26WEI048.政宽教惠.张鲁.png",
-  },
-  {
-    name: "夏侯霸",
-    id: "gz_smyt_shu_wei041_xiahouba",
+    name: "劉備",
+    id: "identity_2026_shu001",
     faction: "蜀",
-    mode: "國戰",
-    date: "2026/05/25",
-    image: "/images/generals/国战UI.SHU%26WEI041.棘途壮志.夏侯霸.png",
+    mode: "身分局",
+    date: "2026/06/14",
+    image: "/images/generals/26身分珍藏.SHU001.乱世的枭雄.刘备.png",
   },
   {
-    name: "羊祜",
-    id: "gz_smyt_jin022_yanghu",
-    faction: "晉",
-    mode: "國戰",
-    date: "2026/05/24",
-    image: "/images/generals/国战UI.JIN022.执德清劭.羊祜.png",
+    name: "曹操",
+    id: "identity_2026_wei001",
+    faction: "魏",
+    mode: "身分局",
+    date: "2026/06/14",
+    image: "/images/generals/26身分珍藏.WEI001.魏武帝.曹操.png",
   },
   {
-    name: "陸郁生",
-    id: "gz_smyt_wu078_luyusheng",
+    name: "孫權",
+    id: "identity_2026_wu001",
     faction: "吳",
-    mode: "國戰",
-    date: "2026/05/23",
-    image: "/images/generals/国战UI.WU078.义姑.陆郁生.png",
+    mode: "身分局",
+    date: "2026/06/14",
+    image: "/images/generals/26身分珍藏.WU001.年轻的贤君.孙权.png",
+  },
+  {
+    name: "呂布",
+    id: "identity_2026_qun002",
+    faction: "群",
+    mode: "身分局",
+    date: "2026/06/14",
+    image: "/images/generals/26身分珍藏.QUN002.武的化身.吕布.png",
+  },
+  {
+    name: "華佗",
+    id: "identity_2026_qun001",
+    faction: "群",
+    mode: "身分局",
+    date: "2026/06/14",
+    image: "/images/generals/26身分珍藏.QUN001.神医.华佗.png",
   },
 ];
 
 const stats = [
-  { label: "武將數", value: "156", icon: "/images/home/icon/武將數-cropped.png" },
-  { label: "卡牌數", value: "0", icon: "/images/home/icon/卡牌數-cropped.png" },
+  { label: "武將數", value: String(generals.length), icon: "/images/home/icon/武將數-cropped.png" },
+  { label: "卡牌數", value: String(cards.length), icon: "/images/home/icon/卡牌數-cropped.png" },
   { label: "支援模式", value: "國戰 / 身分局", icon: "/images/home/icon/支援模式-cropped.png" },
-  { label: "版本", value: "v1.0", icon: "/images/home/icon/版本-cropped.png" },
+  { label: "版本", value: "v1.1", icon: "/images/home/icon/版本-cropped.png" },
 ];
 
 function makeRoomCode() {
@@ -134,6 +137,7 @@ export default function Home() {
   const [nationalPlayers, setNationalPlayers] = useState(8);
   const [identityPlayers, setIdentityPlayers] = useState(8);
   const [nationalVersion, setNationalVersion] = useState(nationalVersions[0]);
+  const [identityVersion, setIdentityVersion] = useState(identityVersions[0]);
   const [selectedGeneral, setSelectedGeneral] = useState<General | null>(null);
   const setupRef = useRef<HTMLElement | null>(null);
 
@@ -154,9 +158,7 @@ export default function Home() {
       players: String(setupMode === "war" ? nationalPlayers : identityPlayers),
     });
 
-    if (setupMode === "war") {
-      params.set("version", nationalVersion);
-    }
+    params.set("version", setupMode === "war" ? nationalVersion : identityVersion);
 
     router.push(`/s/${makeRoomCode()}?${params.toString()}`);
   }
@@ -265,9 +267,9 @@ export default function Home() {
             </select>
           </label>
 
-          {setupMode === "war" && (
-            <label className="setup-field">
-              <span>國戰版本</span>
+          <label className="setup-field">
+            <span>{setupMode === "war" ? "國戰版本" : "身分局版本"}</span>
+            {setupMode === "war" ? (
               <select value={nationalVersion} onChange={(event) => setNationalVersion(event.target.value)}>
                 {nationalVersions.map((version) => (
                   <option key={version} value={version}>
@@ -275,8 +277,16 @@ export default function Home() {
                   </option>
                 ))}
               </select>
-            </label>
-          )}
+            ) : (
+              <select value={identityVersion} onChange={(event) => setIdentityVersion(event.target.value)}>
+                {identityVersions.map((version) => (
+                  <option key={version} value={version}>
+                    {version}
+                  </option>
+                ))}
+              </select>
+            )}
+          </label>
 
           <button type="button" className="setup-create" onClick={createRoom}>
             建立牌局

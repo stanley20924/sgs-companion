@@ -13,6 +13,7 @@ export type General = {
   modes: string[];
   versions: string[];
   skills?: string[];
+  cardEntry?: boolean;
 };
 
 type RatingKey = "show" | "top" | "strong" | "npc" | "weak";

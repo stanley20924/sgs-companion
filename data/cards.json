@@ -1,6 +1,6 @@
 [
   {
-    "id": "identity_standard_slash",
+    "id": "identity_standard_slash_01",
     "name": "殺",
     "simplifiedName": "杀",
     "modes": [
@@ -9,16 +9,508 @@
     ],
     "category": "基本牌",
     "expansion": "標準",
-    "count": 30,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "攻擊範圍內一名角色",
     "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
-    "notes": "國戰與身分局皆常見。可依實際版本補上花色點數。",
     "image": "/images/cards/bwiki/identity_standard_slash.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
   },
   {
-    "id": "identity_standard_dodge",
+    "id": "identity_standard_slash_02",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_03",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_04",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_05",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_06",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_07",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_08",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_09",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_10",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_11",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_12",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_13",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_14",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_15",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_16",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_17",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_18",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_19",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_20",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_21",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_22",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_23",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_24",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_25",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_26",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_27",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_28",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_29",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_slash_30",
+    "name": "殺",
+    "simplifiedName": "杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_dodge_01",
     "name": "閃",
     "simplifiedName": "闪",
     "modes": [
@@ -27,16 +519,253 @@
     ],
     "category": "基本牌",
     "expansion": "標準",
-    "count": 15,
+    "deckCount": 1,
     "timing": "需要響應殺時",
     "target": "自己",
     "effect": "抵消一張殺的效果。",
-    "notes": "可作為部分錦囊或技能的響應牌。",
     "image": "/images/cards/bwiki/identity_standard_dodge.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
   },
   {
-    "id": "identity_standard_peach",
+    "id": "identity_standard_dodge_02",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_03",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_04",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_05",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_06",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_07",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_08",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_09",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_10",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_11",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_12",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_13",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_14",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_dodge_15",
+    "name": "閃",
+    "simplifiedName": "闪",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要響應殺時",
+    "target": "自己",
+    "effect": "抵消一張殺的效果。",
+    "image": "/images/cards/bwiki/identity_standard_dodge.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+  },
+  {
+    "id": "identity_standard_peach_01",
     "name": "桃",
     "simplifiedName": "桃",
     "modes": [
@@ -45,16 +774,134 @@
     ],
     "category": "基本牌",
     "expansion": "標準",
-    "count": 8,
+    "deckCount": 1,
     "timing": "出牌階段或角色瀕死時",
     "target": "自己或瀕死角色",
     "effect": "回復1點體力。瀕死時可對瀕死角色使用。",
-    "notes": "不同版本對使用時機與響應細節以規則集為準。",
     "image": "/images/cards/bwiki/identity_standard_peach.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E6%A1%83"
   },
   {
-    "id": "identity_junzheng_wine",
+    "id": "identity_standard_peach_02",
+    "name": "桃",
+    "simplifiedName": "桃",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段或角色瀕死時",
+    "target": "自己或瀕死角色",
+    "effect": "回復1點體力。瀕死時可對瀕死角色使用。",
+    "image": "/images/cards/bwiki/identity_standard_peach.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%A1%83"
+  },
+  {
+    "id": "identity_standard_peach_03",
+    "name": "桃",
+    "simplifiedName": "桃",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段或角色瀕死時",
+    "target": "自己或瀕死角色",
+    "effect": "回復1點體力。瀕死時可對瀕死角色使用。",
+    "image": "/images/cards/bwiki/identity_standard_peach.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%A1%83"
+  },
+  {
+    "id": "identity_standard_peach_04",
+    "name": "桃",
+    "simplifiedName": "桃",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段或角色瀕死時",
+    "target": "自己或瀕死角色",
+    "effect": "回復1點體力。瀕死時可對瀕死角色使用。",
+    "image": "/images/cards/bwiki/identity_standard_peach.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%A1%83"
+  },
+  {
+    "id": "identity_standard_peach_05",
+    "name": "桃",
+    "simplifiedName": "桃",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段或角色瀕死時",
+    "target": "自己或瀕死角色",
+    "effect": "回復1點體力。瀕死時可對瀕死角色使用。",
+    "image": "/images/cards/bwiki/identity_standard_peach.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%A1%83"
+  },
+  {
+    "id": "identity_standard_peach_06",
+    "name": "桃",
+    "simplifiedName": "桃",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段或角色瀕死時",
+    "target": "自己或瀕死角色",
+    "effect": "回復1點體力。瀕死時可對瀕死角色使用。",
+    "image": "/images/cards/bwiki/identity_standard_peach.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%A1%83"
+  },
+  {
+    "id": "identity_standard_peach_07",
+    "name": "桃",
+    "simplifiedName": "桃",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段或角色瀕死時",
+    "target": "自己或瀕死角色",
+    "effect": "回復1點體力。瀕死時可對瀕死角色使用。",
+    "image": "/images/cards/bwiki/identity_standard_peach.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%A1%83"
+  },
+  {
+    "id": "identity_standard_peach_08",
+    "name": "桃",
+    "simplifiedName": "桃",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段或角色瀕死時",
+    "target": "自己或瀕死角色",
+    "effect": "回復1點體力。瀕死時可對瀕死角色使用。",
+    "image": "/images/cards/bwiki/identity_standard_peach.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%A1%83"
+  },
+  {
+    "id": "identity_junzheng_wine_01",
     "name": "酒",
     "simplifiedName": "酒",
     "modes": [
@@ -63,16 +910,83 @@
     ],
     "category": "基本牌",
     "expansion": "軍爭篇",
-    "count": 5,
+    "deckCount": 1,
     "timing": "出牌階段或自己瀕死時",
     "target": "自己",
     "effect": "出牌階段限一次，對自己使用，令本回合下一張殺造成的傷害+1；當你處於瀕死狀態時，也可對自己使用，回復1點體力。",
-    "notes": "瀕死時使用酒通常不受出牌階段限一次限制；細節以當前版本規則為準。",
-    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%85%92",
-    "image": ""
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%85%92"
   },
   {
-    "id": "identity_junzheng_fire_slash",
+    "id": "identity_junzheng_wine_02",
+    "name": "酒",
+    "simplifiedName": "酒",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段或自己瀕死時",
+    "target": "自己",
+    "effect": "出牌階段限一次，對自己使用，令本回合下一張殺造成的傷害+1；當你處於瀕死狀態時，也可對自己使用，回復1點體力。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%85%92"
+  },
+  {
+    "id": "identity_junzheng_wine_03",
+    "name": "酒",
+    "simplifiedName": "酒",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段或自己瀕死時",
+    "target": "自己",
+    "effect": "出牌階段限一次，對自己使用，令本回合下一張殺造成的傷害+1；當你處於瀕死狀態時，也可對自己使用，回復1點體力。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%85%92"
+  },
+  {
+    "id": "identity_junzheng_wine_04",
+    "name": "酒",
+    "simplifiedName": "酒",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段或自己瀕死時",
+    "target": "自己",
+    "effect": "出牌階段限一次，對自己使用，令本回合下一張殺造成的傷害+1；當你處於瀕死狀態時，也可對自己使用，回復1點體力。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%85%92"
+  },
+  {
+    "id": "identity_junzheng_wine_05",
+    "name": "酒",
+    "simplifiedName": "酒",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段或自己瀕死時",
+    "target": "自己",
+    "effect": "出牌階段限一次，對自己使用，令本回合下一張殺造成的傷害+1；當你處於瀕死狀態時，也可對自己使用，回復1點體力。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%85%92"
+  },
+  {
+    "id": "identity_junzheng_fire_slash_01",
     "name": "火殺",
     "simplifiedName": "火杀",
     "modes": [
@@ -81,16 +995,83 @@
     ],
     "category": "基本牌",
     "expansion": "軍爭篇",
-    "count": 5,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "攻擊範圍內一名角色",
     "effect": "對目標角色造成1點火焰傷害。",
-    "notes": "屬性傷害可觸發連環傳導。",
     "image": "/images/cards/bwiki/identity_junzheng_fire_slash.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E7%81%AB%E6%9D%80"
   },
   {
-    "id": "identity_junzheng_thunder_slash",
+    "id": "identity_junzheng_fire_slash_02",
+    "name": "火殺",
+    "simplifiedName": "火杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點火焰傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_fire_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E7%81%AB%E6%9D%80"
+  },
+  {
+    "id": "identity_junzheng_fire_slash_03",
+    "name": "火殺",
+    "simplifiedName": "火杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點火焰傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_fire_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E7%81%AB%E6%9D%80"
+  },
+  {
+    "id": "identity_junzheng_fire_slash_04",
+    "name": "火殺",
+    "simplifiedName": "火杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點火焰傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_fire_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E7%81%AB%E6%9D%80"
+  },
+  {
+    "id": "identity_junzheng_fire_slash_05",
+    "name": "火殺",
+    "simplifiedName": "火杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點火焰傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_fire_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E7%81%AB%E6%9D%80"
+  },
+  {
+    "id": "identity_junzheng_thunder_slash_01",
     "name": "雷殺",
     "simplifiedName": "雷杀",
     "modes": [
@@ -99,16 +1080,151 @@
     ],
     "category": "基本牌",
     "expansion": "軍爭篇",
-    "count": 9,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "攻擊範圍內一名角色",
     "effect": "對目標角色造成1點雷電傷害。",
-    "notes": "屬性傷害可觸發連環傳導。",
     "image": "/images/cards/bwiki/identity_junzheng_thunder_slash.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E9%9B%B7%E6%9D%80"
   },
   {
-    "id": "identity_standard_duel",
+    "id": "identity_junzheng_thunder_slash_02",
+    "name": "雷殺",
+    "simplifiedName": "雷杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點雷電傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_thunder_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%9B%B7%E6%9D%80"
+  },
+  {
+    "id": "identity_junzheng_thunder_slash_03",
+    "name": "雷殺",
+    "simplifiedName": "雷杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點雷電傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_thunder_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%9B%B7%E6%9D%80"
+  },
+  {
+    "id": "identity_junzheng_thunder_slash_04",
+    "name": "雷殺",
+    "simplifiedName": "雷杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點雷電傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_thunder_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%9B%B7%E6%9D%80"
+  },
+  {
+    "id": "identity_junzheng_thunder_slash_05",
+    "name": "雷殺",
+    "simplifiedName": "雷杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點雷電傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_thunder_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%9B%B7%E6%9D%80"
+  },
+  {
+    "id": "identity_junzheng_thunder_slash_06",
+    "name": "雷殺",
+    "simplifiedName": "雷杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點雷電傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_thunder_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%9B%B7%E6%9D%80"
+  },
+  {
+    "id": "identity_junzheng_thunder_slash_07",
+    "name": "雷殺",
+    "simplifiedName": "雷杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點雷電傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_thunder_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%9B%B7%E6%9D%80"
+  },
+  {
+    "id": "identity_junzheng_thunder_slash_08",
+    "name": "雷殺",
+    "simplifiedName": "雷杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點雷電傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_thunder_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%9B%B7%E6%9D%80"
+  },
+  {
+    "id": "identity_junzheng_thunder_slash_09",
+    "name": "雷殺",
+    "simplifiedName": "雷杀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "基本牌",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "攻擊範圍內一名角色",
+    "effect": "對目標角色造成1點雷電傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_thunder_slash.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%9B%B7%E6%9D%80"
+  },
+  {
+    "id": "identity_standard_duel_01",
     "name": "決鬥",
     "simplifiedName": "决斗",
     "modes": [
@@ -118,16 +1234,51 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "標準",
-    "count": 3,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "一名其他角色",
     "effect": "由目標開始，雙方輪流打出殺；先不出殺的一方受到另一方造成的1點傷害。",
-    "notes": "可被無懈可擊響應。",
     "image": "/images/cards/bwiki/identity_standard_duel.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E5%86%B3%E6%96%97"
   },
   {
-    "id": "identity_standard_dismantlement",
+    "id": "identity_standard_duel_02",
+    "name": "決鬥",
+    "simplifiedName": "决斗",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名其他角色",
+    "effect": "由目標開始，雙方輪流打出殺；先不出殺的一方受到另一方造成的1點傷害。",
+    "image": "/images/cards/bwiki/identity_standard_duel.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E5%86%B3%E6%96%97"
+  },
+  {
+    "id": "identity_standard_duel_03",
+    "name": "決鬥",
+    "simplifiedName": "决斗",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名其他角色",
+    "effect": "由目標開始，雙方輪流打出殺；先不出殺的一方受到另一方造成的1點傷害。",
+    "image": "/images/cards/bwiki/identity_standard_duel.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E5%86%B3%E6%96%97"
+  },
+  {
+    "id": "identity_standard_dismantlement_01",
     "name": "過河拆橋",
     "simplifiedName": "过河拆桥",
     "modes": [
@@ -137,16 +1288,105 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "標準",
-    "count": 6,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "一名區域內有牌的角色",
     "effect": "棄置目標角色區域內的一張牌。",
-    "notes": "可指定手牌、裝備區或判定區牌。",
     "image": "/images/cards/bwiki/identity_standard_dismantlement.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E8%BF%87%E6%B2%B3%E6%8B%86%E6%A1%A5"
   },
   {
-    "id": "identity_standard_snatch",
+    "id": "identity_standard_dismantlement_02",
+    "name": "過河拆橋",
+    "simplifiedName": "过河拆桥",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名區域內有牌的角色",
+    "effect": "棄置目標角色區域內的一張牌。",
+    "image": "/images/cards/bwiki/identity_standard_dismantlement.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E8%BF%87%E6%B2%B3%E6%8B%86%E6%A1%A5"
+  },
+  {
+    "id": "identity_standard_dismantlement_03",
+    "name": "過河拆橋",
+    "simplifiedName": "过河拆桥",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名區域內有牌的角色",
+    "effect": "棄置目標角色區域內的一張牌。",
+    "image": "/images/cards/bwiki/identity_standard_dismantlement.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E8%BF%87%E6%B2%B3%E6%8B%86%E6%A1%A5"
+  },
+  {
+    "id": "identity_standard_dismantlement_04",
+    "name": "過河拆橋",
+    "simplifiedName": "过河拆桥",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名區域內有牌的角色",
+    "effect": "棄置目標角色區域內的一張牌。",
+    "image": "/images/cards/bwiki/identity_standard_dismantlement.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E8%BF%87%E6%B2%B3%E6%8B%86%E6%A1%A5"
+  },
+  {
+    "id": "identity_standard_dismantlement_05",
+    "name": "過河拆橋",
+    "simplifiedName": "过河拆桥",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名區域內有牌的角色",
+    "effect": "棄置目標角色區域內的一張牌。",
+    "image": "/images/cards/bwiki/identity_standard_dismantlement.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E8%BF%87%E6%B2%B3%E6%8B%86%E6%A1%A5"
+  },
+  {
+    "id": "identity_standard_dismantlement_06",
+    "name": "過河拆橋",
+    "simplifiedName": "过河拆桥",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名區域內有牌的角色",
+    "effect": "棄置目標角色區域內的一張牌。",
+    "image": "/images/cards/bwiki/identity_standard_dismantlement.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E8%BF%87%E6%B2%B3%E6%8B%86%E6%A1%A5"
+  },
+  {
+    "id": "identity_standard_snatch_01",
     "name": "順手牽羊",
     "simplifiedName": "顺手牵羊",
     "modes": [
@@ -156,16 +1396,87 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "標準",
-    "count": 5,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "距離為1且區域內有牌的一名角色",
     "effect": "獲得目標角色區域內的一張牌。",
-    "notes": "距離與裝備修正需要依場上狀態計算。",
     "image": "/images/cards/bwiki/identity_standard_snatch.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E9%A1%BA%E6%89%8B%E7%89%B5%E7%BE%8A"
   },
   {
-    "id": "identity_standard_ex_nihilo",
+    "id": "identity_standard_snatch_02",
+    "name": "順手牽羊",
+    "simplifiedName": "顺手牵羊",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "距離為1且區域內有牌的一名角色",
+    "effect": "獲得目標角色區域內的一張牌。",
+    "image": "/images/cards/bwiki/identity_standard_snatch.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%A1%BA%E6%89%8B%E7%89%B5%E7%BE%8A"
+  },
+  {
+    "id": "identity_standard_snatch_03",
+    "name": "順手牽羊",
+    "simplifiedName": "顺手牵羊",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "距離為1且區域內有牌的一名角色",
+    "effect": "獲得目標角色區域內的一張牌。",
+    "image": "/images/cards/bwiki/identity_standard_snatch.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%A1%BA%E6%89%8B%E7%89%B5%E7%BE%8A"
+  },
+  {
+    "id": "identity_standard_snatch_04",
+    "name": "順手牽羊",
+    "simplifiedName": "顺手牵羊",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "距離為1且區域內有牌的一名角色",
+    "effect": "獲得目標角色區域內的一張牌。",
+    "image": "/images/cards/bwiki/identity_standard_snatch.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%A1%BA%E6%89%8B%E7%89%B5%E7%BE%8A"
+  },
+  {
+    "id": "identity_standard_snatch_05",
+    "name": "順手牽羊",
+    "simplifiedName": "顺手牵羊",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "距離為1且區域內有牌的一名角色",
+    "effect": "獲得目標角色區域內的一張牌。",
+    "image": "/images/cards/bwiki/identity_standard_snatch.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%A1%BA%E6%89%8B%E7%89%B5%E7%BE%8A"
+  },
+  {
+    "id": "identity_standard_ex_nihilo_01",
     "name": "無中生有",
     "simplifiedName": "无中生有",
     "modes": [
@@ -175,16 +1486,69 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "標準",
-    "count": 4,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "自己",
     "effect": "摸兩張牌。",
-    "notes": "可被無懈可擊響應。",
     "image": "/images/cards/bwiki/identity_standard_ex_nihilo.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E6%97%A0%E4%B8%AD%E7%94%9F%E6%9C%89"
   },
   {
-    "id": "identity_standard_nullification",
+    "id": "identity_standard_ex_nihilo_02",
+    "name": "無中生有",
+    "simplifiedName": "无中生有",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "自己",
+    "effect": "摸兩張牌。",
+    "image": "/images/cards/bwiki/identity_standard_ex_nihilo.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%97%A0%E4%B8%AD%E7%94%9F%E6%9C%89"
+  },
+  {
+    "id": "identity_standard_ex_nihilo_03",
+    "name": "無中生有",
+    "simplifiedName": "无中生有",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "自己",
+    "effect": "摸兩張牌。",
+    "image": "/images/cards/bwiki/identity_standard_ex_nihilo.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%97%A0%E4%B8%AD%E7%94%9F%E6%9C%89"
+  },
+  {
+    "id": "identity_standard_ex_nihilo_04",
+    "name": "無中生有",
+    "simplifiedName": "无中生有",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "自己",
+    "effect": "摸兩張牌。",
+    "image": "/images/cards/bwiki/identity_standard_ex_nihilo.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%97%A0%E4%B8%AD%E7%94%9F%E6%9C%89"
+  },
+  {
+    "id": "identity_standard_nullification_01",
     "name": "無懈可擊",
     "simplifiedName": "无懈可击",
     "modes": [
@@ -194,16 +1558,69 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "標準",
-    "count": 4,
+    "deckCount": 1,
     "timing": "錦囊牌生效前",
     "target": "一張錦囊牌",
     "effect": "抵消目標錦囊牌對一名角色產生的效果。",
-    "notes": "國戰中存在特殊無懈互動時，以當前規則為準。",
     "image": "/images/cards/bwiki/identity_standard_nullification.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E6%97%A0%E6%87%88%E5%8F%AF%E5%87%BB"
   },
   {
-    "id": "identity_standard_barbarians",
+    "id": "identity_standard_nullification_02",
+    "name": "無懈可擊",
+    "simplifiedName": "无懈可击",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "錦囊牌生效前",
+    "target": "一張錦囊牌",
+    "effect": "抵消目標錦囊牌對一名角色產生的效果。",
+    "image": "/images/cards/bwiki/identity_standard_nullification.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%97%A0%E6%87%88%E5%8F%AF%E5%87%BB"
+  },
+  {
+    "id": "identity_standard_nullification_03",
+    "name": "無懈可擊",
+    "simplifiedName": "无懈可击",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "錦囊牌生效前",
+    "target": "一張錦囊牌",
+    "effect": "抵消目標錦囊牌對一名角色產生的效果。",
+    "image": "/images/cards/bwiki/identity_standard_nullification.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%97%A0%E6%87%88%E5%8F%AF%E5%87%BB"
+  },
+  {
+    "id": "identity_standard_nullification_04",
+    "name": "無懈可擊",
+    "simplifiedName": "无懈可击",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "錦囊牌生效前",
+    "target": "一張錦囊牌",
+    "effect": "抵消目標錦囊牌對一名角色產生的效果。",
+    "image": "/images/cards/bwiki/identity_standard_nullification.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%97%A0%E6%87%88%E5%8F%AF%E5%87%BB"
+  },
+  {
+    "id": "identity_standard_barbarians_01",
     "name": "南蠻入侵",
     "simplifiedName": "南蛮入侵",
     "modes": [
@@ -213,11 +1630,46 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "標準",
-    "count": 3,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "所有其他角色",
     "effect": "每名目標角色需打出一張殺，否則受到1點傷害。",
-    "notes": "依座次依序結算。",
+    "image": "/images/cards/bwiki/identity_standard_barbarians.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E5%8D%97%E8%9B%AE%E5%85%A5%E4%BE%B5"
+  },
+  {
+    "id": "identity_standard_barbarians_02",
+    "name": "南蠻入侵",
+    "simplifiedName": "南蛮入侵",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "所有其他角色",
+    "effect": "每名目標角色需打出一張殺，否則受到1點傷害。",
+    "image": "/images/cards/bwiki/identity_standard_barbarians.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E5%8D%97%E8%9B%AE%E5%85%A5%E4%BE%B5"
+  },
+  {
+    "id": "identity_standard_barbarians_03",
+    "name": "南蠻入侵",
+    "simplifiedName": "南蛮入侵",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "所有其他角色",
+    "effect": "每名目標角色需打出一張殺，否則受到1點傷害。",
     "image": "/images/cards/bwiki/identity_standard_barbarians.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E5%8D%97%E8%9B%AE%E5%85%A5%E4%BE%B5"
   },
@@ -232,16 +1684,15 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "標準",
-    "count": 1,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "所有其他角色",
     "effect": "每名目標角色需打出一張閃，否則受到1點傷害。",
-    "notes": "依座次依序結算。",
     "image": "/images/cards/bwiki/identity_standard_arrows.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E4%B8%87%E7%AE%AD%E9%BD%90%E5%8F%91"
   },
   {
-    "id": "identity_standard_harvest",
+    "id": "identity_standard_harvest_01",
     "name": "五穀豐登",
     "simplifiedName": "五谷丰登",
     "modes": [
@@ -251,11 +1702,28 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "標準",
-    "count": 2,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "所有角色",
     "effect": "亮出等同存活角色數的牌，目標角色依序選擇並獲得一張。",
-    "notes": "依座次選牌。",
+    "image": "/images/cards/bwiki/identity_standard_harvest.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E4%BA%94%E8%B0%B7%E4%B8%B0%E7%99%BB"
+  },
+  {
+    "id": "identity_standard_harvest_02",
+    "name": "五穀豐登",
+    "simplifiedName": "五谷丰登",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "所有角色",
+    "effect": "亮出等同存活角色數的牌，目標角色依序選擇並獲得一張。",
     "image": "/images/cards/bwiki/identity_standard_harvest.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E4%BA%94%E8%B0%B7%E4%B8%B0%E7%99%BB"
   },
@@ -270,16 +1738,15 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "標準",
-    "count": 1,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "所有角色",
     "effect": "對所有角色使用。每名目標角色回復1點體力。",
-    "notes": "已滿體力角色不回復。",
-    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%A1%83%E5%9B%AD%E7%BB%93%E4%B9%89",
-    "image": ""
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%A1%83%E5%9B%AD%E7%BB%93%E4%B9%89"
   },
   {
-    "id": "identity_standard_steal_weapon",
+    "id": "identity_standard_steal_weapon_01",
     "name": "借刀殺人",
     "simplifiedName": "借刀杀人",
     "modes": [
@@ -288,16 +1755,32 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "標準",
-    "count": 2,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "裝備武器的一名其他角色",
     "effect": "令目標角色對你指定的另一名角色使用一張殺，否則將其武器交給你。",
-    "notes": "指定角色需在目標角色攻擊範圍內。",
     "image": "/images/cards/bwiki/identity_standard_steal_weapon.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E5%80%9F%E5%88%80%E6%9D%80%E4%BA%BA"
   },
   {
-    "id": "identity_standard_indulgence",
+    "id": "identity_standard_steal_weapon_02",
+    "name": "借刀殺人",
+    "simplifiedName": "借刀杀人",
+    "modes": [
+      "身分局"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "裝備武器的一名其他角色",
+    "effect": "令目標角色對你指定的另一名角色使用一張殺，否則將其武器交給你。",
+    "image": "/images/cards/bwiki/identity_standard_steal_weapon.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E5%80%9F%E5%88%80%E6%9D%80%E4%BA%BA"
+  },
+  {
+    "id": "identity_standard_indulgence_01",
     "name": "樂不思蜀",
     "simplifiedName": "乐不思蜀",
     "modes": [
@@ -307,16 +1790,51 @@
     "category": "錦囊牌",
     "subtype": "延時錦囊",
     "expansion": "標準",
-    "count": 3,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "一名其他角色",
     "effect": "置於目標判定區；判定不為紅桃，目標跳過出牌階段。",
-    "notes": "判定牌與改判技能會影響結果。",
     "image": "/images/cards/bwiki/identity_standard_indulgence.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E4%B9%90%E4%B8%8D%E6%80%9D%E8%9C%80"
   },
   {
-    "id": "identity_standard_lightning",
+    "id": "identity_standard_indulgence_02",
+    "name": "樂不思蜀",
+    "simplifiedName": "乐不思蜀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "延時錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名其他角色",
+    "effect": "置於目標判定區；判定不為紅桃，目標跳過出牌階段。",
+    "image": "/images/cards/bwiki/identity_standard_indulgence.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E4%B9%90%E4%B8%8D%E6%80%9D%E8%9C%80"
+  },
+  {
+    "id": "identity_standard_indulgence_03",
+    "name": "樂不思蜀",
+    "simplifiedName": "乐不思蜀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "延時錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名其他角色",
+    "effect": "置於目標判定區；判定不為紅桃，目標跳過出牌階段。",
+    "image": "/images/cards/bwiki/identity_standard_indulgence.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E4%B9%90%E4%B8%8D%E6%80%9D%E8%9C%80"
+  },
+  {
+    "id": "identity_standard_lightning_01",
     "name": "閃電",
     "simplifiedName": "闪电",
     "modes": [
@@ -325,16 +1843,32 @@
     "category": "錦囊牌",
     "subtype": "延時錦囊",
     "expansion": "標準",
-    "count": 2,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "自己",
     "effect": "對自己使用，置於判定區。判定階段若結果為黑桃2至9，當前回合角色受到3點雷電傷害並棄置此牌；否則將閃電移至下一名角色的判定區。",
-    "notes": "標準版與 EX 版本花色不同；判定與改判以當前規則為準。",
-    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA%E7%94%B5",
-    "image": ""
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA%E7%94%B5"
   },
   {
-    "id": "identity_junzheng_supply_shortage",
+    "id": "identity_standard_lightning_02",
+    "name": "閃電",
+    "simplifiedName": "闪电",
+    "modes": [
+      "身分局"
+    ],
+    "category": "錦囊牌",
+    "subtype": "延時錦囊",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "自己",
+    "effect": "對自己使用，置於判定區。判定階段若結果為黑桃2至9，當前回合角色受到3點雷電傷害並棄置此牌；否則將閃電移至下一名角色的判定區。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA%E7%94%B5"
+  },
+  {
+    "id": "identity_junzheng_supply_shortage_01",
     "name": "兵糧寸斷",
     "simplifiedName": "兵粮寸断",
     "modes": [
@@ -344,16 +1878,33 @@
     "category": "錦囊牌",
     "subtype": "延時錦囊",
     "expansion": "軍爭篇",
-    "count": 2,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "距離為1的一名角色",
     "effect": "置於目標判定區；判定不為梅花，目標跳過摸牌階段。",
-    "notes": "距離與判定可受技能影響。",
     "image": "/images/cards/bwiki/identity_junzheng_supply_shortage.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E5%85%B5%E7%B2%AE%E5%AF%B8%E6%96%AD"
   },
   {
-    "id": "identity_junzheng_fire_attack",
+    "id": "identity_junzheng_supply_shortage_02",
+    "name": "兵糧寸斷",
+    "simplifiedName": "兵粮寸断",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "延時錦囊",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "距離為1的一名角色",
+    "effect": "置於目標判定區；判定不為梅花，目標跳過摸牌階段。",
+    "image": "/images/cards/bwiki/identity_junzheng_supply_shortage.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E5%85%B5%E7%B2%AE%E5%AF%B8%E6%96%AD"
+  },
+  {
+    "id": "identity_junzheng_fire_attack_01",
     "name": "火攻",
     "simplifiedName": "火攻",
     "modes": [
@@ -363,16 +1914,51 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "軍爭篇",
-    "count": 3,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "一名有手牌的角色",
     "effect": "目標展示一張手牌；若你棄置一張同花色牌，對其造成1點火焰傷害。",
-    "notes": "屬性傷害可觸發連環傳導。",
     "image": "/images/cards/bwiki/identity_junzheng_fire_attack.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E7%81%AB%E6%94%BB"
   },
   {
-    "id": "identity_junzheng_chain",
+    "id": "identity_junzheng_fire_attack_02",
+    "name": "火攻",
+    "simplifiedName": "火攻",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名有手牌的角色",
+    "effect": "目標展示一張手牌；若你棄置一張同花色牌，對其造成1點火焰傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_fire_attack.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E7%81%AB%E6%94%BB"
+  },
+  {
+    "id": "identity_junzheng_fire_attack_03",
+    "name": "火攻",
+    "simplifiedName": "火攻",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名有手牌的角色",
+    "effect": "目標展示一張手牌；若你棄置一張同花色牌，對其造成1點火焰傷害。",
+    "image": "/images/cards/bwiki/identity_junzheng_fire_attack.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E7%81%AB%E6%94%BB"
+  },
+  {
+    "id": "identity_junzheng_chain_01",
     "name": "鐵索連環",
     "simplifiedName": "铁索连环",
     "modes": [
@@ -382,16 +1968,105 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "軍爭篇",
-    "count": 6,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "一至兩名角色",
     "effect": "橫置或重置目標角色；也可重鑄。",
-    "notes": "連環狀態會傳導屬性傷害。",
     "image": "/images/cards/bwiki/identity_junzheng_chain.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E9%93%81%E7%B4%A2%E8%BF%9E%E7%8E%AF"
   },
   {
-    "id": "identity_standard_crossbow",
+    "id": "identity_junzheng_chain_02",
+    "name": "鐵索連環",
+    "simplifiedName": "铁索连环",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一至兩名角色",
+    "effect": "橫置或重置目標角色；也可重鑄。",
+    "image": "/images/cards/bwiki/identity_junzheng_chain.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%93%81%E7%B4%A2%E8%BF%9E%E7%8E%AF"
+  },
+  {
+    "id": "identity_junzheng_chain_03",
+    "name": "鐵索連環",
+    "simplifiedName": "铁索连环",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一至兩名角色",
+    "effect": "橫置或重置目標角色；也可重鑄。",
+    "image": "/images/cards/bwiki/identity_junzheng_chain.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%93%81%E7%B4%A2%E8%BF%9E%E7%8E%AF"
+  },
+  {
+    "id": "identity_junzheng_chain_04",
+    "name": "鐵索連環",
+    "simplifiedName": "铁索连环",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一至兩名角色",
+    "effect": "橫置或重置目標角色；也可重鑄。",
+    "image": "/images/cards/bwiki/identity_junzheng_chain.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%93%81%E7%B4%A2%E8%BF%9E%E7%8E%AF"
+  },
+  {
+    "id": "identity_junzheng_chain_05",
+    "name": "鐵索連環",
+    "simplifiedName": "铁索连环",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一至兩名角色",
+    "effect": "橫置或重置目標角色；也可重鑄。",
+    "image": "/images/cards/bwiki/identity_junzheng_chain.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%93%81%E7%B4%A2%E8%BF%9E%E7%8E%AF"
+  },
+  {
+    "id": "identity_junzheng_chain_06",
+    "name": "鐵索連環",
+    "simplifiedName": "铁索连环",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一至兩名角色",
+    "effect": "橫置或重置目標角色；也可重鑄。",
+    "image": "/images/cards/bwiki/identity_junzheng_chain.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%93%81%E7%B4%A2%E8%BF%9E%E7%8E%AF"
+  },
+  {
+    "id": "identity_standard_crossbow_01",
     "name": "諸葛連弩",
     "simplifiedName": "诸葛连弩",
     "modes": [
@@ -401,16 +2076,33 @@
     "category": "裝備牌",
     "subtype": "武器",
     "expansion": "標準",
-    "count": 2,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "自己",
     "effect": "攻擊範圍1；你使用殺無次數限制。",
-    "notes": "常見爆發型武器。",
     "image": "/images/cards/bwiki/identity_standard_crossbow.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E8%AF%B8%E8%91%9B%E8%BF%9E%E5%BC%A9"
   },
   {
-    "id": "identity_standard_eight_diagram",
+    "id": "identity_standard_crossbow_02",
+    "name": "諸葛連弩",
+    "simplifiedName": "诸葛连弩",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "武器",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "自己",
+    "effect": "攻擊範圍1；你使用殺無次數限制。",
+    "image": "/images/cards/bwiki/identity_standard_crossbow.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E8%AF%B8%E8%91%9B%E8%BF%9E%E5%BC%A9"
+  },
+  {
+    "id": "identity_standard_eight_diagram_01",
     "name": "八卦陣",
     "simplifiedName": "八卦阵",
     "modes": [
@@ -420,11 +2112,28 @@
     "category": "裝備牌",
     "subtype": "防具",
     "expansion": "標準",
-    "count": 2,
+    "deckCount": 1,
     "timing": "需要使用或打出閃時",
     "target": "自己",
     "effect": "可進行判定，若結果為紅色，視為使用或打出一張閃。",
-    "notes": "防具效果可被部分技能影響。",
+    "image": "/images/cards/bwiki/identity_standard_eight_diagram.png",
+    "sourceUrl": "https://wiki.biligame.com/sgs/%E5%85%AB%E5%8D%A6%E9%98%B5"
+  },
+  {
+    "id": "identity_standard_eight_diagram_02",
+    "name": "八卦陣",
+    "simplifiedName": "八卦阵",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "防具",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要使用或打出閃時",
+    "target": "自己",
+    "effect": "可進行判定，若結果為紅色，視為使用或打出一張閃。",
     "image": "/images/cards/bwiki/identity_standard_eight_diagram.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E5%85%AB%E5%8D%A6%E9%98%B5"
   },
@@ -439,16 +2148,15 @@
     "category": "裝備牌",
     "subtype": "防具",
     "expansion": "軍爭篇",
-    "count": 1,
+    "deckCount": 1,
     "timing": "受到傷害時 / 失去裝備時",
     "target": "自己",
     "effect": "你受到大於1點的傷害時，防止多餘傷害；失去裝備區的白銀獅子後回復1點體力。",
-    "notes": "回復觸發與失去方式需依規則結算。",
     "image": "/images/cards/bwiki/identity_junzheng_silver_lion.png",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E7%99%BD%E9%93%B6%E7%8B%AE%E5%AD%90"
   },
   {
-    "id": "guozhan_yiyidailao",
+    "id": "guozhan_yiyidailao_01",
     "name": "以逸待勞",
     "simplifiedName": "以逸待劳",
     "modes": [
@@ -457,15 +2165,32 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "國戰",
-    "count": 2,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "與你勢力相同的角色",
     "effect": "目標角色各摸兩張牌，然後各棄置兩張牌。",
-    "notes": "實際目標限制以國戰規則為準。",
-    "image": ""
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
   },
   {
-    "id": "guozhan_yuanjiaojingong",
+    "id": "guozhan_yiyidailao_02",
+    "name": "以逸待勞",
+    "simplifiedName": "以逸待劳",
+    "modes": [
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "國戰",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "與你勢力相同的角色",
+    "effect": "目標角色各摸兩張牌，然後各棄置兩張牌。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
+  },
+  {
+    "id": "guozhan_yuanjiaojingong_01",
     "name": "遠交近攻",
     "simplifiedName": "远交近攻",
     "modes": [
@@ -474,15 +2199,32 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "國戰",
-    "count": 2,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "一名與你勢力不同的角色",
     "effect": "目標摸一張牌，然後你摸三張牌。",
-    "notes": "未明置勢力時需依國戰規則判定。",
-    "image": ""
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
   },
   {
-    "id": "guozhan_zhijizhibi",
+    "id": "guozhan_yuanjiaojingong_02",
+    "name": "遠交近攻",
+    "simplifiedName": "远交近攻",
+    "modes": [
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "國戰",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名與你勢力不同的角色",
+    "effect": "目標摸一張牌，然後你摸三張牌。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
+  },
+  {
+    "id": "guozhan_zhijizhibi_01",
     "name": "知己知彼",
     "simplifiedName": "知己知彼",
     "modes": [
@@ -491,12 +2233,29 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "國戰",
-    "count": 2,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "一名有暗置武將牌或手牌的角色",
     "effect": "觀看目標一張暗置武將牌或其手牌。",
-    "notes": "國戰查暗將與手牌資訊的重要錦囊。",
-    "image": ""
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
+  },
+  {
+    "id": "guozhan_zhijizhibi_02",
+    "name": "知己知彼",
+    "simplifiedName": "知己知彼",
+    "modes": [
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "國戰",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名有暗置武將牌或手牌的角色",
+    "effect": "觀看目標一張暗置武將牌或其手牌。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
   },
   {
     "id": "guozhan_chiling",
@@ -508,16 +2267,15 @@
     "category": "錦囊牌",
     "subtype": "特殊錦囊",
     "expansion": "國戰",
-    "count": 1,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "所有未確定勢力的角色",
     "effect": "每名目標依序選擇：明置一張武將牌並摸一張牌，或失去1點體力。",
-    "notes": "勢備篇錦囊。用來逼迫暗將表態，或讓對手用體力換取繼續隱藏。",
     "image": "/images/cards/official/guozhan_chiling.jpg",
     "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
   },
   {
-    "id": "guozhan_diaohulishan",
+    "id": "guozhan_diaohulishan_01",
     "name": "調虎離山",
     "simplifiedName": "调虎离山",
     "modes": [
@@ -526,11 +2284,27 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "勢備篇",
-    "count": 2,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "一至兩名其他角色",
     "effect": "直到本回合結束，目標不計入距離與座次計算，且不能使用牌、打出牌或發動技能。",
-    "notes": "勢備篇錦囊。適合拆開隊列、切斷圍攻或暫時封鎖關鍵角色。",
+    "image": "/images/cards/official/guozhan_diaohulishan.jpg",
+    "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
+  },
+  {
+    "id": "guozhan_diaohulishan_02",
+    "name": "調虎離山",
+    "simplifiedName": "调虎离山",
+    "modes": [
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "勢備篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一至兩名其他角色",
+    "effect": "直到本回合結束，目標不計入距離與座次計算，且不能使用牌、打出牌或發動技能。",
     "image": "/images/cards/official/guozhan_diaohulishan.jpg",
     "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
   },
@@ -544,11 +2318,10 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "勢備篇",
-    "count": 1,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "與你同隊列或同圍攻關係的一名角色",
     "effect": "對目標角色造成1點火焰傷害。",
-    "notes": "勢備篇錦囊。屬性傷害可配合連環與隊列位置形成壓力。",
     "image": "/images/cards/official/guozhan_huoshaolianying.jpg",
     "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
   },
@@ -562,11 +2335,10 @@
     "category": "錦囊牌",
     "subtype": "普通錦囊",
     "expansion": "勢備篇",
-    "count": 1,
+    "deckCount": 1,
     "timing": "出牌階段",
     "target": "所有角色",
     "effect": "大勢力角色摸一張牌；小勢力角色回復1點體力並摸一張牌；野心家摸三張牌。",
-    "notes": "勢備篇錦囊。效果依角色目前勢力狀態結算。",
     "image": "/images/cards/official/guozhan_lianjunshengyan.jpg",
     "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
   },
@@ -580,12 +2352,12 @@
     "category": "裝備牌",
     "subtype": "寶物",
     "expansion": "國戰",
-    "count": 1,
+    "deckCount": 1,
     "timing": "裝備後持續生效",
     "target": "自己",
-    "effect": "寶物牌。具體效果請依國戰規則集補完整文字。",
-    "notes": "國戰專屬裝備資料位。",
-    "image": ""
+    "effect": "鎖定技。與你勢力相同的角色受到屬性傷害時，防止此傷害；當你失去裝備區裡的太平要術後，你失去1點體力。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
   },
   {
     "id": "guozhan_yuxi",
@@ -597,92 +2369,59 @@
     "category": "裝備牌",
     "subtype": "寶物",
     "expansion": "勢備篇",
-    "count": 1,
+    "deckCount": 1,
     "timing": "出牌階段開始時 / 摸牌階段 / 出牌階段",
     "target": "自己",
     "effect": "若你有明置武將，出牌階段開始時可視為使用知己知彼；摸牌階段多摸一張；出牌階段可額外使用一張殺。",
-    "notes": "勢備篇寶物。提供偵查、過牌與出殺次數三種節奏收益。",
     "image": "/images/cards/official/guozhan_yuxi.jpg",
     "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
   },
   {
-    "id": "identity_role_lord",
-    "name": "主公",
-    "simplifiedName": "主公",
-    "modes": [
-      "身分局"
-    ],
-    "category": "身份牌",
-    "expansion": "標準",
-    "count": 1,
-    "timing": "遊戲開始",
-    "target": "玩家身份",
-    "effect": "主公公開身份，目標通常是擊敗所有反賊與內奸。",
-    "notes": "不同人數配置會影響身份牌數量。",
-    "image": ""
-  },
-  {
-    "id": "identity_role_loyalist",
-    "name": "忠臣",
-    "simplifiedName": "忠臣",
-    "modes": [
-      "身分局"
-    ],
-    "category": "身份牌",
-    "expansion": "標準",
-    "count": 1,
-    "timing": "遊戲開始",
-    "target": "玩家身份",
-    "effect": "協助主公擊敗反賊與內奸。",
-    "notes": "不同人數配置會影響身份牌數量。",
-    "image": ""
-  },
-  {
-    "id": "identity_role_rebel",
-    "name": "反賊",
-    "simplifiedName": "反贼",
-    "modes": [
-      "身分局"
-    ],
-    "category": "身份牌",
-    "expansion": "標準",
-    "count": 4,
-    "timing": "遊戲開始",
-    "target": "玩家身份",
-    "effect": "擊敗主公。",
-    "notes": "不同人數配置會影響身份牌數量。",
-    "image": ""
-  },
-  {
-    "id": "identity_role_renegade",
-    "name": "內奸",
-    "simplifiedName": "内奸",
-    "modes": [
-      "身分局"
-    ],
-    "category": "身份牌",
-    "expansion": "標準",
-    "count": 1,
-    "timing": "遊戲開始",
-    "target": "玩家身份",
-    "effect": "通常需先清除其他角色，最後擊敗主公。",
-    "notes": "勝利條件以當前規則為準。",
-    "image": ""
-  },
-  {
-    "id": "guozhan_general_card",
-    "name": "國戰武將牌",
-    "simplifiedName": "国战武将牌",
+    "id": "smyt_rule_monarch_token",
+    "name": "君主標記",
+    "simplifiedName": "君主标记",
     "modes": [
       "國戰"
     ],
-    "category": "武將牌",
+    "category": "規則牌",
     "expansion": "受命於天",
-    "count": 156,
-    "timing": "遊戲準備階段",
+    "deckCount": 1,
+    "timing": "遊戲準備階段與明置君主時",
+    "target": "擁有君主武將的玩家",
+    "effect": "用於標記受命於天模式中的君主武將身份。君主相關技能、勢力判定與陣營互動依受命於天規則處理。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://www.sanguosha.com/"
+  },
+  {
+    "id": "smyt_rule_faction_pairing",
+    "name": "勢力配對牌",
+    "simplifiedName": "势力配对牌",
+    "modes": [
+      "國戰"
+    ],
+    "category": "規則牌",
+    "expansion": "受命於天",
+    "deckCount": 1,
+    "timing": "選將與暗置武將時",
     "target": "玩家武將配置",
-    "effect": "玩家選擇兩張同勢力或規則允許的武將牌作為本局武將。",
-    "notes": "詳細武將資料請見武將圖鑑。",
-    "image": ""
+    "effect": "用於提示玩家需選擇同勢力或規則允許組合的武將。若武將具有多勢力或特殊規則，依當局受命於天版本設定判定可用組合。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://www.sanguosha.com/"
+  },
+  {
+    "id": "smyt_rule_exposed_general",
+    "name": "明置武將提示牌",
+    "simplifiedName": "明置武将提示牌",
+    "modes": [
+      "國戰"
+    ],
+    "category": "規則牌",
+    "expansion": "受命於天",
+    "deckCount": 1,
+    "timing": "武將明置時",
+    "target": "明置武將的玩家",
+    "effect": "用於記錄武將已明置。明置後該武將勢力與已發動的明置相關技能可被其他玩家確認，後續結算依國戰規則進行。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://www.sanguosha.com/"
   }
 ]

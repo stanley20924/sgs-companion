@@ -2818,5 +2818,1412 @@
     ],
     "skills": [],
     "partners": []
+  },
+  {
+    "id": "guozhan_general_card",
+    "name": "國戰武將牌",
+    "faction": "資料",
+    "image": "/images/cards/placeholder.webp",
+    "modes": [
+      "武將牌"
+    ],
+    "versions": [
+      "受命於天"
+    ],
+    "skills": [
+      "玩家選擇兩張同勢力或規則允許的武將牌作為本局武將。"
+    ],
+    "partners": [],
+    "factions": [
+      "資料"
+    ],
+    "type": "normal",
+    "cardEntry": true
+  },
+  {
+    "id": "identity_2026_qun001",
+    "name": "华佗",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN001.神医.华佗.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun002",
+    "name": "吕布",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN002.武的化身.吕布.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun003",
+    "name": "貂蝉",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN003.绝世倾城.貂蝉.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun004",
+    "name": "袁绍",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN004.高贵的名门.袁绍.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun005",
+    "name": "颜良&文丑",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN005.虎狼兄弟.颜良&文丑.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun006",
+    "name": "董卓",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN006.魔王.董卓.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun007",
+    "name": "贾诩",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN007.毒士无双.贾诩.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun008",
+    "name": "庞德",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN008.人马一体.庞德.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun009",
+    "name": "左慈",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN009.迷之仙人.左慈.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun010",
+    "name": "张角",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN010.天公将军.张角.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun011",
+    "name": "于吉",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN011.太平道人.于吉.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun012",
+    "name": "蔡文姬",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN012.异乡的孤女.蔡文姬.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun019",
+    "name": "华雄",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN019.飞扬跋扈.华雄.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun021",
+    "name": "袁术",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN021.仲家帝.袁术.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun023",
+    "name": "张绣",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN023.北地枪王.张绣.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun026",
+    "name": "公孙瓒",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN026.白马将军.公孙瓒.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun066",
+    "name": "许攸",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN066.朝秦暮楚.许攸.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_qun067",
+    "name": "卢植",
+    "faction": "群",
+    "image": "/images/generals/26身分珍藏.QUN067.国之桢干.卢植.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "群"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu001",
+    "name": "刘备",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU001.乱世的枭雄.刘备.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu002",
+    "name": "关羽",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU002.美髯公.关羽.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu003",
+    "name": "张飞",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU003.万夫不当.张飞.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu004",
+    "name": "诸葛亮",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU004.迟暮的丞相.诸葛亮.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu005",
+    "name": "赵云",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU005.虎威将军.赵云.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu006",
+    "name": "马超",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU006.一骑当千.马超.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu007",
+    "name": "黄月英",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU007.归隐的杰女.黄月英.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu008",
+    "name": "黄忠",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU008.老当益壮.黄忠.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu009",
+    "name": "魏延",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU009.嗜血的独狼.魏延.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu010",
+    "name": "庞统",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU010.凤雏.庞统.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu011",
+    "name": "诸葛亮",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU011.卧龙.诸葛亮.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu012",
+    "name": "姜维",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU012.龙的衣钵.姜维.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu013",
+    "name": "刘禅",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU013.无为的真命主.刘禅.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu014",
+    "name": "孟获",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU014.南蛮王.孟获.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu015",
+    "name": "祝融",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU015.野性的女王.祝融.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu023",
+    "name": "王平",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU023.兵谋以致用.王平.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu051",
+    "name": "伊籍",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU051.礼仁同渡.伊籍.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu066",
+    "name": "严颜",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU066.断头将军.严颜.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu067",
+    "name": "陈到",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU067.白毦督.陈到.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_shu068",
+    "name": "诸葛瞻",
+    "faction": "蜀",
+    "image": "/images/generals/26身分珍藏.SHU068.临难死义.诸葛瞻.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "蜀"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei001",
+    "name": "曹操",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI001.魏武帝.曹操.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei002",
+    "name": "司马懿",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI002.狼顾之鬼.司马懿.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei003",
+    "name": "夏侯惇",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI003.独眼的罗刹.夏侯惇.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei004",
+    "name": "张辽",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI004.前将军.张辽.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei005",
+    "name": "许褚",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI005.虎痴.许褚.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei006",
+    "name": "郭嘉",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI006.早终的先知.郭嘉.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei007",
+    "name": "甄姬",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI007.薄幸的美人.甄姬.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei008",
+    "name": "夏侯渊",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI008.疾行的猎豹.夏侯渊.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei009",
+    "name": "张郃",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI009.无定的水虺.张郃.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei010",
+    "name": "徐晃",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI010.周亚夫之风.徐晃.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei011",
+    "name": "曹仁",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI011.大将军.曹仁.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei012",
+    "name": "典韦",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI012.古之恶来.典韦.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei013",
+    "name": "荀彧",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI013.王佐之才.荀彧.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei014",
+    "name": "曹丕",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI014.霸业的继承者.曹丕.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei015",
+    "name": "邓艾",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI015.矫然的壮士.邓艾.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei029",
+    "name": "曹彰",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI029.黄须儿.曹彰.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei053",
+    "name": "王基",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI053.经行合一.王基.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei066",
+    "name": "蒯良&蒯越",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI066.雍论臼谋.蒯良&蒯越.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei067",
+    "name": "郝昭",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI067.扣弦的豪将.郝昭.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wei068",
+    "name": "毌丘俭",
+    "faction": "魏",
+    "image": "/images/generals/26身分珍藏.WEI068.镌功铭征荣.毌丘俭.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "魏"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu001",
+    "name": "孙权",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU001.年轻的贤君.孙权.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu002",
+    "name": "甘宁",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU002.锦帆游侠.甘宁.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu003",
+    "name": "吕蒙",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU003.士别三日.吕蒙.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu004",
+    "name": "黄盖",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU004.轻身为国.黄盖.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu005",
+    "name": "周瑜",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU005.大都督.周瑜.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu006",
+    "name": "大乔",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU006.矜持之花.大乔.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu007",
+    "name": "陆逊",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU007.儒生雄才.陆逊.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu008",
+    "name": "孙尚香",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU008.弓腰姬.孙尚香.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu009",
+    "name": "孙坚",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU009.武烈帝.孙坚.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu010",
+    "name": "孙策",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU010.江东的小霸王.孙策.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu011",
+    "name": "小乔",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU011.矫情之花.小乔.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu012",
+    "name": "太史慈",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU012.剑鸣不平.太史慈.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu013",
+    "name": "周泰",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU013.历战之躯.周泰.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu014",
+    "name": "鲁肃",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU014.荷檐吐奇.鲁肃.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu015",
+    "name": "张昭&张纮",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU015.经天纬地.张昭&张纮.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu019",
+    "name": "陆抗",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU019.社稷之瑰宝.陆抗.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu066",
+    "name": "陆绩",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU066.瑚琏之器.陆绩.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu067",
+    "name": "孙亮",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU067.寒江枯木.孙亮.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
+  },
+  {
+    "id": "identity_2026_wu068",
+    "name": "周妃",
+    "faction": "吳",
+    "image": "/images/generals/26身分珍藏.WU068.软玉温香.周妃.png",
+    "modes": [
+      "身分局"
+    ],
+    "versions": [
+      "2026珍藏版"
+    ],
+    "skills": [],
+    "partners": [],
+    "factions": [
+      "吳"
+    ],
+    "type": "normal"
   }
 ]

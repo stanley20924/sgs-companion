@@ -33,7 +33,7 @@ const modes: GameMode[] = ["國戰", "身分局"];
 
 const versionsByMode: Record<GameMode, string[]> = {
   國戰: ["受命于天", "標準國戰", "君臨天下"],
-  身分局: ["2026 珍藏版", "標準身份", "軍爭"],
+  身分局: ["2026珍藏版", "標準身份", "軍爭"],
 };
 
 const playerLimitsByMode: Record<GameMode, { min: number; max: number; defaultCount: number }> = {
