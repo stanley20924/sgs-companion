@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
+import SiteNav from "./site-nav";
 
 const changelog = [
   {
@@ -49,10 +48,7 @@ export default function ChangelogView() {
     <main className="changelog-page">
       <div className="generals-backdrop" aria-hidden="true" />
       <div className="generals-shell changelog-shell">
-        <Link href="/" className="generals-home-link">
-          <ChevronLeft size={18} />
-          首頁
-        </Link>
+        <SiteNav currentLabel="更新日誌" />
 
         <section className="generals-hero changelog-hero">
           <span className="generals-kicker">版本記錄</span>

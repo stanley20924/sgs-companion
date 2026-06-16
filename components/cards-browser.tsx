@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { ChevronLeft, Search, X } from "lucide-react";
+import { Search, X } from "lucide-react";
 import { Converter } from "opencc-js";
 import { useMemo, useState } from "react";
 import cardsJson from "../data/cards.json";
+import SiteNav from "./site-nav";
 
 type CardData = {
   id: string;
@@ -94,10 +94,7 @@ export default function CardsBrowser() {
       <div className="generals-backdrop" aria-hidden="true" />
 
       <div className="generals-shell cards-shell">
-        <Link href="/" className="generals-home-link">
-          <ChevronLeft size={18} />
-          首頁
-        </Link>
+        <SiteNav currentLabel="卡牌資料庫" />
 
         <section className="generals-hero cards-hero">
           <span className="generals-kicker">卡牌</span>

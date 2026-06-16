@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { BookOpen, ChevronLeft, ExternalLink, Search } from "lucide-react";
+import { BookOpen, ExternalLink, Search } from "lucide-react";
 import { Converter } from "opencc-js";
 import { useMemo, useState } from "react";
+import SiteNav from "./site-nav";
 
 type FaqMode = "共通" | "身分局" | "國戰";
 
@@ -204,10 +204,7 @@ export default function RulesFaq() {
     <main className="faq-page">
       <div className="generals-backdrop" aria-hidden="true" />
       <div className="generals-shell faq-shell">
-        <Link href="/" className="generals-home-link">
-          <ChevronLeft size={18} />
-          首頁
-        </Link>
+        <SiteNav currentLabel="FAQ" />
 
         <section className="generals-hero faq-hero">
           <span className="generals-kicker">規則檢查</span>

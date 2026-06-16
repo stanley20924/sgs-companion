@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Converter } from "opencc-js";
 import generalsJson from "../data/generals.json";
 import { supabase } from "../lib/supabase";
+import SiteNav from "./site-nav";
 
 type General = {
   id: string;
@@ -852,14 +853,7 @@ export default function SessionApp({
   return (
     <div style={styles.page}>
       <header style={styles.header}>
-        <nav style={styles.nav}>
-          <a href="/" style={styles.homeNavLink}>← Home</a>
-          <strong style={styles.logo}>三國殺牌局 Companion</strong>
-          <a href="/generals" style={styles.navLink}>武將</a>
-          <a href="/cards" style={styles.navLink}>卡牌</a>
-          <a href="/faq" style={styles.navLink}>FAQ</a>
-          <span style={styles.currentNavItem}>牌局</span>
-        </nav>
+        <SiteNav currentLabel="牌局" />
 
         <div style={styles.sectionLabel}>
           <span style={styles.labelLine} />

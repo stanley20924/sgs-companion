@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import { ChevronLeft, MessageSquare, Search, Send, Star, X } from "lucide-react";
+import { MessageSquare, Search, Send, Star, X } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { Converter } from "opencc-js";
 import { useEffect, useMemo, useState } from "react";
 import generalsJson from "../data/generals.json";
+import SiteNav from "./site-nav";
 
 type General = {
   id: string;
@@ -86,6 +86,10 @@ function emptyFeedback(): GeneralFeedback {
     userVote: undefined,
     comments: [],
   };
+}
+
+function createFeedbackId() {
+  return globalThis.crypto?.randomUUID?.() ?? `feedback-${Date.now()}-${Math.random().toString(36).slice(2)}`;
 }
 
 export default function GeneralsBrowser() {
@@ -204,7 +208,7 @@ export default function GeneralsBrowser() {
       ...feedback,
       comments: [
         {
-          id: crypto.randomUUID(),
+          id: createFeedbackId(),
           name: commentName.trim() || "匿名軍師",
           rating: commentRating,
           text: commentText.trim(),
@@ -224,10 +228,7 @@ export default function GeneralsBrowser() {
       <div className="generals-backdrop" aria-hidden="true" />
 
       <div className="generals-shell">
-        <Link href="/" className="generals-home-link">
-          <ChevronLeft size={18} />
-          首頁
-        </Link>
+        <SiteNav currentLabel="武將圖鑑" />
 
         <section className="generals-hero">
           <span className="generals-kicker">武將</span>
@@ -310,7 +311,11 @@ export default function GeneralsBrowser() {
               key={general.id}
               type="button"
               className="general-card-tile"
-              onClick={() => setSelectedGeneral(general)}
+              onClick={(event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                setSelectedGeneral(general);
+              }}
             >
               <span className="general-card-art">
                 {general.image ? <img src={general.image} alt={general.name} /> : <span>{general.name.slice(0, 1)}</span>}
@@ -333,7 +338,7 @@ export default function GeneralsBrowser() {
 
       {selectedGeneral && (
         <div className="general-detail-overlay" role="dialog" aria-modal="true" aria-label={`${selectedGeneral.name} 詳情`}>
-          <div className="general-detail-modal">
+          <div className="general-detail-modal" onClick={(event) => event.stopPropagation()}>
             <button
               type="button"
               className="general-detail-close"
