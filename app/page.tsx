@@ -389,7 +389,7 @@ export default function Home() {
       </section>
 
       {selectedGeneral && (
-        <GeneralDetailModal general={selectedGeneral} onClose={() => setSelectedGeneral(null)} />
+        <GeneralDetailModal general={selectedGeneral} onClose={() => setSelectedGeneral(null)} compact />
       )}
     </main>
   );

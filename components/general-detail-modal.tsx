@@ -77,9 +77,10 @@ function emptyFeedback(): GeneralFeedback {
 type GeneralDetailModalProps = {
   general: General;
   onClose: () => void;
+  compact?: boolean;
 };
 
-export default function GeneralDetailModal({ general, onClose }: GeneralDetailModalProps) {
+export default function GeneralDetailModal({ general, onClose, compact = false }: GeneralDetailModalProps) {
   const [feedback, setFeedback] = useState<GeneralFeedback>(emptyFeedback);
   const [commentName, setCommentName] = useState("");
   const [commentText, setCommentText] = useState("");
@@ -165,7 +166,7 @@ export default function GeneralDetailModal({ general, onClose }: GeneralDetailMo
 
   return (
     <div className="general-detail-overlay" role="dialog" aria-modal="true" aria-label={`${general.name} 詳情`}>
-      <div className="general-detail-modal">
+      <div className={`general-detail-modal ${compact ? "compact-general-modal" : ""}`}>
         <button type="button" className="general-detail-close" onClick={onClose} aria-label="關閉武將詳情">
           <X size={22} />
         </button>
@@ -190,7 +191,7 @@ export default function GeneralDetailModal({ general, onClose }: GeneralDetailMo
               </div>
             </div>
 
-            <dl className="general-meta-grid">
+            {!compact && <dl className="general-meta-grid">
               <div>
                 <dt>ID</dt>
                 <dd>{general.id}</dd>
@@ -207,9 +208,9 @@ export default function GeneralDetailModal({ general, onClose }: GeneralDetailMo
                 <dt>類型</dt>
                 <dd>{general.type ? typeLabels[general.type] : "一般"}</dd>
               </div>
-            </dl>
+            </dl>}
 
-            <section className="detail-rating-panel">
+            {!compact && <section className="detail-rating-panel">
               <div className="rating-summary">
                 <span>
                   <Star size={18} fill="currentColor" />
@@ -230,11 +231,11 @@ export default function GeneralDetailModal({ general, onClose }: GeneralDetailMo
                   </button>
                 ))}
               </div>
-            </section>
+            </section>}
           </div>
         </section>
 
-        <section className="general-feedback-panel">
+        {!compact && <section className="general-feedback-panel">
           <div className="feedback-heading">
             <div>
               <MessageSquare size={20} />
@@ -282,7 +283,7 @@ export default function GeneralDetailModal({ general, onClose }: GeneralDetailMo
               );
             })}
           </div>
-        </section>
+        </section>}
       </div>
     </div>
   );

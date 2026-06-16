@@ -855,10 +855,10 @@ export default function SessionApp({
         <nav style={styles.nav}>
           <a href="/" style={styles.homeNavLink}>← Home</a>
           <strong style={styles.logo}>三國殺牌局 Companion</strong>
-          <span>武將</span>
-          <span>卡牌</span>
-          <span>FAQ</span>
-          <span style={{ color: "#fca5a5" }}>牌局</span>
+          <a href="/generals" style={styles.navLink}>武將</a>
+          <a href="/cards" style={styles.navLink}>卡牌</a>
+          <a href="/faq" style={styles.navLink}>FAQ</a>
+          <span style={styles.currentNavItem}>牌局</span>
         </nav>
 
         <div style={styles.sectionLabel}>
@@ -869,8 +869,6 @@ export default function SessionApp({
         <h1 style={styles.title}>三國殺牌局記錄</h1>
 
         <p style={styles.description}>
-          國戰與身分局玩家自用資料站。資料僅供參考，以官方裁定為準。
-          <br />
           房間 <strong>{roomCode}</strong> · 目前 {gameMode} / {version} · {supabase ? (isReady ? "多人同步已連線" : "連線中") : "本機模式"}
         </p>
       </header>
@@ -1197,40 +1195,50 @@ const styles: Record<string, React.CSSProperties> = {
     minHeight: "100vh",
     overflowX: "hidden",
     background:
-      "radial-gradient(circle at top left, rgba(92,28,20,.45), transparent 36%), #130f0d",
-    color: "#f5f5f4",
-    fontFamily: 'Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif',
+      "radial-gradient(circle at 50% 0, rgba(218,171,93,.13), transparent 28%), linear-gradient(180deg, rgba(0,0,0,.38), #050504 58%), url('/images/home/hero-background.png') center top / cover fixed no-repeat",
+    color: "#f4e4c1",
+    fontFamily: '"Noto Serif TC", "Microsoft JhengHei", serif',
   },
   header: {
     maxWidth: 1180,
     boxSizing: "border-box",
     margin: "0 auto",
-    padding: "22px 20px 18px",
+    padding: "20px 20px 18px",
   },
   nav: {
     height: 42,
     display: "flex",
     alignItems: "center",
     gap: 18,
-    borderBottom: "1px solid rgba(127,29,29,.55)",
+    borderBottom: "1px solid rgba(218,171,93,.28)",
     marginBottom: 28,
-    color: "#a8a29e",
+    color: "#cbb487",
     fontSize: 13,
   },
   logo: {
-    color: "#f5f5f4",
+    color: "#fff0d0",
     marginRight: "auto",
+    fontWeight: 700,
   },
   homeNavLink: {
-    color: "#facc15",
+    color: "#e7b865",
     textDecoration: "none",
-    fontWeight: 900,
+    fontWeight: 700,
+  },
+  navLink: {
+    color: "#cbb487",
+    textDecoration: "none",
+    fontWeight: 600,
+  },
+  currentNavItem: {
+    color: "#e7b865",
+    fontWeight: 700,
   },
   sectionLabel: {
     display: "flex",
     alignItems: "center",
     gap: 8,
-    color: "#f87171",
+    color: "#e2b469",
     fontSize: 13,
     fontWeight: 800,
     marginBottom: 10,
@@ -1238,20 +1246,21 @@ const styles: Record<string, React.CSSProperties> = {
   labelLine: {
     width: 22,
     height: 1,
-    background: "#ef4444",
+    background: "#e2b469",
     display: "inline-block",
   },
   title: {
     margin: 0,
+    color: "#fff0d0",
     fontSize: 42,
     lineHeight: 1.15,
     letterSpacing: 1,
-    fontWeight: 900,
+    fontWeight: 600,
   },
   description: {
     marginTop: 12,
     marginBottom: 0,
-    color: "#d6d3d1",
+    color: "#d8bd88",
     fontSize: 15,
     lineHeight: 1.8,
   },
@@ -1267,12 +1276,12 @@ const styles: Record<string, React.CSSProperties> = {
     flexWrap: "wrap",
     alignItems: "end",
     gap: 12,
-    border: "1px solid rgba(127,29,29,.75)",
-    background: "#1d1713",
-    borderRadius: 6,
+    border: "1px solid rgba(218,171,93,.42)",
+    background: "linear-gradient(135deg, rgba(23,18,12,.94), rgba(7,8,7,.94))",
+    borderRadius: 4,
     padding: 16,
     marginBottom: 16,
-    boxShadow: "0 12px 30px rgba(0,0,0,.22)",
+    boxShadow: "inset 0 0 0 1px rgba(0,0,0,.82), 0 16px 36px rgba(0,0,0,.32)",
   },
   field: {
     display: "flex",
@@ -1281,45 +1290,45 @@ const styles: Record<string, React.CSSProperties> = {
     minWidth: 140,
   },
   fieldLabel: {
-    color: "#c8b6a6",
+    color: "#d9b574",
     fontSize: 13,
     fontWeight: 700,
   },
   select: {
     height: 38,
-    background: "#14100e",
-    color: "#f5f5f4",
-    border: "1px solid #57534e",
+    background: "rgba(5,5,4,.78)",
+    color: "#f7ead3",
+    border: "1px solid rgba(218,171,93,.36)",
     borderRadius: 4,
     padding: "0 10px",
   },
   dangerButton: {
     height: 38,
     background: "transparent",
-    color: "#fca5a5",
-    border: "1px solid #b91c1c",
+    color: "#f2c778",
+    border: "1px solid rgba(218,171,93,.5)",
     borderRadius: 4,
     padding: "0 16px",
-    fontWeight: 800,
+    fontWeight: 700,
     cursor: "pointer",
   },
   primaryButton: {
     height: 38,
-    background: "#7f1d1d",
-    color: "#fff",
-    border: "1px solid #991b1b",
+    background: "linear-gradient(180deg, rgba(103,69,21,.92), rgba(45,31,13,.94))",
+    color: "#ffe4a5",
+    border: "1px solid rgba(242,204,124,.72)",
     borderRadius: 4,
     padding: "0 18px",
-    fontWeight: 800,
+    fontWeight: 700,
     cursor: "pointer",
   },
   secondaryButton: {
-    background: "#292524",
-    color: "#f5f5f4",
-    border: "1px solid #57534e",
+    background: "rgba(5,5,4,.72)",
+    color: "#f4e4c1",
+    border: "1px solid rgba(218,171,93,.38)",
     borderRadius: 4,
     padding: "8px 16px",
-    fontWeight: 800,
+    fontWeight: 700,
     cursor: "pointer",
   },
   saveArea: {
@@ -1329,7 +1338,7 @@ const styles: Record<string, React.CSSProperties> = {
     gap: 12,
   },
   savedText: {
-    color: "#c8b6a6",
+    color: "#c8aa78",
     fontSize: 13,
   },
   sharePanel: {
@@ -1337,24 +1346,24 @@ const styles: Record<string, React.CSSProperties> = {
     justifyContent: "space-between",
     gap: 12,
     alignItems: "center",
-    border: "1px solid rgba(127,29,29,.65)",
-    background: "#1d1713",
-    borderRadius: 6,
+    border: "1px solid rgba(218,171,93,.38)",
+    background: "linear-gradient(135deg, rgba(23,18,12,.9), rgba(7,8,7,.94))",
+    borderRadius: 4,
     padding: 16,
     marginBottom: 16,
   },
   panelTitle: {
-    color: "#fca5a5",
+    color: "#e2b469",
     fontSize: 13,
     fontWeight: 900,
     marginBottom: 8,
   },
   code: {
     display: "inline-block",
-    color: "#d6d3d1",
-    border: "1px solid #57534e",
+    color: "#f7ead3",
+    border: "1px solid rgba(218,171,93,.32)",
     borderRadius: 4,
-    background: "#14100e",
+    background: "rgba(5,5,4,.72)",
     padding: "7px 10px",
     fontSize: 13,
   },
@@ -1365,9 +1374,9 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: 20,
   },
   statCard: {
-    background: "#1d1713",
-    border: "1px solid rgba(127,29,29,.65)",
-    borderRadius: 6,
+    background: "linear-gradient(180deg, rgba(20,15,10,.94), rgba(7,8,7,.96))",
+    border: "1px solid rgba(218,171,93,.38)",
+    borderRadius: 4,
     padding: 14,
   },
   statNumber: {
@@ -1382,11 +1391,11 @@ const styles: Record<string, React.CSSProperties> = {
   playerCard: {
     position: "relative",
     minWidth: 0,
-    background: "#1d1713",
-    border: "1px solid rgba(127,29,29,.75)",
-    borderRadius: 8,
+    background: "linear-gradient(180deg, rgba(20,15,10,.96), rgba(8,8,6,.98))",
+    border: "1px solid rgba(218,171,93,.42)",
+    borderRadius: 4,
     padding: 18,
-    boxShadow: "0 12px 30px rgba(0,0,0,.18)",
+    boxShadow: "inset 0 0 0 1px rgba(0,0,0,.78), 0 16px 34px rgba(0,0,0,.34)",
   },
   identityPlayerCard: {
     maxWidth: 320,
@@ -1403,8 +1412,8 @@ const styles: Record<string, React.CSSProperties> = {
     left: 8,
     width: 18,
     height: 18,
-    borderLeft: "1px solid #facc15",
-    borderTop: "1px solid #facc15",
+    borderLeft: "1px solid #e2b469",
+    borderTop: "1px solid #e2b469",
     opacity: 0.8,
   },
   cornerBottom: {
@@ -1413,8 +1422,8 @@ const styles: Record<string, React.CSSProperties> = {
     bottom: 8,
     width: 18,
     height: 18,
-    borderRight: "1px solid #facc15",
-    borderBottom: "1px solid #facc15",
+    borderRight: "1px solid #e2b469",
+    borderBottom: "1px solid #e2b469",
     opacity: 0.8,
   },
   playerHeader: {
@@ -1431,9 +1440,9 @@ const styles: Record<string, React.CSSProperties> = {
   playerInput: {
     height: 42,
     flex: 1,
-    background: "#14100e",
-    color: "#f5f5f4",
-    border: "1px solid #44403c",
+    background: "rgba(5,5,4,.72)",
+    color: "#f7ead3",
+    border: "1px solid rgba(218,171,93,.32)",
     borderRadius: 4,
     padding: "0 12px",
     minWidth: 90,
@@ -1448,24 +1457,24 @@ const styles: Record<string, React.CSSProperties> = {
   },
   identitySelect: {
     height: 42,
-    background: "#14100e",
-    color: "#f5f5f4",
-    border: "1px solid #44403c",
+    background: "rgba(5,5,4,.72)",
+    color: "#f7ead3",
+    border: "1px solid rgba(218,171,93,.32)",
     borderRadius: 4,
     padding: "0 8px",
   },
   slotCount: {
-    background: "#a68a64",
-    color: "#201a16",
+    background: "#d9ae6a",
+    color: "#15100a",
     borderRadius: 999,
     padding: "5px 10px",
     fontSize: 12,
     fontWeight: 900,
   },
   deadButton: {
-    background: "#292524",
-    color: "#fca5a5",
-    border: "1px solid #57534e",
+    background: "rgba(32,22,14,.88)",
+    color: "#f2c778",
+    border: "1px solid rgba(218,171,93,.35)",
     borderRadius: 4,
     height: 42,
     width: 44,
@@ -1484,9 +1493,9 @@ const styles: Record<string, React.CSSProperties> = {
     minWidth: 0,
     aspectRatio: "2 / 3",
     height: "auto",
-    background: "#625746",
-    border: "1px dashed rgba(185,28,28,.75)",
-    borderRadius: 8,
+    background: "rgba(45,34,20,.72)",
+    border: "1px dashed rgba(218,171,93,.42)",
+    borderRadius: 4,
     overflow: "hidden",
     color: "#d6d3d1",
     cursor: "pointer",
@@ -1511,7 +1520,7 @@ const styles: Record<string, React.CSSProperties> = {
     inset: 0,
     display: "flex",
     flexDirection: "column",
-    background: "#14100e",
+    background: "#070706",
   },
   generalArt: {
     flex: 1,
@@ -1520,7 +1529,7 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: "center",
     justifyContent: "center",
     overflow: "hidden",
-    background: "linear-gradient(135deg, #292524, #57534e)",
+    background: "linear-gradient(135deg, #17120d, #3a2c19)",
   },
   generalImage: {
     width: "100%",
