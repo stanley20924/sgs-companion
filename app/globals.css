@@ -2150,7 +2150,7 @@ a {
   margin-top: 18px;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 640px) {
   .home-screen {
     max-width: 100vw;
     padding-top: 10px;
@@ -2274,44 +2274,57 @@ a {
   }
 
   .stats-panel {
-    padding: 15px 3px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    padding: 10px 8px;
   }
 
   .stat-item {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    justify-items: center;
-    gap: 0;
-    padding: 0 4px;
-    text-align: center;
+    grid-template-columns: 38px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: start;
+    align-items: center;
+    gap: 6px;
+    row-gap: 0;
+    min-height: 68px;
+    padding: 8px 9px;
+    text-align: left;
+  }
+
+  .stat-item:nth-child(2n)::after {
+    display: none;
+  }
+
+  .stat-item:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(218, 171, 93, 0.18);
   }
 
   .stat-emblem {
     grid-column: 1;
-    grid-row: 1;
-    width: 43px;
-    height: 43px;
-    margin-bottom: 5px;
+    grid-row: 1 / span 2;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0;
   }
 
   .stat-item span {
-    grid-column: 1;
-    grid-row: 2;
-    font-size: 9.5px;
-    line-height: 1.1;
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 11px;
+    line-height: 1.2;
     white-space: nowrap;
   }
 
   .stat-item strong {
-    grid-column: 1;
-    grid-row: 3;
-    font-size: 13px;
-    line-height: 1.12;
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 17px;
+    line-height: 1.15;
     white-space: nowrap;
   }
 
   .stat-item:nth-child(3) strong {
-    font-size: 9.5px;
+    font-size: 13px;
     letter-spacing: 0;
   }
 
@@ -2359,12 +2372,13 @@ a {
   }
 
   .general-detail-overlay {
-    padding: 8px;
+    padding: 12px;
   }
 
   .general-detail-modal,
   .general-feedback-panel {
-    width: min(100%, calc(100vw - 16px));
+    width: min(100%, calc(100vw - 24px));
+    overflow: hidden;
   }
 
   .general-detail-main {
@@ -2373,18 +2387,21 @@ a {
   }
 
   .general-detail-image {
-    max-height: 58vh;
+    align-items: center;
+    max-height: 64vh;
+    padding: 0;
   }
 
   .general-detail-image img {
+    width: 100%;
     height: auto;
-    max-height: 58vh;
+    max-height: 64vh;
     object-fit: contain;
   }
 
   .general-detail-info {
-    padding: 20px 16px;
-    gap: 18px;
+    padding: 16px 14px;
+    gap: 14px;
   }
 
   .detail-title-row {
@@ -2401,8 +2418,33 @@ a {
   }
 
   .general-meta-grid {
-    grid-template-columns: 1fr;
-    gap: 9px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .general-meta-grid div {
+    padding: 9px;
+  }
+
+  .general-meta-grid dd {
+    overflow-wrap: anywhere;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .rating-actions {
+    gap: 7px;
+  }
+
+  .rating-chip {
+    min-height: 30px;
+    padding: 0 9px;
+    font-size: 12px;
+  }
+
+  .general-feedback-panel {
+    margin-top: 12px;
+    padding: 15px;
   }
 
   .feedback-heading {
@@ -2456,22 +2498,27 @@ a {
 
   .card-detail-main {
     grid-template-columns: 1fr;
+    min-height: 0;
   }
 
   .card-detail-preview {
-    min-height: 360px;
-    padding: 16px;
+    min-height: 0;
+    max-height: 58vh;
+    padding: 14px;
+  }
+
+  .card-detail-preview img {
+    max-height: 54vh;
   }
 
   .card-detail-placeholder {
-    width: min(100%, 220px);
+    width: min(100%, 190px);
   }
 
   .card-mode-badges {
     justify-content: flex-start;
   }
 
-  .faq-card-body,
   .changelog-section-grid {
     grid-template-columns: 1fr;
   }
@@ -2479,6 +2526,58 @@ a {
   .faq-card,
   .changelog-card {
     padding: 15px;
+  }
+
+  .faq-card {
+    border-color: rgba(218, 171, 93, 0.38);
+    background:
+      radial-gradient(circle at 100% 0, rgba(218, 171, 93, 0.06), transparent 38%),
+      linear-gradient(180deg, rgba(18, 15, 10, 0.98), rgba(6, 7, 6, 0.98));
+  }
+
+  .faq-card header {
+    gap: 7px;
+    margin-bottom: 12px;
+  }
+
+  .faq-card h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .faq-card header p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .faq-card-body {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .faq-card-body section {
+    padding: 12px;
+    border-color: rgba(222, 179, 104, 0.18);
+    background: rgba(0, 0, 0, 0.18);
+  }
+
+  .faq-card h3 {
+    margin-bottom: 7px;
+    font-size: 15px;
+  }
+
+  .faq-card-body p,
+  .faq-card-body li {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .faq-source {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.45;
   }
 
   .changelog-card header {
