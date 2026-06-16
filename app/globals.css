@@ -2399,6 +2399,14 @@ a {
     object-fit: contain;
   }
 
+  .home-screen .general-detail-image {
+    max-height: 48vh;
+  }
+
+  .home-screen .general-detail-image img {
+    max-height: 48vh;
+  }
+
   .general-detail-info {
     padding: 16px 14px;
     gap: 14px;
