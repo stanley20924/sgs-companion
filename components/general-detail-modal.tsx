@@ -2,6 +2,7 @@
 
 import { MessageSquare, Send, Star, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ratingOptions, type RatingKey, useGeneralFeedback } from "./use-general-feedback";
 
 export type General = {
   id: string;
@@ -16,37 +17,10 @@ export type General = {
   cardEntry?: boolean;
 };
 
-type RatingKey = "show" | "top" | "strong" | "npc" | "weak";
-
-type GeneralFeedback = {
-  ratingCounts: Record<RatingKey, number>;
-  userVote?: RatingKey;
-  comments: Array<{
-    id: string;
-    name: string;
-    rating: RatingKey;
-    text: string;
-    createdAt: string;
-  }>;
-};
-
 const typeLabels: Record<NonNullable<General["type"]>, string> = {
   normal: "一般",
   dual: "雙勢力",
   lord: "君主",
-};
-
-const ratingOptions: Array<{ key: RatingKey; label: string; tone: string }> = [
-  { key: "show", label: "秀", tone: "blue" },
-  { key: "top", label: "頂級", tone: "gold" },
-  { key: "strong", label: "人人人", tone: "green" },
-  { key: "npc", label: "npc", tone: "red" },
-  { key: "weak", label: "拉完了", tone: "slate" },
-];
-
-const defaultFeedback: GeneralFeedback = {
-  ratingCounts: { show: 0, top: 0, strong: 0, npc: 0, weak: 0 },
-  comments: [],
 };
 
 function getTitle(general: General) {
@@ -62,18 +36,6 @@ function getFactions(general: General) {
   return general.factions?.length ? general.factions : [general.faction];
 }
 
-function getFeedbackKey(generalId: string) {
-  return `sgs-general-feedback:${generalId}`;
-}
-
-function emptyFeedback(): GeneralFeedback {
-  return {
-    ratingCounts: { ...defaultFeedback.ratingCounts },
-    userVote: undefined,
-    comments: [],
-  };
-}
-
 type GeneralDetailModalProps = {
   general: General;
   onClose: () => void;
@@ -81,16 +43,11 @@ type GeneralDetailModalProps = {
 };
 
 export default function GeneralDetailModal({ general, onClose, compact = false }: GeneralDetailModalProps) {
-  const [feedback, setFeedback] = useState<GeneralFeedback>(emptyFeedback);
   const [commentName, setCommentName] = useState("");
   const [commentText, setCommentText] = useState("");
   const [commentRating, setCommentRating] = useState<RatingKey>("show");
-
-  const totalVotes = ratingOptions.reduce((sum, option) => sum + feedback.ratingCounts[option.key], 0);
-  const leadingRating = ratingOptions.reduce(
-    (best, option) =>
-      feedback.ratingCounts[option.key] > feedback.ratingCounts[best.key] ? option : best,
-    ratingOptions[0]
+  const { feedback, totalVotes, leadingRating, syncStatus, vote, submitComment: saveComment } = useGeneralFeedback(
+    compact ? undefined : general.id
   );
 
   useEffect(() => {
@@ -102,66 +59,14 @@ export default function GeneralDetailModal({ general, onClose, compact = false }
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [onClose]);
 
-  useEffect(() => {
-    const raw = window.localStorage.getItem(getFeedbackKey(general.id));
-    if (!raw) {
-      setFeedback(emptyFeedback());
-      return;
-    }
-
-    try {
-      const parsed = JSON.parse(raw) as Partial<GeneralFeedback>;
-      setFeedback({
-        ...emptyFeedback(),
-        ...parsed,
-        ratingCounts: { ...defaultFeedback.ratingCounts, ...parsed.ratingCounts },
-        comments: parsed.comments ?? [],
-      });
-    } catch {
-      setFeedback(emptyFeedback());
-    }
-  }, [general.id]);
-
-  function saveFeedback(nextFeedback: GeneralFeedback) {
-    setFeedback(nextFeedback);
-    window.localStorage.setItem(getFeedbackKey(general.id), JSON.stringify(nextFeedback));
-  }
-
-  function vote(rating: RatingKey) {
-    const nextCounts = { ...feedback.ratingCounts };
-
-    if (feedback.userVote) {
-      nextCounts[feedback.userVote] = Math.max(0, nextCounts[feedback.userVote] - 1);
-    }
-
-    nextCounts[rating] += 1;
-
-    saveFeedback({
-      ...feedback,
-      userVote: rating,
-      ratingCounts: nextCounts,
-    });
-  }
-
-  function submitComment() {
+  async function submitComment() {
     if (!commentText.trim()) return;
 
-    saveFeedback({
-      ...feedback,
-      comments: [
-        {
-          id: crypto.randomUUID(),
-          name: commentName.trim() || "匿名軍師",
-          rating: commentRating,
-          text: commentText.trim(),
-          createdAt: new Date().toISOString(),
-        },
-        ...feedback.comments,
-      ].slice(0, 30),
-    });
-
-    setCommentText("");
-    setCommentName("");
+    const saved = await saveComment(commentName, commentRating, commentText);
+    if (saved) {
+      setCommentText("");
+      setCommentName("");
+    }
   }
 
   return (
@@ -241,7 +146,7 @@ export default function GeneralDetailModal({ general, onClose, compact = false }
               <MessageSquare size={20} />
               <h3>留言建議</h3>
             </div>
-            <span>給自製武將平衡調整用</span>
+            <span>{syncStatus === "synced" ? "已同步到公開建議牆" : "給自製武將平衡調整用"}</span>
           </div>
 
           <div className="feedback-form">

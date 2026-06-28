@@ -6,6 +6,7 @@ import { Converter } from "opencc-js";
 import { useEffect, useMemo, useState } from "react";
 import generalsJson from "../data/generals.json";
 import SiteNav from "./site-nav";
+import { ratingOptions, type RatingKey, useGeneralFeedback } from "./use-general-feedback";
 
 type General = {
   id: string;
@@ -20,20 +21,6 @@ type General = {
   cardEntry?: boolean;
 };
 
-type RatingKey = "show" | "top" | "strong" | "npc" | "weak";
-
-type GeneralFeedback = {
-  ratingCounts: Record<RatingKey, number>;
-  userVote?: RatingKey;
-  comments: Array<{
-    id: string;
-    name: string;
-    rating: RatingKey;
-    text: string;
-    createdAt: string;
-  }>;
-};
-
 const generals = (generalsJson as General[]).filter((general) => !general.cardEntry);
 const t2s = Converter({ from: "tw", to: "cn" });
 const factions = ["全部", "魏", "蜀", "吳", "群", "晉"];
@@ -45,19 +32,6 @@ const typeFilters = [
   { key: "dual", label: "雙勢力" },
   { key: "normal", label: "一般" },
 ] as const;
-
-const ratingOptions: Array<{ key: RatingKey; label: string; tone: string }> = [
-  { key: "show", label: "秀", tone: "blue" },
-  { key: "top", label: "頂級", tone: "gold" },
-  { key: "strong", label: "人人人", tone: "green" },
-  { key: "npc", label: "npc", tone: "red" },
-  { key: "weak", label: "拉完了", tone: "slate" },
-];
-
-const defaultFeedback: GeneralFeedback = {
-  ratingCounts: { show: 0, top: 0, strong: 0, npc: 0, weak: 0 },
-  comments: [],
-};
 
 function getTitle(general: General) {
   if (!general.image) return "待補稱號";
@@ -76,22 +50,6 @@ function normalize(value: string) {
   return t2s(value.toLowerCase().replace(/\s+/g, ""));
 }
 
-function getFeedbackKey(generalId: string) {
-  return `sgs-general-feedback:${generalId}`;
-}
-
-function emptyFeedback(): GeneralFeedback {
-  return {
-    ratingCounts: { ...defaultFeedback.ratingCounts },
-    userVote: undefined,
-    comments: [],
-  };
-}
-
-function createFeedbackId() {
-  return globalThis.crypto?.randomUUID?.() ?? `feedback-${Date.now()}-${Math.random().toString(36).slice(2)}`;
-}
-
 export default function GeneralsBrowser() {
   const searchParams = useSearchParams();
   const [query, setQuery] = useState("");
@@ -100,10 +58,12 @@ export default function GeneralsBrowser() {
   const [selectedVersion, setSelectedVersion] = useState("全部");
   const [selectedType, setSelectedType] = useState<(typeof typeFilters)[number]["key"]>("all");
   const [selectedGeneral, setSelectedGeneral] = useState<General | null>(null);
-  const [feedback, setFeedback] = useState<GeneralFeedback>(emptyFeedback);
   const [commentName, setCommentName] = useState("");
   const [commentText, setCommentText] = useState("");
   const [commentRating, setCommentRating] = useState<RatingKey>("show");
+  const { feedback, totalVotes, leadingRating, syncStatus, vote, submitComment: saveComment } = useGeneralFeedback(
+    selectedGeneral?.id
+  );
   const recentIds = useMemo(
     () => (searchParams.get("recent") ?? "").split(",").filter(Boolean),
     [searchParams]
@@ -137,13 +97,6 @@ export default function GeneralsBrowser() {
     });
   }, [query, selectedFaction, selectedMode, selectedVersion, selectedType, recentIds]);
 
-  const totalVotes = ratingOptions.reduce((sum, option) => sum + feedback.ratingCounts[option.key], 0);
-  const leadingRating = ratingOptions.reduce(
-    (best, option) =>
-      feedback.ratingCounts[option.key] > feedback.ratingCounts[best.key] ? option : best,
-    ratingOptions[0]
-  );
-
   useEffect(() => {
     const generalId = searchParams.get("general");
     if (!generalId) return;
@@ -154,73 +107,14 @@ export default function GeneralsBrowser() {
     }
   }, [searchParams]);
 
-  useEffect(() => {
-    if (!selectedGeneral) return;
-
-    const raw = window.localStorage.getItem(getFeedbackKey(selectedGeneral.id));
-    if (!raw) {
-      setFeedback(emptyFeedback());
-      return;
-    }
-
-    try {
-      const parsed = JSON.parse(raw) as Partial<GeneralFeedback>;
-      setFeedback({
-        ...emptyFeedback(),
-        ...parsed,
-        ratingCounts: { ...defaultFeedback.ratingCounts, ...parsed.ratingCounts },
-        comments: parsed.comments ?? [],
-      });
-    } catch {
-      setFeedback(emptyFeedback());
-    }
-  }, [selectedGeneral]);
-
-  function saveFeedback(nextFeedback: GeneralFeedback) {
-    if (!selectedGeneral) return;
-
-    setFeedback(nextFeedback);
-    window.localStorage.setItem(getFeedbackKey(selectedGeneral.id), JSON.stringify(nextFeedback));
-  }
-
-  function vote(rating: RatingKey) {
-    const nextCounts = { ...feedback.ratingCounts };
-
-    if (feedback.userVote) {
-      nextCounts[feedback.userVote] = Math.max(0, nextCounts[feedback.userVote] - 1);
-    }
-
-    nextCounts[rating] += 1;
-
-    const nextFeedback = {
-      ...feedback,
-      userVote: rating,
-      ratingCounts: nextCounts,
-    };
-
-    saveFeedback(nextFeedback);
-  }
-
-  function submitComment() {
+  async function submitComment() {
     if (!commentText.trim()) return;
 
-    const nextFeedback = {
-      ...feedback,
-      comments: [
-        {
-          id: createFeedbackId(),
-          name: commentName.trim() || "匿名軍師",
-          rating: commentRating,
-          text: commentText.trim(),
-          createdAt: new Date().toISOString(),
-        },
-        ...feedback.comments,
-      ].slice(0, 30),
-    };
-
-    saveFeedback(nextFeedback);
-    setCommentText("");
-    setCommentName("");
+    const saved = await saveComment(commentName, commentRating, commentText);
+    if (saved) {
+      setCommentText("");
+      setCommentName("");
+    }
   }
 
   return (
@@ -422,7 +316,7 @@ export default function GeneralsBrowser() {
                   <MessageSquare size={20} />
                   <h3>留言建議</h3>
                 </div>
-                <span>給自製武將平衡調整用</span>
+                <span>{syncStatus === "synced" ? "已同步到公開建議牆" : "給自製武將平衡調整用"}</span>
               </div>
 
               <div className="feedback-form">
