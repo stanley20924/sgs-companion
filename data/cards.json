@@ -10,11 +10,16 @@
     "category": "基本牌",
     "expansion": "標準",
     "deckCount": 30,
-    "timing": "出牌階段",
-    "target": "攻擊範圍內一名角色",
-    "effect": "對目標角色造成1點傷害。通常每回合限使用一次。",
-    "image": "/images/cards/bwiki/identity_standard_slash.png",
-    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%9D%80"
+    "timing": "出牌階段限一次。",
+    "target": "你攻擊範圍內的一名角色。",
+    "effect": "你對目標角色造成1點傷害。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/basic.html",
+    "notes": [
+      "「殺」有三種：普通殺、火殺、雷殺。",
+      "火殺造成火焰傷害；雷殺造成雷電傷害。",
+      "響應某事件要求使用或打出殺時，若無特別聲明，普通殺和屬性殺都可以使用或打出。"
+    ]
   },
   {
     "id": "identity_standard_dodge",
@@ -27,11 +32,12 @@
     "category": "基本牌",
     "expansion": "標準",
     "deckCount": 15,
-    "timing": "需要響應殺時",
-    "target": "自己",
-    "effect": "抵消一張殺的效果。",
-    "image": "/images/cards/bwiki/identity_standard_dodge.png",
-    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%97%AA"
+    "timing": "以你為目標的殺生效前。",
+    "target": "以你為目標的殺。",
+    "effect": "抵消此殺。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/basic.html",
+    "notes": []
   },
   {
     "id": "identity_standard_peach",
@@ -44,11 +50,14 @@
     "category": "基本牌",
     "expansion": "標準",
     "deckCount": 8,
-    "timing": "出牌階段或角色瀕死時",
-    "target": "自己或瀕死角色",
-    "effect": "回復1點體力。瀕死時可對瀕死角色使用。",
-    "image": "/images/cards/bwiki/identity_standard_peach.png",
-    "sourceUrl": "https://wiki.biligame.com/sgs/%E6%A1%83"
+    "timing": "出牌階段；或當一名角色處於瀕死狀態時。",
+    "target": "包括你在內的一名已受傷角色；或一名瀕死角色。",
+    "effect": "目標角色回復1點體力。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/basic.html",
+    "notes": [
+      "桃有兩種使用方法：出牌階段回復已受傷角色，或在瀕死狀態時救援。"
+    ]
   },
   {
     "id": "identity_junzheng_wine",
@@ -61,11 +70,14 @@
     "category": "基本牌",
     "expansion": "軍爭篇",
     "deckCount": 5,
-    "timing": "出牌階段或自己瀕死時",
-    "target": "自己",
-    "effect": "出牌階段限一次，對自己使用，令本回合下一張殺造成的傷害+1；當你處於瀕死狀態時，也可對自己使用，回復1點體力。",
+    "timing": "出牌階段，每回合限一次；或當你處於瀕死狀態時。",
+    "target": "包括你在內的一名角色；或瀕死狀態下的你。",
+    "effect": "出牌階段使用後，目標角色於此回合內使用的下一張殺造成的傷害+1；瀕死時使用則回復1點體力。",
     "image": "/images/cards/placeholder.webp",
-    "sourceUrl": "https://wiki.biligame.com/sgs/%E9%85%92"
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/basic.html",
+    "notes": [
+      "出牌階段使用酒與瀕死時使用酒是兩種不同使用方法。"
+    ]
   },
   {
     "id": "identity_junzheng_fire_slash",

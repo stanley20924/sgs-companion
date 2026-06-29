@@ -2089,6 +2089,36 @@ a {
   line-height: 1.65;
 }
 
+.card-notes {
+  display: grid;
+  gap: 7px;
+  margin-top: 2px;
+  padding-top: 11px;
+  border-top: 1px solid rgba(222, 179, 104, 0.18);
+}
+
+.card-notes h4 {
+  margin: 0;
+  color: #e8be73;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.card-notes ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 18px;
+  color: #c8aa78;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.card-notes li::marker {
+  color: #e4b86a;
+}
+
 .card-effect-panel a {
   justify-self: start;
   margin-top: 2px;

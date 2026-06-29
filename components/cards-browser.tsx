@@ -18,7 +18,7 @@ type CardData = {
   timing?: string;
   target?: string;
   effect: string;
-  notes?: string;
+  notes?: string | string[];
   image?: string;
   sourceUrl?: string;
 };
@@ -55,6 +55,11 @@ function getDisplayNameStyle(name: string) {
   return undefined;
 }
 
+function getCardNotes(card: CardData) {
+  if (!card.notes) return [];
+  return Array.isArray(card.notes) ? card.notes.filter(Boolean) : [card.notes].filter(Boolean);
+}
+
 export default function CardsBrowser() {
   const [query, setQuery] = useState("");
   const [selectedMode, setSelectedMode] = useState(allLabel);
@@ -74,8 +79,10 @@ export default function CardsBrowser() {
           card.category,
           card.subtype ?? "",
           card.expansion,
+          card.timing ?? "",
+          card.target ?? "",
           card.effect,
-          card.notes ?? "",
+          ...getCardNotes(card),
           ...card.modes,
         ].join(" ")
       );
@@ -262,7 +269,16 @@ export default function CardsBrowser() {
                 <section className="card-effect-panel">
                   <h3>效果</h3>
                   <p>{selectedCard.effect}</p>
-                  {selectedCard.notes && <small>{selectedCard.notes}</small>}
+                  {getCardNotes(selectedCard).length > 0 && (
+                    <div className="card-notes">
+                      <h4>備註</h4>
+                      <ul>
+                        {getCardNotes(selectedCard).map((note) => (
+                          <li key={note}>{note}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   {selectedCard.sourceUrl && (
                     <a href={selectedCard.sourceUrl} target="_blank" rel="noreferrer">
                       查看資料來源
