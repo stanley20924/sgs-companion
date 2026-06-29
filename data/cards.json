@@ -13,7 +13,7 @@
     "timing": "出牌階段限一次。",
     "target": "你攻擊範圍內的一名角色。",
     "effect": "你對目標角色造成1點傷害。",
-    "image": "/images/cards/placeholder.webp",
+    "image": "/images/cards/bwiki/identity_standard_slash.png",
     "sourceUrl": "https://gltjk.com/sanguosha/rules/card/basic.html",
     "notes": [
       "「殺」有三種：普通殺、火殺、雷殺。",
@@ -110,7 +110,7 @@
     "timing": "出牌階段",
     "target": "攻擊範圍內一名角色",
     "effect": "對目標角色造成1點雷電傷害。",
-    "image": "/images/cards/bwiki/identity_junzheng_thunder_slash.png",
+    "image": "/images/cards/placeholder.webp",
     "sourceUrl": "https://wiki.biligame.com/sgs/%E9%9B%B7%E6%9D%80"
   },
   {
