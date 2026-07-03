@@ -260,10 +260,6 @@ export default function CardsBrowser() {
                     <dt>目標</dt>
                     <dd>{selectedCard.target || "待補"}</dd>
                   </div>
-                  <div>
-                    <dt>ID</dt>
-                    <dd>{selectedCard.id}</dd>
-                  </div>
                 </dl>
 
                 <section className="card-effect-panel">
