@@ -404,6 +404,9 @@ export default function SessionApp({
     createPlayers(safeInitialPlayerCount, initialMode)
   );
   const [picker, setPicker] = useState<{ playerId: number; slotIndex: number } | null>(null);
+  const [adviceOpen, setAdviceOpen] = useState(false);
+  const [adviceQuery, setAdviceQuery] = useState("");
+  const [adviceGeneralIds, setAdviceGeneralIds] = useState<string[]>([]);
   const [factionPicker, setFactionPicker] = useState<{ playerId: number; factions: string[] } | null>(null);
   const [query, setQuery] = useState("");
   const [savedAt, setSavedAt] = useState("連線中...");
@@ -431,6 +434,65 @@ export default function SessionApp({
       );
     });
   }, [gameMode, query, version]);
+
+  const adviceAvailableGenerals = useMemo(() => {
+    const keyword = normalizeChineseSearch(adviceQuery.trim());
+
+    return generals.filter((general) => {
+      const searchableText = normalizeChineseSearch(
+        [general.name, general.faction, ...(general.factions ?? []), general.id].join(" ")
+      );
+
+      return (
+        general.modes.includes(gameMode) &&
+        general.versions.includes(version) &&
+        (!keyword || searchableText.includes(keyword))
+      );
+    });
+  }, [adviceQuery, gameMode, version]);
+
+  const adviceGenerals = useMemo(
+    () => adviceGeneralIds.map((id) => generalFromId(id)).filter(Boolean) as General[],
+    [adviceGeneralIds]
+  );
+
+  const advicePairs = useMemo(() => {
+    const pairs: { first: General; second: General; factions: string[] }[] = [];
+
+    for (let i = 0; i < adviceGenerals.length; i++) {
+      for (let j = i + 1; j < adviceGenerals.length; j++) {
+        const first = adviceGenerals[i];
+        const second = adviceGenerals[j];
+        const shared = getGeneralFactions(first).filter((faction) => getGeneralFactions(second).includes(faction));
+
+        if (shared.length > 0) {
+          pairs.push({ first, second, factions: shared });
+        }
+      }
+    }
+
+    return pairs;
+  }, [adviceGenerals]);
+
+  const advicePrompt = useMemo(() => {
+    const names = adviceGenerals.map((general) => general.name).join("、") || "尚未選擇";
+    const pairs =
+      advicePairs.length > 0
+        ? advicePairs
+            .map((pair) => `${pair.first.name}+${pair.second.name}（${pair.factions.join("/")}）`)
+            .join("、")
+        : "目前候選中沒有合法同勢力組合，請先依截圖檢查是否有雙勢力可配。";
+
+    return [
+      `請分析以下國戰候選武將，推薦最佳 2 張組合。`,
+      `目前模式：${gameMode} / ${version}`,
+      `候選武將：${names}`,
+      `硬性規則：只能推薦同勢力組合；雙勢力武將可視為任一包含勢力；不得推薦不同勢力組合。`,
+      `請只根據截圖中的武將牌面技能判斷，不要使用其他版本記憶。`,
+      `請排名前 3 組，說明優缺點、新手難度、容錯率與操作提醒。`,
+      `系統先檢查出的合法配對：${pairs}`,
+    ].join("\n");
+  }, [adviceGenerals, advicePairs, gameMode, version]);
 
   const factionStats = useMemo(() => {
     const stats: Record<string, number> = { 魏: 0, 蜀: 0, 吳: 0, 群: 0, 晉: 0 };
@@ -849,6 +911,20 @@ export default function SessionApp({
     }
   }
 
+  function toggleAdviceGeneral(general: General) {
+    setAdviceGeneralIds((current) => {
+      if (current.includes(general.id)) {
+        return current.filter((id) => id !== general.id);
+      }
+
+      return current.length >= 7 ? current : [...current, general.id];
+    });
+  }
+
+  async function copyAdvicePrompt() {
+    await navigator.clipboard?.writeText(advicePrompt);
+  }
+
   async function choosePlayerFaction(playerId: number, faction: string) {
     const targetPlayer = players.find((player) => player.id === playerId);
 
@@ -965,6 +1041,15 @@ export default function SessionApp({
               ))}
             </select>
           </label>
+
+          <button
+            onClick={() => setAdviceOpen(true)}
+            style={styles.primaryButton}
+            disabled={gameMode !== "國戰"}
+            title={gameMode === "國戰" ? "產生 AI 選將分析截圖" : "第一版先支援國戰"}
+          >
+            選將建議
+          </button>
 
           <button onClick={clearAll} style={styles.dangerButton}>
             重置牌局
@@ -1203,6 +1288,118 @@ export default function SessionApp({
           })}
         </section>
       </main>
+
+      {adviceOpen && (
+        <div style={styles.modalBackdrop}>
+          <div style={styles.adviceModal}>
+            <div style={styles.modalHeader}>
+              <div>
+                <h2 style={styles.modalTitle}>國戰選將建議</h2>
+                <p style={styles.adviceIntro}>
+                  選 6-7 張候選武將，手機截圖下方分析卡，再丟給 AI。圖片會保留完整牌面，讓 AI 直接讀技能。
+                </p>
+              </div>
+
+              <button type="button" onClick={() => setAdviceOpen(false)} style={styles.closeButton}>
+                ×
+              </button>
+            </div>
+
+            <div style={styles.adviceActions}>
+              <button type="button" onClick={copyAdvicePrompt} style={styles.primaryButton}>
+                複製 Prompt
+              </button>
+              <a href="https://chatgpt.com/" target="_blank" rel="noreferrer" style={styles.aiLink}>
+                ChatGPT
+              </a>
+              <a href="https://gemini.google.com/" target="_blank" rel="noreferrer" style={styles.aiLink}>
+                Gemini
+              </a>
+              <a href="https://claude.ai/" target="_blank" rel="noreferrer" style={styles.aiLink}>
+                Claude
+              </a>
+              <a href="https://chat.deepseek.com/" target="_blank" rel="noreferrer" style={styles.aiLink}>
+                DeepSeek
+              </a>
+            </div>
+
+            <label style={styles.adviceSearchLabel}>
+              <span>搜尋候選武將</span>
+              <input
+                value={adviceQuery}
+                onChange={(event) => setAdviceQuery(event.target.value)}
+                placeholder="輸入武將名、勢力或編號"
+                style={styles.searchInput}
+              />
+            </label>
+
+            <div style={styles.advicePickerGrid}>
+              {adviceAvailableGenerals.slice(0, 36).map((general) => {
+                const selected = adviceGeneralIds.includes(general.id);
+
+                return (
+                  <button
+                    key={general.id}
+                    type="button"
+                    onClick={() => toggleAdviceGeneral(general)}
+                    style={{
+                      ...styles.advicePickerButton,
+                      ...(selected ? styles.advicePickerButtonSelected : {}),
+                    }}
+                  >
+                    <span>{selected ? "已選" : "加入"}</span>
+                    <strong>{general.name}</strong>
+                    <small>{getGeneralFactions(general).join(" / ")}</small>
+                  </button>
+                );
+              })}
+            </div>
+
+            <section style={styles.screenshotCard}>
+              <div style={styles.screenshotHeader}>
+                <div>
+                  <span style={styles.panelTitle}>AI 分析截圖卡</span>
+                  <h3 style={styles.screenshotTitle}>國戰候選武將組合分析</h3>
+                </div>
+                <div style={styles.screenshotMeta}>{gameMode} / {version}</div>
+              </div>
+
+              <pre style={styles.promptBlock}>{advicePrompt}</pre>
+
+              <div style={styles.legalPairs}>
+                <strong>合法同勢力配對</strong>
+                <span>
+                  {advicePairs.length > 0
+                    ? advicePairs.map((pair) => `${pair.first.name}+${pair.second.name}`).join("、")
+                    : "尚未形成合法配對"}
+                </span>
+              </div>
+
+              <div style={styles.screenshotGeneralGrid}>
+                {adviceGenerals.map((general) => (
+                  <article key={general.id} style={styles.screenshotGeneralCard}>
+                    <div style={styles.screenshotGeneralImageWrap}>
+                      {general.image ? (
+                        <img src={general.image} alt={general.name} style={styles.screenshotGeneralImage} />
+                      ) : (
+                        <span style={styles.generalInitial}>{general.name.slice(0, 1)}</span>
+                      )}
+                    </div>
+                    <div style={styles.screenshotGeneralName}>
+                      <strong>{general.name}</strong>
+                      <span>{getGeneralFactions(general).join(" / ")}</span>
+                    </div>
+                  </article>
+                ))}
+
+                {adviceGenerals.length === 0 && (
+                  <div style={styles.adviceEmpty}>先加入 6-7 張候選武將，這裡會生成可截圖的分析卡。</div>
+                )}
+              </div>
+            </section>
+          </div>
+        </div>
+      )}
 
       {factionPicker && (
         <div style={styles.factionPickerBackdrop}>
@@ -1797,6 +1994,162 @@ const styles: Record<string, React.CSSProperties> = {
     color: "#a68a64",
     cursor: "pointer",
     fontSize: 13,
+  },
+  adviceModal: {
+    maxWidth: 1180,
+    margin: "0 auto",
+    background: "linear-gradient(180deg, #17110b, #070706)",
+    border: "1px solid rgba(218,171,93,.58)",
+    borderRadius: 8,
+    padding: 18,
+    boxShadow: "0 24px 80px rgba(0,0,0,.65)",
+  },
+  adviceIntro: {
+    margin: "8px 0 0",
+    color: "#d8bd88",
+    fontSize: 14,
+    lineHeight: 1.6,
+  },
+  adviceActions: {
+    display: "flex",
+    gap: 10,
+    flexWrap: "wrap",
+    alignItems: "center",
+    marginBottom: 14,
+  },
+  aiLink: {
+    minHeight: 38,
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#ffe4a5",
+    textDecoration: "none",
+    border: "1px solid rgba(218,171,93,.46)",
+    borderRadius: 4,
+    background: "rgba(5,5,4,.72)",
+    padding: "0 14px",
+    fontWeight: 700,
+  },
+  adviceSearchLabel: {
+    display: "block",
+    color: "#d9b574",
+    fontSize: 13,
+    fontWeight: 800,
+  },
+  advicePickerGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(138px, 1fr))",
+    gap: 8,
+    maxHeight: 170,
+    overflow: "auto",
+    marginBottom: 18,
+  },
+  advicePickerButton: {
+    display: "grid",
+    gap: 4,
+    textAlign: "left",
+    border: "1px solid rgba(218,171,93,.32)",
+    borderRadius: 4,
+    background: "rgba(5,5,4,.74)",
+    color: "#f4e4c1",
+    padding: 10,
+    cursor: "pointer",
+  },
+  advicePickerButtonSelected: {
+    borderColor: "rgba(255,220,142,.9)",
+    background: "linear-gradient(180deg, rgba(86,58,22,.92), rgba(28,19,10,.94))",
+  },
+  screenshotCard: {
+    background: "#050504",
+    border: "2px solid rgba(218,171,93,.72)",
+    borderRadius: 4,
+    padding: 10,
+    color: "#fff0d0",
+  },
+  screenshotHeader: {
+    display: "flex",
+    justifyContent: "space-between",
+    gap: 12,
+    alignItems: "start",
+    borderBottom: "1px solid rgba(218,171,93,.36)",
+    paddingBottom: 10,
+    marginBottom: 12,
+  },
+  screenshotTitle: {
+    margin: "4px 0 0",
+    fontSize: 21,
+    lineHeight: 1.2,
+    color: "#fff4d8",
+    fontWeight: 700,
+  },
+  screenshotMeta: {
+    color: "#f0c977",
+    fontSize: 14,
+    whiteSpace: "nowrap",
+  },
+  promptBlock: {
+    margin: "0 0 12px",
+    whiteSpace: "pre-wrap",
+    color: "#f7ead3",
+    background: "#120d08",
+    border: "1px solid rgba(218,171,93,.34)",
+    borderRadius: 4,
+    padding: 9,
+    fontFamily: '"Noto Serif TC", "Microsoft JhengHei", serif',
+    fontSize: 12,
+    lineHeight: 1.5,
+  },
+  legalPairs: {
+    display: "grid",
+    gap: 4,
+    color: "#e6c88b",
+    background: "rgba(38,27,13,.78)",
+    border: "1px solid rgba(218,171,93,.28)",
+    borderRadius: 4,
+    padding: 8,
+    marginBottom: 10,
+    fontSize: 12,
+    lineHeight: 1.45,
+  },
+  screenshotGeneralGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(92px, 1fr))",
+    gap: 8,
+  },
+  screenshotGeneralCard: {
+    minWidth: 0,
+    background: "#100c08",
+    border: "1px solid rgba(218,171,93,.44)",
+    borderRadius: 4,
+    overflow: "hidden",
+  },
+  screenshotGeneralImageWrap: {
+    background: "#050504",
+    aspectRatio: "2 / 3",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  screenshotGeneralImage: {
+    width: "100%",
+    height: "100%",
+    objectFit: "contain",
+    display: "block",
+  },
+  screenshotGeneralName: {
+    display: "grid",
+    gap: 3,
+    padding: "6px 7px",
+    color: "#fff0d0",
+    fontSize: 11,
+  },
+  adviceEmpty: {
+    gridColumn: "1 / -1",
+    textAlign: "center",
+    color: "#d8bd88",
+    border: "1px dashed rgba(218,171,93,.34)",
+    borderRadius: 4,
+    padding: 18,
   },
   modalBackdrop: {
     position: "fixed",
