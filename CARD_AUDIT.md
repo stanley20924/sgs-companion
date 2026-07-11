@@ -1,12 +1,12 @@
 # Card Database Audit
 
-Generated: 2026-07-03T07:59:53.829Z
+Generated: 2026-07-05T23:29:27.843Z
 
 ## Summary
 
-- Total cards: 33
+- Total cards: 61
 - Cards with non-placeholder image: 33
-- Placeholder images: 0
+- Placeholder images: 28
 - Missing image value: 0
 - Missing image files: 0
 - Usable medium images: 26
@@ -17,7 +17,34 @@ Generated: 2026-07-03T07:59:53.829Z
 
 ## Placeholder Images
 
-- None
+- `identity_junzheng_vine` - 藤甲 / 軍爭篇
+- `identity_standard_qinggang_sword` - 青釭劍 / 標準
+- `identity_standard_double_swords` - 雌雄雙股劍 / 標準
+- `identity_standard_green_dragon_blade` - 青龍偃月刀 / 標準
+- `identity_standard_serpent_spear` - 丈八蛇矛 / 標準
+- `identity_standard_rock_cleaving_axe` - 貫石斧 / 標準
+- `identity_standard_halberd` - 方天畫戟 / 標準
+- `identity_standard_kylin_bow` - 麒麟弓 / 標準
+- `identity_junzheng_ice_sword` - 寒冰劍 / 軍爭篇
+- `identity_standard_renwang_shield` - 仁王盾 / 標準
+- `identity_junzheng_guding_blade` - 古錠刀 / 軍爭篇
+- `identity_junzheng_fan` - 朱雀羽扇 / 軍爭篇
+- `identity_junzheng_wooden_ox` - 木牛流馬 / 軍爭篇
+- `identity_standard_red_hare` - 赤兔 / 標準
+- `identity_standard_dayuan` - 大宛 / 標準
+- `identity_standard_zixing` - 紫騂 / 標準
+- `identity_standard_jueying` - 絕影 / 標準
+- `identity_standard_dilu` - 的盧 / 標準
+- `identity_standard_zhuahuang` - 爪黃飛電 / 標準
+- `identity_junzheng_hualiu` - 驊騮 / 軍爭篇
+- `identity_junzheng_drowning` - 水淹七軍 / 軍爭篇
+- `identity_trick_binglinchengxia` - 兵臨城下 / 軍爭篇
+- `identity_trick_lulitongxin` - 勠力同心 / 勢備篇
+- `identity_trick_shengdongjixi` - 聲東擊西 / 勢備篇
+- `identity_trick_zengbingjianzao` - 增兵減灶 / 勢備篇
+- `identity_trick_caomujiebing` - 草木皆兵 / 勢備篇
+- `identity_trick_qijiayebing` - 棄甲曳兵 / 勢備篇
+- `identity_trick_fulei` - 浮雷 / 軍爭篇
 
 
 ## Missing Image Values

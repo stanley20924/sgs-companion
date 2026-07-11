@@ -2,6 +2,7 @@
 
 import { MessageSquare, Send, Star, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { getSkillNotesForGeneral } from "./skill-glossary";
 import { ratingOptions, type RatingKey, useGeneralFeedback } from "./use-general-feedback";
 
 export type General = {
@@ -49,6 +50,7 @@ export default function GeneralDetailModal({ general, onClose, compact = false }
   const { feedback, totalVotes, leadingRating, syncStatus, vote, submitComment: saveComment } = useGeneralFeedback(
     compact ? undefined : general.id
   );
+  const skillNotes = getSkillNotesForGeneral(general.id, general.skills ?? []);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -98,10 +100,6 @@ export default function GeneralDetailModal({ general, onClose, compact = false }
 
             {!compact && <dl className="general-meta-grid">
               <div>
-                <dt>ID</dt>
-                <dd>{general.id}</dd>
-              </div>
-              <div>
                 <dt>模式</dt>
                 <dd>{general.modes.join(" / ")}</dd>
               </div>
@@ -139,6 +137,23 @@ export default function GeneralDetailModal({ general, onClose, compact = false }
             </section>}
           </div>
         </section>
+
+        {!compact && skillNotes.length > 0 && (
+          <section className="general-skill-panel">
+            <div className="skill-panel-heading">
+              <h3>技能提示</h3>
+              <span>依常見版本整理，正式結算以牌面與當局規則為準</span>
+            </div>
+            <div className="skill-note-list">
+              {skillNotes.map((skill) => (
+                <article key={skill.name} className="skill-note-card">
+                  <strong>{skill.name}</strong>
+                  <p>{skill.summary}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
 
         {!compact && <section className="general-feedback-panel">
           <div className="feedback-heading">

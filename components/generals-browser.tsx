@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Converter } from "opencc-js";
 import { useEffect, useMemo, useState } from "react";
 import generalsJson from "../data/generals.json";
+import { getSkillNotesForGeneral } from "./skill-glossary";
 import SiteNav from "./site-nav";
 import { ratingOptions, type RatingKey, useGeneralFeedback } from "./use-general-feedback";
 
@@ -64,6 +65,7 @@ export default function GeneralsBrowser() {
   const { feedback, totalVotes, leadingRating, syncStatus, vote, submitComment: saveComment } = useGeneralFeedback(
     selectedGeneral?.id
   );
+  const skillNotes = selectedGeneral ? getSkillNotesForGeneral(selectedGeneral.id, selectedGeneral.skills ?? []) : [];
   const recentIds = useMemo(
     () => (searchParams.get("recent") ?? "").split(",").filter(Boolean),
     [searchParams]
@@ -268,10 +270,6 @@ export default function GeneralsBrowser() {
 
                 <dl className="general-meta-grid">
                   <div>
-                    <dt>ID</dt>
-                    <dd>{selectedGeneral.id}</dd>
-                  </div>
-                  <div>
                     <dt>模式</dt>
                     <dd>{selectedGeneral.modes.join(" / ")}</dd>
                   </div>
@@ -309,6 +307,23 @@ export default function GeneralsBrowser() {
                 </section>
               </div>
             </section>
+
+            {skillNotes.length > 0 && (
+              <section className="general-skill-panel">
+                <div className="skill-panel-heading">
+                  <h3>技能提示</h3>
+                  <span>依常見版本整理，正式結算以牌面與當局規則為準</span>
+                </div>
+                <div className="skill-note-list">
+                  {skillNotes.map((skill) => (
+                    <article key={skill.name} className="skill-note-card">
+                      <strong>{skill.name}</strong>
+                      <p>{skill.summary}</p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
 
             <section className="general-feedback-panel">
               <div className="feedback-heading">

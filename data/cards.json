@@ -587,5 +587,528 @@
     "effect": "若你有明置武將，出牌階段開始時可視為使用知己知彼；摸牌階段多摸一張；出牌階段可額外使用一張殺。",
     "image": "/images/cards/fandom/guozhan_yuxi.webp",
     "sourceUrl": "https://www.sanguosha.com/news/20170719_5639_4109"
+  },
+  {
+    "id": "identity_junzheng_vine",
+    "name": "藤甲",
+    "simplifiedName": "藤甲",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "防具",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "裝備後持續生效",
+    "target": "自己",
+    "effect": "鎖定技。普通【殺】、【南蠻入侵】、【萬箭齊發】對你造成的傷害通常被防止；你受到火焰傷害時，該傷害通常+1。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html",
+    "notes": [
+      "藤甲與火焰傷害、鐵索連環互動很常見，結算時先看最後是否實際受到火焰傷害。"
+    ]
+  },
+  {
+    "id": "identity_standard_qinggang_sword",
+    "name": "青釭劍",
+    "simplifiedName": "青釭剑",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "武器",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "你使用【殺】指定目標後",
+    "target": "自己",
+    "effect": "攻擊範圍2。鎖定技，你使用【殺】指定一名角色為目標後，無視其防具。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_double_swords",
+    "name": "雌雄雙股劍",
+    "simplifiedName": "雌雄双股剑",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "武器",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "你使用【殺】指定異性角色為目標後",
+    "target": "自己",
+    "effect": "攻擊範圍2。你使用【殺】指定異性角色為目標後，可令其選擇：棄置一張手牌，或令你摸一張牌。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_green_dragon_blade",
+    "name": "青龍偃月刀",
+    "simplifiedName": "青龙偃月刀",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "武器",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "你使用的【殺】被【閃】抵消後",
+    "target": "自己",
+    "effect": "攻擊範圍3。你使用的【殺】被目標以【閃】抵消後，可對同一目標再使用一張【殺】。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_serpent_spear",
+    "name": "丈八蛇矛",
+    "simplifiedName": "丈八蛇矛",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "武器",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "需要使用或打出【殺】時",
+    "target": "自己",
+    "effect": "攻擊範圍3。你可將兩張手牌當【殺】使用或打出。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_rock_cleaving_axe",
+    "name": "貫石斧",
+    "simplifiedName": "贯石斧",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "武器",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "你使用的【殺】被【閃】抵消後",
+    "target": "自己",
+    "effect": "攻擊範圍3。你使用的【殺】被【閃】抵消後，可棄置兩張牌，令此【殺】依然造成傷害。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_halberd",
+    "name": "方天畫戟",
+    "simplifiedName": "方天画戟",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "武器",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "你使用最後一張手牌作為【殺】時",
+    "target": "自己",
+    "effect": "攻擊範圍4。你使用最後一張手牌作為【殺】時，可額外指定至多兩名目標。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_kylin_bow",
+    "name": "麒麟弓",
+    "simplifiedName": "麒麟弓",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "武器",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "你使用【殺】對目標造成傷害後",
+    "target": "自己",
+    "effect": "攻擊範圍5。你使用【殺】對目標造成傷害後，可棄置其裝備區裡的一張坐騎牌。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_junzheng_ice_sword",
+    "name": "寒冰劍",
+    "simplifiedName": "寒冰剑",
+    "modes": [
+      "身分局"
+    ],
+    "category": "裝備牌",
+    "subtype": "武器",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "你使用【殺】將造成傷害時",
+    "target": "自己",
+    "effect": "攻擊範圍2。你使用【殺】將造成傷害時，可防止此傷害，改為依次棄置目標兩張牌。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_renwang_shield",
+    "name": "仁王盾",
+    "simplifiedName": "仁王盾",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "防具",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "黑色【殺】對你生效前",
+    "target": "自己",
+    "effect": "鎖定技，黑色【殺】對你無效。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_junzheng_guding_blade",
+    "name": "古錠刀",
+    "simplifiedName": "古锭刀",
+    "modes": [
+      "身分局"
+    ],
+    "category": "裝備牌",
+    "subtype": "武器",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "你使用【殺】對沒有手牌的目標造成傷害時",
+    "target": "自己",
+    "effect": "攻擊範圍2。鎖定技，你使用【殺】對沒有手牌的角色造成傷害時，此傷害+1。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_junzheng_fan",
+    "name": "朱雀羽扇",
+    "simplifiedName": "朱雀羽扇",
+    "modes": [
+      "身分局"
+    ],
+    "category": "裝備牌",
+    "subtype": "武器",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "你使用普通【殺】時",
+    "target": "自己",
+    "effect": "攻擊範圍4。你可將普通【殺】改為火【殺】。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_junzheng_wooden_ox",
+    "name": "木牛流馬",
+    "simplifiedName": "木牛流马",
+    "modes": [
+      "身分局"
+    ],
+    "category": "裝備牌",
+    "subtype": "寶物",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "自己",
+    "effect": "出牌階段限一次，你可將一張手牌置於此牌下；可將此牌移動至一名其他角色的裝備區。此牌下的牌可如手牌般使用或打出。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_red_hare",
+    "name": "赤兔",
+    "simplifiedName": "赤兔",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "進攻坐騎",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "裝備後持續生效",
+    "target": "自己",
+    "effect": "你計算與其他角色的距離-1。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_dayuan",
+    "name": "大宛",
+    "simplifiedName": "大宛",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "進攻坐騎",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "裝備後持續生效",
+    "target": "自己",
+    "effect": "你計算與其他角色的距離-1。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_zixing",
+    "name": "紫騂",
+    "simplifiedName": "紫骍",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "進攻坐騎",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "裝備後持續生效",
+    "target": "自己",
+    "effect": "你計算與其他角色的距離-1。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_jueying",
+    "name": "絕影",
+    "simplifiedName": "绝影",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "防禦坐騎",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "裝備後持續生效",
+    "target": "自己",
+    "effect": "其他角色計算與你的距離+1。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_dilu",
+    "name": "的盧",
+    "simplifiedName": "的卢",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "防禦坐騎",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "裝備後持續生效",
+    "target": "自己",
+    "effect": "其他角色計算與你的距離+1。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_standard_zhuahuang",
+    "name": "爪黃飛電",
+    "simplifiedName": "爪黄飞电",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "裝備牌",
+    "subtype": "防禦坐騎",
+    "expansion": "標準",
+    "deckCount": 1,
+    "timing": "裝備後持續生效",
+    "target": "自己",
+    "effect": "其他角色計算與你的距離+1。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_junzheng_hualiu",
+    "name": "驊騮",
+    "simplifiedName": "骅骝",
+    "modes": [
+      "身分局"
+    ],
+    "category": "裝備牌",
+    "subtype": "防禦坐騎",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "裝備後持續生效",
+    "target": "自己",
+    "effect": "其他角色計算與你的距離+1。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://gltjk.com/sanguosha/rules/card/equipment.html"
+  },
+  {
+    "id": "identity_junzheng_drowning",
+    "name": "水淹七軍",
+    "simplifiedName": "水淹七军",
+    "modes": [
+      "身分局"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名其他角色",
+    "effect": "對目標角色使用。目標通常需選擇棄置裝備區裡的牌或受到傷害；不同版本牌文可能有差異，請以當局牌面為準。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/",
+    "notes": [
+      "此牌版本差異較大，已先加入資料庫待高清圖與牌文二次校對。"
+    ]
+  },
+  {
+    "id": "identity_trick_binglinchengxia",
+    "name": "兵臨城下",
+    "simplifiedName": "兵临城下",
+    "modes": [
+      "身分局"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名其他角色",
+    "effect": "對目標角色使用，依牌文令其展示、使用或棄置指定類型的牌；未滿足條件時依牌文結算傷害或其他效果。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/",
+    "notes": [
+      "待補高清圖後按牌面文字精修。"
+    ]
+  },
+  {
+    "id": "identity_trick_lulitongxin",
+    "name": "勠力同心",
+    "simplifiedName": "戮力同心",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "勢備篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "依牌文指定角色",
+    "effect": "依牌文令符合條件的角色摸牌、棄牌或共同結算效果；具體目標與收益需以使用版本牌面為準。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/",
+    "notes": [
+      "待補高清圖後按牌面文字精修。"
+    ]
+  },
+  {
+    "id": "identity_trick_shengdongjixi",
+    "name": "聲東擊西",
+    "simplifiedName": "声东击西",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "勢備篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "依牌文指定角色",
+    "effect": "對目標使用後，通常涉及轉移目標、棄置或獲得牌等位置互動；具體流程以牌面為準。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/",
+    "notes": [
+      "待補高清圖後按牌面文字精修。"
+    ]
+  },
+  {
+    "id": "identity_trick_zengbingjianzao",
+    "name": "增兵減灶",
+    "simplifiedName": "增兵减灶",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "勢備篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名角色",
+    "effect": "目標摸牌後依牌文棄置一定數量或類型的牌；常用於調整手牌與裝備狀態。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/",
+    "notes": [
+      "待補高清圖後按牌面文字精修。"
+    ]
+  },
+  {
+    "id": "identity_trick_caomujiebing",
+    "name": "草木皆兵",
+    "simplifiedName": "草木皆兵",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "延時錦囊",
+    "expansion": "勢備篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名其他角色",
+    "effect": "置於目標判定區；判定階段依牌文判定，通常會影響摸牌、棄牌或將牌交給其他角色。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/",
+    "notes": [
+      "待補高清圖後按牌面文字精修。"
+    ]
+  },
+  {
+    "id": "identity_trick_qijiayebing",
+    "name": "棄甲曳兵",
+    "simplifiedName": "弃甲曳兵",
+    "modes": [
+      "身分局",
+      "國戰"
+    ],
+    "category": "錦囊牌",
+    "subtype": "普通錦囊",
+    "expansion": "勢備篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "依牌文指定角色",
+    "effect": "依牌文棄置裝備區或手牌中的牌，通常用於破壞裝備與防禦狀態。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/",
+    "notes": [
+      "待補高清圖後按牌面文字精修。"
+    ]
+  },
+  {
+    "id": "identity_trick_fulei",
+    "name": "浮雷",
+    "simplifiedName": "浮雷",
+    "modes": [
+      "身分局"
+    ],
+    "category": "錦囊牌",
+    "subtype": "延時錦囊",
+    "expansion": "軍爭篇",
+    "deckCount": 1,
+    "timing": "出牌階段",
+    "target": "一名角色",
+    "effect": "置於目標判定區；判定階段依牌文判定，可能造成雷電傷害或移動至其他角色判定區。",
+    "image": "/images/cards/placeholder.webp",
+    "sourceUrl": "https://wiki.biligame.com/sgs/",
+    "notes": [
+      "待補高清圖後按牌面文字精修。"
+    ]
   }
 ]

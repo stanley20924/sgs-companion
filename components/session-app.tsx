@@ -304,6 +304,46 @@ async function resetRoomPlayers(roomId: string, count: number, mode: GameMode) {
   });
 }
 
+async function clearRoomGenerals(roomId: string, currentPlayers: Player[], mode: GameMode) {
+  if (!supabase) return;
+
+  const slotCount = mode === "國戰" ? 2 : 1;
+  const playersWithDbIds = currentPlayers.filter((player) => player.dbId);
+
+  const clearedGenerals = playersWithDbIds.flatMap((player) =>
+    Array.from({ length: slotCount }, (_, slotIndex) => ({
+      player_id: player.dbId,
+      slot_index: slotIndex,
+      general_id: null,
+      updated_at: new Date().toISOString(),
+    }))
+  );
+
+  if (clearedGenerals.length > 0) {
+    const { error: generalsError } = await supabase
+      .from("player_generals")
+      .upsert(clearedGenerals, { onConflict: "player_id,slot_index" });
+
+    if (generalsError) throw generalsError;
+  }
+
+  if (playersWithDbIds.length > 0) {
+    const { error: playersError } = await supabase
+      .from("players")
+      .update({ selected_faction: null, updated_at: new Date().toISOString() })
+      .in("id", playersWithDbIds.map((player) => player.dbId));
+
+    if (playersError) throw playersError;
+  }
+
+  const { error: roomError } = await supabase
+    .from("rooms")
+    .update({ updated_at: new Date().toISOString() })
+    .eq("id", roomId);
+
+  if (roomError) throw roomError;
+}
+
 
 function Badge({ faction }: { faction: string }) {
   const color = factionColors[faction] ?? factionColors["群"];
@@ -459,7 +499,7 @@ export default function SessionApp({
 
       refreshTimer = setTimeout(() => {
         refreshFromSupabase(true);
-      }, 150);
+      }, 35);
     }
 
     async function init() {
@@ -707,6 +747,12 @@ export default function SessionApp({
         if (error) throw error;
 
         setSavedAt("已同步");
+        if (roomDbId) {
+          await supabase
+            .from("rooms")
+            .update({ updated_at: new Date().toISOString() })
+            .eq("id", roomDbId);
+        }
       } catch (error) {
         console.error("chooseGeneral failed:", error);
         setSavedAt("同步失敗");
@@ -758,6 +804,12 @@ export default function SessionApp({
         if (error) throw error;
 
         setSavedAt("已同步");
+        if (roomDbId) {
+          await supabase
+            .from("rooms")
+            .update({ updated_at: new Date().toISOString() })
+            .eq("id", roomDbId);
+        }
       } catch (error) {
         console.error("removeGeneral failed:", error);
         setSavedAt("同步失敗");
@@ -772,18 +824,20 @@ export default function SessionApp({
   }
 
   async function clearAll() {
-    setPlayers(createPlayers(playerCount, gameMode));
+    const clearedPlayers = players.map((player) => ({
+      ...player,
+      generals: player.generals.map(() => null),
+      selectedFaction: null,
+    }));
+
+    setPlayers(clearedPlayers);
     markChanged();
 
     if (supabase && roomDbId) {
       try {
         isApplyingRemote.current = true;
-        const freshPlayers = await resetRoomPlayers(roomDbId, playerCount, gameMode);
-        setPlayers(freshPlayers);
-        await supabase
-          .from("rooms")
-          .update({ updated_at: new Date().toISOString() })
-          .eq("id", roomDbId);
+        await clearRoomGenerals(roomDbId, players, gameMode);
+        await refreshFromSupabase(true);
         setSavedAt("已同步");
       } catch (error) {
         console.error("clearAll failed:", error);
@@ -917,8 +971,8 @@ export default function SessionApp({
 
           <div style={styles.saveArea}>
             <span style={styles.savedText}>{savedAt}</span>
-            <button onClick={saveSession} style={styles.primaryButton}>
-              本機備份
+            <button onClick={() => refreshFromSupabase(true)} style={styles.primaryButton}>
+              刷新頁面
             </button>
           </div>
         </section>
