@@ -330,7 +330,7 @@ async function clearRoomGenerals(roomId: string, currentPlayers: Player[], mode:
   if (playersWithDbIds.length > 0) {
     const { error: playersError } = await supabase
       .from("players")
-      .update({ selected_faction: null, updated_at: new Date().toISOString() })
+      .update({ dead: false, selected_faction: null, updated_at: new Date().toISOString() })
       .in("id", playersWithDbIds.map((player) => player.dbId));
 
     if (playersError) throw playersError;
@@ -827,6 +827,7 @@ export default function SessionApp({
     const clearedPlayers = players.map((player) => ({
       ...player,
       generals: player.generals.map(() => null),
+      dead: false,
       selectedFaction: null,
     }));
 
@@ -966,7 +967,7 @@ export default function SessionApp({
           </label>
 
           <button onClick={clearAll} style={styles.dangerButton}>
-            清空武將
+            重置牌局
           </button>
 
           <div style={styles.saveArea}>
