@@ -407,6 +407,7 @@ export default function SessionApp({
   const [adviceOpen, setAdviceOpen] = useState(false);
   const [adviceQuery, setAdviceQuery] = useState("");
   const [adviceGeneralIds, setAdviceGeneralIds] = useState<string[]>([]);
+  const [adviceIdentity, setAdviceIdentity] = useState("主公");
   const [factionPicker, setFactionPicker] = useState<{ playerId: number; factions: string[] } | null>(null);
   const [query, setQuery] = useState("");
   const [savedAt, setSavedAt] = useState("連線中...");
@@ -476,12 +477,25 @@ export default function SessionApp({
 
   const advicePrompt = useMemo(() => {
     const names = adviceGenerals.map((general) => general.name).join("、") || "尚未選擇";
+    const isIdentityAdvice = gameMode === "身分局";
     const pairs =
       advicePairs.length > 0
         ? advicePairs
             .map((pair) => `${pair.first.name}+${pair.second.name}（${pair.factions.join("/")}）`)
             .join("、")
         : "目前候選中沒有合法同勢力組合，請先依截圖檢查是否有雙勢力可配。";
+
+    if (isIdentityAdvice) {
+      return [
+        `請分析以下三國殺身份局候選武將，依我的身份推薦最適合的單將。`,
+        `目前模式：${gameMode} / ${version}`,
+        `我的身份：${adviceIdentity}`,
+        `候選武將：${names}`,
+        `請只根據截圖中的武將牌面技能判斷，不要使用其他版本記憶。`,
+        `請排名前 5 名，說明適合此身份的原因、優缺點、新手難度、容錯率與操作提醒。`,
+        `身份考量：主公重視生存與控場；忠臣重視保主與配合；反賊重視輸出與壓制；內奸重視單挑、蓄爆與自保。`,
+      ].join("\n");
+    }
 
     return [
       `請分析以下國戰候選武將，推薦最佳 2 張組合。`,
@@ -492,7 +506,7 @@ export default function SessionApp({
       `請排名前 3 組，說明優缺點、新手難度、容錯率與操作提醒。`,
       `系統先檢查出的合法配對：${pairs}`,
     ].join("\n");
-  }, [adviceGenerals, advicePairs, gameMode, version]);
+  }, [adviceGenerals, adviceIdentity, advicePairs, gameMode, version]);
 
   const factionStats = useMemo(() => {
     const stats: Record<string, number> = { 魏: 0, 蜀: 0, 吳: 0, 群: 0, 晉: 0 };
@@ -550,6 +564,11 @@ export default function SessionApp({
       mediaQuery.removeEventListener("change", updateMobileState);
     };
   }, []);
+
+  useEffect(() => {
+    setAdviceGeneralIds([]);
+    setAdviceQuery("");
+  }, [gameMode, version]);
 
   useEffect(() => {
     let active = true;
@@ -1045,8 +1064,7 @@ export default function SessionApp({
           <button
             onClick={() => setAdviceOpen(true)}
             style={styles.primaryButton}
-            disabled={gameMode !== "國戰"}
-            title={gameMode === "國戰" ? "產生 AI 選將分析截圖" : "第一版先支援國戰"}
+            title="產生 AI 選將分析截圖"
           >
             選將建議
           </button>
@@ -1294,7 +1312,7 @@ export default function SessionApp({
           <div style={styles.adviceModal}>
             <div style={styles.modalHeader}>
               <div>
-                <h2 style={styles.modalTitle}>國戰選將建議</h2>
+                <h2 style={styles.modalTitle}>{gameMode}選將建議</h2>
                 <p style={styles.adviceIntro}>
                   選 6-7 張候選武將，手機截圖下方分析卡，再丟給 AI。圖片會保留完整牌面，讓 AI 直接讀技能。
                 </p>
@@ -1323,6 +1341,21 @@ export default function SessionApp({
               </a>
             </div>
 
+            {gameMode === "身分局" && (
+              <label style={styles.adviceSearchLabel}>
+                <span>你的身份</span>
+                <select
+                  value={adviceIdentity}
+                  onChange={(event) => setAdviceIdentity(event.target.value)}
+                  style={styles.select}
+                >
+                  {["主公", "忠臣", "反賊", "內奸"].map((role) => (
+                    <option key={role}>{role}</option>
+                  ))}
+                </select>
+              </label>
+            )}
+
             <label style={styles.adviceSearchLabel}>
               <span>搜尋候選武將</span>
               <input
@@ -1334,7 +1367,7 @@ export default function SessionApp({
             </label>
 
             <div style={styles.advicePickerGrid}>
-              {adviceAvailableGenerals.slice(0, 36).map((general) => {
+              {adviceAvailableGenerals.map((general) => {
                 const selected = adviceGeneralIds.includes(general.id);
 
                 return (
@@ -1347,9 +1380,9 @@ export default function SessionApp({
                       ...(selected ? styles.advicePickerButtonSelected : {}),
                     }}
                   >
-                    <span>{selected ? "已選" : "加入"}</span>
-                    <strong>{general.name}</strong>
-                    <small>{getGeneralFactions(general).join(" / ")}</small>
+                  <span>{selected ? "已選" : "加入"}</span>
+                  <strong>{general.name}</strong>
+                  <small>{getGeneralFactions(general).join(" / ")}</small>
                   </button>
                 );
               })}
@@ -1359,21 +1392,30 @@ export default function SessionApp({
               <div style={styles.screenshotHeader}>
                 <div>
                   <span style={styles.panelTitle}>AI 分析截圖卡</span>
-                  <h3 style={styles.screenshotTitle}>國戰候選武將組合分析</h3>
+                  <h3 style={styles.screenshotTitle}>
+                    {gameMode === "國戰" ? "國戰候選武將組合分析" : `身份局 ${adviceIdentity} 選將分析`}
+                  </h3>
                 </div>
                 <div style={styles.screenshotMeta}>{gameMode} / {version}</div>
               </div>
 
               <pre style={styles.promptBlock}>{advicePrompt}</pre>
 
-              <div style={styles.legalPairs}>
-                <strong>合法同勢力配對</strong>
-                <span>
-                  {advicePairs.length > 0
-                    ? advicePairs.map((pair) => `${pair.first.name}+${pair.second.name}`).join("、")
-                    : "尚未形成合法配對"}
-                </span>
-              </div>
+              {gameMode === "國戰" ? (
+                <div style={styles.legalPairs}>
+                  <strong>合法同勢力配對</strong>
+                  <span>
+                    {advicePairs.length > 0
+                      ? advicePairs.map((pair) => `${pair.first.name}+${pair.second.name}`).join("、")
+                      : "尚未形成合法配對"}
+                  </span>
+                </div>
+              ) : (
+                <div style={styles.legalPairs}>
+                  <strong>身份評估方向</strong>
+                  <span>目前身份：{adviceIdentity}。請 AI 依截圖技能判斷單將適性，不要使用其他版本記憶。</span>
+                </div>
+              )}
 
               <div style={styles.screenshotGeneralGrid}>
                 {adviceGenerals.map((general) => (
