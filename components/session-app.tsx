@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Converter } from "opencc-js";
 import generalsJson from "../data/generals.json";
+import guozhanCombosJson from "../data/guozhan-combos.json";
 import { supabase } from "../lib/supabase";
 import SiteNav from "./site-nav";
 
@@ -15,6 +16,20 @@ type General = {
   image?: string;
   modes: string[];
   versions: string[];
+};
+
+type GuozhanCombo = {
+  id: string;
+  version: string;
+  faction: string;
+  generalIds: string[];
+  tier: string;
+  tags: string[];
+  reason: string;
+  weakness: string;
+  sourceName: string;
+  sourceUrl: string;
+  reviewStatus: string;
 };
 
 type GameMode = "國戰" | "身分局";
@@ -43,6 +58,7 @@ const playerLimitsByMode: Record<GameMode, { min: number; max: number; defaultCo
 };
 
 const generals = generalsJson as General[];
+const guozhanCombos = guozhanCombosJson as GuozhanCombo[];
 
 const factionOrder = ["魏", "蜀", "吳", "群", "晉"];
 
@@ -475,6 +491,22 @@ export default function SessionApp({
     return pairs;
   }, [adviceGenerals]);
 
+  const adviceComboMatches = useMemo(() => {
+    if (gameMode !== "國戰" || adviceGenerals.length < 2) return [];
+
+    const selectedIds = new Set(adviceGenerals.map((general) => general.id));
+    const normalizedVersion = normalizeChineseSearch(version);
+
+    return guozhanCombos
+      .filter((combo) => normalizeChineseSearch(combo.version) === normalizedVersion)
+      .filter((combo) => combo.generalIds.every((generalId) => selectedIds.has(generalId)))
+      .map((combo) => ({
+        combo,
+        generals: combo.generalIds.map((generalId) => generalFromId(generalId)).filter(Boolean) as General[],
+      }))
+      .filter((match) => match.generals.length === match.combo.generalIds.length);
+  }, [adviceGenerals, gameMode, version]);
+
   const advicePrompt = useMemo(() => {
     const names = adviceGenerals.map((general) => general.name).join("、") || "尚未選擇";
     const isIdentityAdvice = gameMode === "身分局";
@@ -505,8 +537,13 @@ export default function SessionApp({
       `請只根據截圖中的武將牌面技能判斷，不要使用其他版本記憶。`,
       `請排名前 3 組，說明優缺點、新手難度、容錯率與操作提醒。`,
       `系統先檢查出的合法配對：${pairs}`,
+      adviceComboMatches.length > 0
+        ? `SGS Companion 內建推薦可參考：${adviceComboMatches
+            .map((match) => `${match.generals.map((general) => general.name).join("+")}（${match.combo.tier}，${match.combo.tags.join("/")}）`)
+            .join("、")}`
+        : `SGS Companion 目前沒有命中已收錄推薦組合，請以截圖技能與同勢力規則自行判斷。`,
     ].join("\n");
-  }, [adviceGenerals, adviceIdentity, advicePairs, gameMode, version]);
+  }, [adviceComboMatches, adviceGenerals, adviceIdentity, advicePairs, gameMode, version]);
 
   const factionStats = useMemo(() => {
     const stats: Record<string, number> = { 魏: 0, 蜀: 0, 吳: 0, 群: 0, 晉: 0 };
@@ -1417,6 +1454,34 @@ export default function SessionApp({
                 </div>
               )}
 
+              {gameMode === "國戰" && adviceComboMatches.length > 0 && (
+                <div style={styles.comboMatchPanel}>
+                  <div style={styles.comboMatchHeader}>
+                    <strong>內建推薦組合</strong>
+                    <span>先當作參考，之後可逐組補玩家來源</span>
+                  </div>
+                  <div style={styles.comboMatchGrid}>
+                    {adviceComboMatches.map(({ combo, generals }) => (
+                      <article key={combo.id} style={styles.comboMatchCard}>
+                        <div style={styles.comboMatchTitle}>
+                          <span>{generals.map((general) => general.name).join(" + ")}</span>
+                          <b>{combo.tier}</b>
+                        </div>
+                        <div style={styles.comboTagRow}>
+                          <span>{combo.faction}</span>
+                          {combo.tags.map((tag) => (
+                            <span key={tag}>{tag}</span>
+                          ))}
+                        </div>
+                        <p>{combo.reason}</p>
+                        <small>弱點：{combo.weakness}</small>
+                        <small>來源：{combo.sourceName} · {combo.reviewStatus}</small>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               <div style={styles.screenshotGeneralGrid}>
                 {adviceGenerals.map((general) => (
                   <article key={general.id} style={styles.screenshotGeneralCard}>
@@ -2152,6 +2217,53 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: 10,
     fontSize: 12,
     lineHeight: 1.45,
+  },
+  comboMatchPanel: {
+    display: "grid",
+    gap: 8,
+    marginBottom: 12,
+    padding: 9,
+    border: "1px solid rgba(218,171,93,.36)",
+    borderRadius: 4,
+    background: "linear-gradient(180deg, rgba(32,21,8,.9), rgba(9,7,5,.94))",
+  },
+  comboMatchHeader: {
+    display: "flex",
+    justifyContent: "space-between",
+    gap: 10,
+    color: "#f6d78d",
+    fontSize: 12,
+    lineHeight: 1.45,
+  },
+  comboMatchGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))",
+    gap: 8,
+  },
+  comboMatchCard: {
+    display: "grid",
+    gap: 6,
+    border: "1px solid rgba(218,171,93,.3)",
+    background: "rgba(0,0,0,.28)",
+    padding: 9,
+    color: "#f7ead3",
+    fontSize: 12,
+    lineHeight: 1.5,
+  },
+  comboMatchTitle: {
+    display: "flex",
+    justifyContent: "space-between",
+    gap: 8,
+    alignItems: "center",
+    color: "#fff4d8",
+    fontSize: 14,
+    fontWeight: 700,
+  },
+  comboTagRow: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: 5,
+    color: "#f5d489",
   },
   screenshotGeneralGrid: {
     display: "grid",
