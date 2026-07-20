@@ -70,6 +70,45 @@ const factionColors: Record<string, { bg: string; text: string; border: string }
   晉: { bg: "#31214f", text: "#e9d5ff", border: "#a78bfa" },
 };
 
+const identityLordCandidateIds = new Set([
+  "identity_2026_shu001",
+  "identity_2026_wei001",
+  "identity_2026_wu001",
+  "identity_2026_qun004",
+  "identity_2026_qun006",
+  "identity_2026_shu013",
+  "identity_2026_wei014",
+  "identity_2026_wu010",
+  "identity_2026_wu067",
+]);
+
+const identityAdviceProfiles: Record<string, { drawRule: string; focus: string; avoid: string; output: string }> = {
+  主公: {
+    drawRule: "主公選將通常是 3 張主公候選武將 + 2 張隨機武將，請玩家把實際抽到的 5 張都加入。",
+    focus: "優先看生存、自保、控場、嘲諷承受能力，以及能否在身份未明時穩住前兩輪。",
+    avoid: "避免只看單回合爆發；容易裸奔、低防禦、太依賴隊友保護的武將要降權。",
+    output: "請從 5 張裡推薦前 3，並標出首選、保守選、風險高但上限高的選項。",
+  },
+  忠臣: {
+    drawRule: "忠臣通常從抽到的 3 張武將選 1，請玩家把實際抽到的 3 張都加入。",
+    focus: "優先看保主、補牌、拆控、穩定輸出、能否幫主公吸收火力或打開局面。",
+    avoid: "避免太像內奸、過度自保、前期存在感太低，或容易誤傷主公的武將。",
+    output: "請從 3 張裡推薦最佳忠臣，並說明如何配合主公與前兩輪打法。",
+  },
+  反賊: {
+    drawRule: "反賊通常從抽到的 3 張武將選 1，請玩家把實際抽到的 3 張都加入。",
+    focus: "優先看前期壓制、集火能力、拆防禦、穩定輸出、能否快速對主公造成壓力。",
+    avoid: "避免節奏太慢、只會後期單挑、或需要長時間蓄力才有收益的武將。",
+    output: "請從 3 張裡推薦最佳反賊，並說明集火目標、起手留牌和首輪打法。",
+  },
+  內奸: {
+    drawRule: "內奸通常從抽到的 3 張武將選 1，請玩家把實際抽到的 3 張都加入。",
+    focus: "優先看單挑能力、自保、控血、蓄爆、清場後收尾能力，以及不容易過早暴露身份。",
+    avoid: "避免太依賴隊友、仇恨過高、或只能打團隊輔助而缺少終局能力的武將。",
+    output: "請從 3 張裡推薦最佳內奸，並說明前期裝弱、中期控場、後期收尾策略。",
+  },
+};
+
 function createPlayers(count: number, mode: GameMode): Player[] {
   const slots = mode === "國戰" ? 2 : 1;
 
@@ -473,6 +512,13 @@ export default function SessionApp({
     [adviceGeneralIds]
   );
 
+  const selectedIdentityLordCount = useMemo(
+    () => adviceGenerals.filter((general) => identityLordCandidateIds.has(general.id)).length,
+    [adviceGenerals]
+  );
+
+  const identityAdviceProfile = identityAdviceProfiles[adviceIdentity] ?? identityAdviceProfiles.主公;
+
   const advicePairs = useMemo(() => {
     const pairs: { first: General; second: General; factions: string[] }[] = [];
 
@@ -519,13 +565,16 @@ export default function SessionApp({
 
     if (isIdentityAdvice) {
       return [
-        `請分析以下三國殺身份局候選武將，依我的身份推薦最適合的單將。`,
+        `請分析以下三國殺身份局 2026 珍藏版候選武將，依我的身份推薦最適合的單將。`,
         `目前模式：${gameMode} / ${version}`,
         `我的身份：${adviceIdentity}`,
+        `抽牌規則：${identityAdviceProfile.drawRule}`,
         `候選武將：${names}`,
         `請只根據截圖中的武將牌面技能判斷，不要使用其他版本記憶。`,
-        `請排名前 5 名，說明適合此身份的原因、優缺點、新手難度、容錯率與操作提醒。`,
-        `身份考量：主公重視生存與控場；忠臣重視保主與配合；反賊重視輸出與壓制；內奸重視單挑、蓄爆與自保。`,
+        `身份重點：${identityAdviceProfile.focus}`,
+        `降權條件：${identityAdviceProfile.avoid}`,
+        identityAdviceProfile.output,
+        `如果我是主公，請特別比較 3 張主公候選武將與 2 張隨機武將是否值得冒險改選；如果不是主公，請只在 3 張候選中選 1 張。`,
       ].join("\n");
     }
 
@@ -543,7 +592,7 @@ export default function SessionApp({
             .join("、")}`
         : `SGS Companion 目前沒有命中已收錄推薦組合，請以截圖技能與同勢力規則自行判斷。`,
     ].join("\n");
-  }, [adviceComboMatches, adviceGenerals, adviceIdentity, advicePairs, gameMode, version]);
+  }, [adviceComboMatches, adviceGenerals, adviceIdentity, advicePairs, gameMode, identityAdviceProfile, version]);
 
   const factionStats = useMemo(() => {
     const stats: Record<string, number> = { 魏: 0, 蜀: 0, 吳: 0, 群: 0, 晉: 0 };
@@ -1351,7 +1400,9 @@ export default function SessionApp({
               <div>
                 <h2 style={styles.modalTitle}>{gameMode}選將建議</h2>
                 <p style={styles.adviceIntro}>
-                  選 6-7 張候選武將，手機截圖下方分析卡，再丟給 AI。圖片會保留完整牌面，讓 AI 直接讀技能。
+                  {gameMode === "國戰"
+                    ? "選 6-7 張候選武將，手機截圖下方分析卡，再丟給 AI。圖片會保留完整牌面，讓 AI 直接讀技能。"
+                    : "先選身份，再加入你實際抽到的候選武將。主公通常加入 5 張，其他身份加入 3 張，截圖後丟給 AI。"}
                 </p>
               </div>
 
@@ -1379,18 +1430,30 @@ export default function SessionApp({
             </div>
 
             {gameMode === "身分局" && (
-              <label style={styles.adviceSearchLabel}>
-                <span>你的身份</span>
-                <select
-                  value={adviceIdentity}
-                  onChange={(event) => setAdviceIdentity(event.target.value)}
-                  style={styles.select}
-                >
-                  {["主公", "忠臣", "反賊", "內奸"].map((role) => (
-                    <option key={role}>{role}</option>
-                  ))}
-                </select>
-              </label>
+              <div style={styles.identityAdviceBox}>
+                <label style={styles.adviceSearchLabel}>
+                  <span>你的身份</span>
+                  <select
+                    value={adviceIdentity}
+                    onChange={(event) => setAdviceIdentity(event.target.value)}
+                    style={styles.select}
+                  >
+                    {["主公", "忠臣", "反賊", "內奸"].map((role) => (
+                      <option key={role}>{role}</option>
+                    ))}
+                  </select>
+                </label>
+                <div style={styles.identityAdviceRule}>
+                  <strong>{adviceIdentity}選將規則</strong>
+                  <span>{identityAdviceProfile.drawRule}</span>
+                  {adviceIdentity === "主公" && (
+                    <small>目前已加入 {adviceGenerals.length} 張，其中主公候選 {selectedIdentityLordCount} 張。</small>
+                  )}
+                  {adviceIdentity !== "主公" && (
+                    <small>目前已加入 {adviceGenerals.length} 張，建議剛好加入你抽到的 3 張。</small>
+                  )}
+                </div>
+              </div>
             )}
 
             <label style={styles.adviceSearchLabel}>
@@ -1419,7 +1482,10 @@ export default function SessionApp({
                   >
                   <span>{selected ? "已選" : "加入"}</span>
                   <strong>{general.name}</strong>
-                  <small>{getGeneralFactions(general).join(" / ")}</small>
+                  <small>
+                    {getGeneralFactions(general).join(" / ")}
+                    {gameMode === "身分局" && identityLordCandidateIds.has(general.id) ? " · 主公候選" : ""}
+                  </small>
                   </button>
                 );
               })}
@@ -1450,7 +1516,12 @@ export default function SessionApp({
               ) : (
                 <div style={styles.legalPairs}>
                   <strong>身份評估方向</strong>
-                  <span>目前身份：{adviceIdentity}。請 AI 依截圖技能判斷單將適性，不要使用其他版本記憶。</span>
+                  <span>
+                    目前身份：{adviceIdentity}。{identityAdviceProfile.focus}
+                    {adviceIdentity === "主公"
+                      ? ` 已加入 ${adviceGenerals.length} 張，其中主公候選 ${selectedIdentityLordCount} 張。`
+                      : ` 已加入 ${adviceGenerals.length} 張候選，請從 3 張中選 1。`}
+                  </span>
                 </div>
               )}
 
@@ -2142,6 +2213,24 @@ const styles: Record<string, React.CSSProperties> = {
     color: "#d9b574",
     fontSize: 13,
     fontWeight: 800,
+  },
+  identityAdviceBox: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+    gap: 10,
+    alignItems: "end",
+    marginBottom: 12,
+  },
+  identityAdviceRule: {
+    display: "grid",
+    gap: 4,
+    color: "#ead19b",
+    border: "1px solid rgba(218,171,93,.3)",
+    background: "rgba(14,10,5,.72)",
+    borderRadius: 4,
+    padding: 10,
+    fontSize: 12,
+    lineHeight: 1.5,
   },
   advicePickerGrid: {
     display: "grid",
