@@ -44,7 +44,6 @@ type Player = {
   selectedFaction?: string | null;
 };
 
-const identities = ["主公", "忠臣", "反賊", "內奸", "未公開"];
 const modes: GameMode[] = ["國戰", "身分局"];
 
 const versionsByMode: Record<GameMode, string[]> = {
@@ -117,7 +116,7 @@ function createPlayers(count: number, mode: GameMode): Player[] {
     name: `玩家 ${index + 1}`,
     generals: Array.from({ length: slots }, () => null),
     dead: false,
-    identity: mode === "身分局" ? identities[Math.min(index, identities.length - 1)] : "",
+    identity: mode === "身分局" ? "未公開" : "",
     selectedFaction: null,
   }));
 }
@@ -1234,23 +1233,6 @@ export default function SessionApp({
                     }}
                   />
 
-                  {gameMode === "身分局" && (
-                    <select
-                      value={player.identity}
-                      onChange={(event) =>
-                        updatePlayer(player.id, { identity: event.target.value })
-                      }
-                      style={{
-                        ...styles.identitySelect,
-                        ...(isMobile && isIdentityMode ? styles.mobileIdentitySelect : {}),
-                      }}
-                    >
-                      {identities.map((identity) => (
-                        <option key={identity}>{identity}</option>
-                      ))}
-                    </select>
-                  )}
-
                   {gameMode === "國戰" && getResolvedPlayerFaction(player) && (
                     <Badge faction={getResolvedPlayerFaction(player)!} />
                   )}
@@ -1879,14 +1861,6 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: 13,
     padding: "0 9px",
   },
-  identitySelect: {
-    height: 42,
-    background: "rgba(5,5,4,.72)",
-    color: "#f7ead3",
-    border: "1px solid rgba(218,171,93,.32)",
-    borderRadius: 4,
-    padding: "0 8px",
-  },
   slotCount: {
     background: "#d9ae6a",
     color: "#15100a",
@@ -1927,13 +1901,6 @@ const styles: Record<string, React.CSSProperties> = {
   },
   identityGeneralSlot: {
     height: 330,
-  },
-  mobileIdentitySelect: {
-    flex: "1 1 auto",
-    height: 32,
-    minWidth: 0,
-    fontSize: 12,
-    padding: "0 5px",
   },
   mobileIdentityGeneralSlot: {
     height: "auto",
